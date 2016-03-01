@@ -220,7 +220,6 @@
 				TargetAttributes = {
 					AD2F00AF1C854603006E66DA = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 9W2KFA4NS5;
 					};
 					AD2F00C31C854603006E66DA = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -476,6 +475,7 @@
 			baseConfigurationReference = 76824E770E258698A630750C /* Pods-never-go-bad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "never-go-bad/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codepath.never-go-bad";
@@ -488,6 +488,7 @@
 			baseConfigurationReference = 74B37664F2B8B3ABAB7AE0F8 /* Pods-never-go-bad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "never-go-bad/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codepath.never-go-bad";
