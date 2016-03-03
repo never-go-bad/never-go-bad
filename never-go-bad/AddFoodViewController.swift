@@ -8,7 +8,9 @@
 
 import UIKit
 
-class AddFoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddFoodTableViewCellDelegate {
+class AddFoodViewController: UIViewController,
+    UITableViewDelegate, UITableViewDataSource,
+    AddFoodTableViewCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var foods = [
@@ -76,6 +78,7 @@ class AddFoodViewController: UIViewController, UITableViewDelegate, UITableViewD
         let indexPath = tableView.indexPathForCell(addFoodTableViewCell)
         foods[indexPath!.row].name = name
     }
+        
     
     /*
     // MARK: - Navigation
