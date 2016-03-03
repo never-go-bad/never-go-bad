@@ -14,6 +14,12 @@
 		AD2F00BE1C854603006E66DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD2F00BC1C854603006E66DA /* LaunchScreen.storyboard */; };
 		AD2F00C91C854603006E66DA /* never_go_badTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00C81C854603006E66DA /* never_go_badTests.swift */; };
 		AD2F00D41C854604006E66DA /* never_go_badUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00D31C854604006E66DA /* never_go_badUITests.swift */; };
+		AD483A0E1C86DB56000303C2 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A0D1C86DB56000303C2 /* Food.swift */; };
+		AD483A101C86DB7C000303C2 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A0F1C86DB7C000303C2 /* FoodListViewController.swift */; };
+		AD483A131C86DCC3000303C2 /* FoodListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A121C86DCC3000303C2 /* FoodListTableViewCell.swift */; };
+		AD483A161C86EBE3000303C2 /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A151C86EBE3000303C2 /* FoodList.swift */; };
+		AD483A181C86F284000303C2 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A171C86F284000303C2 /* AddFoodViewController.swift */; };
+		AD483A1A1C86F5B7000303C2 /* AddFoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A191C86F5B7000303C2 /* AddFoodTableViewCell.swift */; };
 		E9A00C747A3B21A429B99F1F /* Pods_never_go_bad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247536C44AD3BA169E3E638D /* Pods_never_go_bad.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +57,12 @@
 		AD2F00CF1C854604006E66DA /* never-go-badUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "never-go-badUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2F00D31C854604006E66DA /* never_go_badUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = never_go_badUITests.swift; sourceTree = "<group>"; };
 		AD2F00D51C854604006E66DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD483A0D1C86DB56000303C2 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		AD483A0F1C86DB7C000303C2 /* FoodListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
+		AD483A121C86DCC3000303C2 /* FoodListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodListTableViewCell.swift; sourceTree = "<group>"; };
+		AD483A151C86EBE3000303C2 /* FoodList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodList.swift; sourceTree = "<group>"; };
+		AD483A171C86F284000303C2 /* AddFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
+		AD483A191C86F5B7000303C2 /* AddFoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFoodTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +125,9 @@
 		AD2F00B21C854603006E66DA /* never-go-bad */ = {
 			isa = PBXGroup;
 			children = (
+				AD483A111C86DC94000303C2 /* View */,
+				AD483A0C1C86DB08000303C2 /* ViewController */,
+				AD483A0B1C86DAFF000303C2 /* Model */,
 				AD2F00B31C854603006E66DA /* AppDelegate.swift */,
 				AD2F00B51C854603006E66DA /* ViewController.swift */,
 				AD2F00B71C854603006E66DA /* Main.storyboard */,
@@ -139,6 +154,33 @@
 				AD2F00D51C854604006E66DA /* Info.plist */,
 			);
 			path = "never-go-badUITests";
+			sourceTree = "<group>";
+		};
+		AD483A0B1C86DAFF000303C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD483A0D1C86DB56000303C2 /* Food.swift */,
+				AD483A151C86EBE3000303C2 /* FoodList.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AD483A0C1C86DB08000303C2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AD483A0F1C86DB7C000303C2 /* FoodListViewController.swift */,
+				AD483A171C86F284000303C2 /* AddFoodViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		AD483A111C86DC94000303C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD483A121C86DCC3000303C2 /* FoodListTableViewCell.swift */,
+				AD483A191C86F5B7000303C2 /* AddFoodTableViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		DD73FBC89266FFEDA223E6B7 /* Frameworks */ = {
@@ -333,8 +375,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD483A181C86F284000303C2 /* AddFoodViewController.swift in Sources */,
+				AD483A1A1C86F5B7000303C2 /* AddFoodTableViewCell.swift in Sources */,
 				AD2F00B61C854603006E66DA /* ViewController.swift in Sources */,
 				AD2F00B41C854603006E66DA /* AppDelegate.swift in Sources */,
+				AD483A101C86DB7C000303C2 /* FoodListViewController.swift in Sources */,
+				AD483A161C86EBE3000303C2 /* FoodList.swift in Sources */,
+				AD483A131C86DCC3000303C2 /* FoodListTableViewCell.swift in Sources */,
+				AD483A0E1C86DB56000303C2 /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
