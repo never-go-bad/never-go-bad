@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddFoodViewController: UIViewController,
+class FoodInputViewController: UIViewController,
     UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
@@ -36,17 +36,16 @@ class AddFoodViewController: UIViewController,
         } else {
             return UITableViewCellEditingStyle.Insert
         }
-//        UITableViewCellEditingStyle.Insert
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         editingStyle
         if editingStyle == UITableViewCellEditingStyle.Insert {
             foodInputs.append(FoodInput(name: "", daysLeft: 1, quantityType: QuantityType.unit, quantity: 1))
-            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Bottom)
+            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         } else if editingStyle == UITableViewCellEditingStyle.Delete {
             foodInputs.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Bottom)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
     }
     
@@ -56,7 +55,7 @@ class AddFoodViewController: UIViewController,
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.row < foodInputs.count {
-            let cell = tableView.dequeueReusableCellWithIdentifier("AddFoodTableViewCell") as! AddFoodTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("FoodInputTableViewCell") as! FoodInputTableViewCell
             cell.foodInput = foodInputs[indexPath.row]
             return cell
         } else {

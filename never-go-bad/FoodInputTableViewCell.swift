@@ -8,13 +8,10 @@
 
 import UIKit
 
-@objc protocol AddFoodTableViewCellDelegate {
-    func addFoodTableViewCell(addFoodTableViewCell: AddFoodTableViewCell, didCellValueChanged value: FoodInput)
-}
-
 var DAYS_LEFT_PICKER_VIEW = 1
 var TYPE_PICKER_VIEW = 2
-class AddFoodTableViewCell: UITableViewCell,
+
+class FoodInputTableViewCell: UITableViewCell,
 UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
     var daysLeftPickerStrings = ["1 day", "2 days", "3 days", "4 days", "5 days", "6 days", "1 week", "2 weeks", "3 weeks", "1 month", "2 months"]
@@ -26,9 +23,6 @@ UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
     var daysLeftPickerView: UIPickerView?
     var typePickerView: UIPickerView?
-
-    weak var delegate: AddFoodTableViewCellDelegate?
-
     
     @IBOutlet weak var foodNameTextField: UITextField!
     @IBOutlet weak var daysLeftTextField: UITextField!

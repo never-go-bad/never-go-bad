@@ -18,8 +18,8 @@
 		AD483A101C86DB7C000303C2 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A0F1C86DB7C000303C2 /* FoodListViewController.swift */; };
 		AD483A131C86DCC3000303C2 /* FoodListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A121C86DCC3000303C2 /* FoodListTableViewCell.swift */; };
 		AD483A161C86EBE3000303C2 /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A151C86EBE3000303C2 /* FoodList.swift */; };
-		AD483A181C86F284000303C2 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A171C86F284000303C2 /* AddFoodViewController.swift */; };
-		AD483A1A1C86F5B7000303C2 /* AddFoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A191C86F5B7000303C2 /* AddFoodTableViewCell.swift */; };
+		AD483A181C86F284000303C2 /* FoodInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A171C86F284000303C2 /* FoodInputViewController.swift */; };
+		AD483A1A1C86F5B7000303C2 /* FoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A191C86F5B7000303C2 /* FoodInputTableViewCell.swift */; };
 		AD483A1C1C8838DD000303C2 /* FoodInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A1B1C8838DD000303C2 /* FoodInput.swift */; };
 		E9A00C747A3B21A429B99F1F /* Pods_never_go_bad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247536C44AD3BA169E3E638D /* Pods_never_go_bad.framework */; };
 /* End PBXBuildFile section */
@@ -62,8 +62,8 @@
 		AD483A0F1C86DB7C000303C2 /* FoodListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
 		AD483A121C86DCC3000303C2 /* FoodListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodListTableViewCell.swift; sourceTree = "<group>"; };
 		AD483A151C86EBE3000303C2 /* FoodList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodList.swift; sourceTree = "<group>"; };
-		AD483A171C86F284000303C2 /* AddFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
-		AD483A191C86F5B7000303C2 /* AddFoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFoodTableViewCell.swift; sourceTree = "<group>"; };
+		AD483A171C86F284000303C2 /* FoodInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodInputViewController.swift; sourceTree = "<group>"; };
+		AD483A191C86F5B7000303C2 /* FoodInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodInputTableViewCell.swift; sourceTree = "<group>"; };
 		AD483A1B1C8838DD000303C2 /* FoodInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				AD483A0F1C86DB7C000303C2 /* FoodListViewController.swift */,
-				AD483A171C86F284000303C2 /* AddFoodViewController.swift */,
+				AD483A171C86F284000303C2 /* FoodInputViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				AD483A121C86DCC3000303C2 /* FoodListTableViewCell.swift */,
-				AD483A191C86F5B7000303C2 /* AddFoodTableViewCell.swift */,
+				AD483A191C86F5B7000303C2 /* FoodInputTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -378,8 +378,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD483A181C86F284000303C2 /* AddFoodViewController.swift in Sources */,
-				AD483A1A1C86F5B7000303C2 /* AddFoodTableViewCell.swift in Sources */,
+				AD483A181C86F284000303C2 /* FoodInputViewController.swift in Sources */,
+				AD483A1A1C86F5B7000303C2 /* FoodInputTableViewCell.swift in Sources */,
 				AD2F00B61C854603006E66DA /* ViewController.swift in Sources */,
 				AD2F00B41C854603006E66DA /* AppDelegate.swift in Sources */,
 				AD483A101C86DB7C000303C2 /* FoodListViewController.swift in Sources */,
