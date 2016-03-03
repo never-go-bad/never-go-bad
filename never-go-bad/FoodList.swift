@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+let SECONDS_IN_DAYS = 86400
 class FoodList: NSObject {
     static var foods: [Food]? = nil
     class func getCurrentFoods() -> [Food] {
@@ -23,5 +23,17 @@ class FoodList: NSObject {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(self.foods, forKey: "food")
         defaults.synchronize()
+    }
+    
+    class func addFoodInputs(foodInputs: [FoodInput]) {
+        for foodInput in foodInputs {
+
+            let today = NSCalendar.currentCalendar().startOfDayForDate(NSDate())
+            foods?.append(Food(
+                name: foodInput.name,
+                expireDate: today.dateByAddingTimeInterval(Double.init(foodInput.daysLeft * SECONDS_IN_DAYS)),
+                quantityType: foodInput.quantityType,
+                quantity: foodInput.quantity))
+        }
     }
 }

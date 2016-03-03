@@ -116,7 +116,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
-                                                        <action selector="foodLabelEditingDidEnd:" destination="H8E-Gu-WFu" eventType="editingDidEnd" id="vV1-3c-W3p"/>
+                                                        <action selector="foodNameTextFieldChanged:" destination="H8E-Gu-WFu" eventType="editingChanged" id="eCO-DD-QrS"/>
+                                                        <action selector="foodNameTextFieldChanged:" destination="H8E-Gu-WFu" eventType="editingDidEnd" id="jpF-h5-YZ9"/>
                                                     </connections>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYh-FP-tPW">
@@ -147,6 +148,10 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    <connections>
+                                                        <action selector="quantityTextFieldChanged:" destination="H8E-Gu-WFu" eventType="editingDidEnd" id="FZe-65-BeI"/>
+                                                        <action selector="quantityTextFieldChanged:" destination="H8E-Gu-WFu" eventType="editingChanged" id="zyY-ms-7L3"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -166,9 +171,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="amountTextField" destination="l5q-d8-3yE" id="3NT-xL-DH1"/>
-                                            <outlet property="daysLeftLabel" destination="CYh-FP-tPW" id="TYs-KB-NNE"/>
-                                            <outlet property="foodNameLabel" destination="kdi-Pw-foj" id="Yer-bw-F5C"/>
+                                            <outlet property="daysLeftTextField" destination="CYh-FP-tPW" id="rzU-dj-H6L"/>
+                                            <outlet property="foodNameTextField" destination="kdi-Pw-foj" id="76x-nb-3QQ"/>
+                                            <outlet property="quantityTextField" destination="l5q-d8-3yE" id="KGa-AO-XBL"/>
                                             <outlet property="typeTextField" destination="nvL-7J-quY" id="w1l-rR-KxT"/>
                                         </connections>
                                     </tableViewCell>
@@ -209,7 +214,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qcz-fq-RgS">
-                        <barButtonItem key="rightBarButtonItem" title="Confirm" id="A62-JD-xPw"/>
+                        <barButtonItem key="rightBarButtonItem" title="Confirm" id="A62-JD-xPw">
+                            <connections>
+                                <action selector="onConfirmButton:" destination="69q-PF-f9N" id="Nm9-Fq-KVN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="kMg-XT-rhA" id="FEp-Bo-YL1"/>
@@ -258,15 +267,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YxF-QP-5JC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="112" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YxF-QP-5JC">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FoodListTableViewCell" rowHeight="68" id="rmW-hA-TER" customClass="FoodListTableViewCell" customModule="never_go_bad" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="68"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FoodListTableViewCell" rowHeight="112" id="rmW-hA-TER" customClass="FoodListTableViewCell" customModule="never_go_bad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rmW-hA-TER" id="ZPh-gj-qLj">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="67.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="111.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iJ-tr-BF6">
@@ -276,7 +285,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.5 lb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DJ-sN-VYn">
-                                                    <rect key="frame" x="82" y="36" width="40" height="20.5"/>
+                                                    <rect key="frame" x="82" y="36.5" width="40" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -291,10 +300,12 @@
                                             <constraints>
                                                 <constraint firstItem="0DJ-sN-VYn" firstAttribute="leading" secondItem="6iJ-tr-BF6" secondAttribute="trailing" constant="20" id="9Bc-Cw-3fe"/>
                                                 <constraint firstItem="0DJ-sN-VYn" firstAttribute="top" secondItem="TjO-wd-YH3" secondAttribute="bottom" constant="8" id="MSG-tx-Ols"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="0DJ-sN-VYn" secondAttribute="bottom" constant="12" id="Wsm-kI-MZO"/>
                                                 <constraint firstItem="TjO-wd-YH3" firstAttribute="top" secondItem="ZPh-gj-qLj" secondAttribute="top" constant="8" id="ZPc-30-wfO"/>
                                                 <constraint firstItem="TjO-wd-YH3" firstAttribute="leading" secondItem="ZPh-gj-qLj" secondAttribute="leading" constant="12" id="cAF-t1-sde"/>
                                                 <constraint firstItem="6iJ-tr-BF6" firstAttribute="leading" secondItem="ZPh-gj-qLj" secondAttribute="leading" constant="12" id="cNq-LX-gXX"/>
                                                 <constraint firstItem="6iJ-tr-BF6" firstAttribute="top" secondItem="TjO-wd-YH3" secondAttribute="bottom" constant="8" id="fTh-4V-Nje"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6iJ-tr-BF6" secondAttribute="bottom" constant="12" id="qEz-bg-FzZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

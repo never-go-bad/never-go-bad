@@ -20,6 +20,13 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.delegate = self
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.reloadData()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        foods = FoodList.getCurrentFoods()
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

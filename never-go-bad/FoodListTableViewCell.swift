@@ -30,7 +30,7 @@ class FoodListTableViewCell: UITableViewCell {
                 } else {
                     daysLeftLabel.text = "\(daysLeft/30) months"
                 }
-                quantityLabel.text = "\(food.quantity) lbs"
+                quantityLabel.text = "\(food.quantity) \(food.quantityType)"
             }
         }
     }

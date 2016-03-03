@@ -9,7 +9,7 @@
 import UIKit
 
 @objc protocol AddFoodTableViewCellDelegate {
-    func addFoodTableViewCell(addFoodTableViewCell: AddFoodTableViewCell, didCellValueChanged name: String)
+    func addFoodTableViewCell(addFoodTableViewCell: AddFoodTableViewCell, didCellValueChanged value: FoodInput)
 }
 
 var DAYS_LEFT_PICKER_VIEW = 1
@@ -23,30 +23,52 @@ UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     var typePickerStrings = ["unit", "lb", "fl oz"]
     var typePickerValues = [QuantityType.unit, QuantityType.weight, QuantityType.volume]
     
+
+    var daysLeftPickerView: UIPickerView?
+    var typePickerView: UIPickerView?
+
     weak var delegate: AddFoodTableViewCellDelegate?
-    @IBOutlet weak var foodNameLabel: UITextField!
-    @IBOutlet weak var daysLeftLabel: UITextField!
+
     
+    @IBOutlet weak var foodNameTextField: UITextField!
+    @IBOutlet weak var daysLeftTextField: UITextField!
     @IBOutlet weak var typeTextField: UITextField!
-    @IBOutlet weak var amountTextField: UITextField!
+    @IBOutlet weak var quantityTextField: UITextField!
     
+    var foodInput: FoodInput? {
+        didSet {
+            if let foodInput = foodInput {
+                foodNameTextField.text = foodInput.name
+                quantityTextField.text = "\(foodInput.quantity)"
+                
+                if let idx = daysLeftPickerValues.indexOf(foodInput.daysLeft) {
+                    daysLeftPickerView?.selectRow(idx, inComponent: 0, animated: false)
+                    daysLeftTextField.text = daysLeftPickerStrings[idx]
+                }
+                if let idx = typePickerValues.indexOf(foodInput.quantityType) {
+                    typePickerView?.selectRow(idx, inComponent: 0, animated: false)
+                    typeTextField.text = typePickerStrings[idx]
+                }
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let daysLeftPickerView = UIPickerView()
-        daysLeftLabel.inputView = daysLeftPickerView
-        daysLeftLabel.delegate = self
-        daysLeftPickerView.dataSource = self
-        daysLeftPickerView.delegate = self
-        daysLeftPickerView.tag = DAYS_LEFT_PICKER_VIEW
+        daysLeftPickerView = UIPickerView()
+        daysLeftTextField.inputView = daysLeftPickerView
+        daysLeftTextField.delegate = self
+        daysLeftPickerView!.dataSource = self
+        daysLeftPickerView!.delegate = self
+        daysLeftPickerView!.tag = DAYS_LEFT_PICKER_VIEW
         
-        let typePickerView = UIPickerView()
+        typePickerView = UIPickerView()
         typeTextField.inputView = typePickerView
         typeTextField.delegate = self
-        typePickerView.dataSource = self
-        typePickerView.delegate = self
-        typePickerView.tag = TYPE_PICKER_VIEW
+        typePickerView!.dataSource = self
+        typePickerView!.delegate = self
+        typePickerView!.tag = TYPE_PICKER_VIEW
         
         // Initialization code
     }
@@ -55,9 +77,6 @@ UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    @IBAction func foodLabelEditingDidEnd(sender: AnyObject) {
-        delegate?.addFoodTableViewCell(self, didCellValueChanged: foodNameLabel.text!)
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -83,10 +102,18 @@ UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == DAYS_LEFT_PICKER_VIEW {
-            daysLeftLabel.text = daysLeftPickerStrings[row]
+            daysLeftTextField.text = daysLeftPickerStrings[row]
+            foodInput?.daysLeft = daysLeftPickerValues[row]
         } else {
             typeTextField.text = typePickerStrings[row]
+            foodInput?.quantityType = typePickerValues[row]
         }
+    }
+    @IBAction func foodNameTextFieldChanged(sender: UITextField) {
+        foodInput?.name = sender.text!
+    }
+    @IBAction func quantityTextFieldChanged(sender: UITextField) {
+        foodInput?.quantity = Float(sender.text!) ?? 1.0
     }
  
     

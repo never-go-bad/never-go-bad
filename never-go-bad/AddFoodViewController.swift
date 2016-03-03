@@ -9,14 +9,10 @@
 import UIKit
 
 class AddFoodViewController: UIViewController,
-    UITableViewDelegate, UITableViewDataSource,
-    AddFoodTableViewCellDelegate {
+    UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    var foods = [
-        Food(name: "name1", expireDate: NSDate(), quantityType: QuantityType.unit, quantity: 2),
-        Food(name: "name2", expireDate: NSDate(), quantityType: QuantityType.unit, quantity: 10),
-    ]
+    var foodInputs: [FoodInput] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +20,6 @@ class AddFoodViewController: UIViewController,
         tableView.delegate = self
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
-        
         tableView.setEditing(true, animated: true)
 
         // Do any additional setup after loading the view.
@@ -36,7 +31,7 @@ class AddFoodViewController: UIViewController,
     }
     
     func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
-        if indexPath.row < foods.count {
+        if indexPath.row < foodInputs.count {
             return UITableViewCellEditingStyle.Delete
         } else {
             return UITableViewCellEditingStyle.Insert
@@ -47,22 +42,22 @@ class AddFoodViewController: UIViewController,
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         editingStyle
         if editingStyle == UITableViewCellEditingStyle.Insert {
-            foods.append(Food(name: "", expireDate: NSDate(), quantityType: QuantityType.unit, quantity: 1))
+            foodInputs.append(FoodInput(name: "", daysLeft: 1, quantityType: QuantityType.unit, quantity: 1))
             tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Bottom)
         } else if editingStyle == UITableViewCellEditingStyle.Delete {
-            foods.removeAtIndex(indexPath.row)
+            foodInputs.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Bottom)
         }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return foods.count + 1
+        return foodInputs.count + 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if indexPath.row < foods.count {
+        if indexPath.row < foodInputs.count {
             let cell = tableView.dequeueReusableCellWithIdentifier("AddFoodTableViewCell") as! AddFoodTableViewCell
-            cell.delegate = self
+            cell.foodInput = foodInputs[indexPath.row]
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("ManuallyAddFoodTableViewCell")!
@@ -70,15 +65,15 @@ class AddFoodViewController: UIViewController,
         }
     }
     @IBAction func touchAddItemManually(sender: AnyObject) {
-        foods.append(Food(name: "", expireDate: NSDate(), quantityType: QuantityType.unit, quantity: 1))
-        tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: foods.count - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Bottom)
+        foodInputs.append(FoodInput(name: "", daysLeft: 1, quantityType: QuantityType.unit, quantity: 1))
+        tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: foodInputs.count - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Bottom)
     }
 
-    func addFoodTableViewCell(addFoodTableViewCell: AddFoodTableViewCell, didCellValueChanged name: String) {
-        let indexPath = tableView.indexPathForCell(addFoodTableViewCell)
-        foods[indexPath!.row].name = name
+    @IBAction func onConfirmButton(sender: UIBarButtonItem) {
+        tableView.setEditing(false, animated: false)
+        FoodList.addFoodInputs(foodInputs)
+        self.navigationController?.popViewControllerAnimated(true)
     }
-        
     
     /*
     // MARK: - Navigation

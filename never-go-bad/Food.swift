@@ -22,13 +22,22 @@ class Food: NSObject {
     }
     
     func daysLeft() -> Int {
-        let diff = Int(NSDate().timeIntervalSinceDate(expireDate))
-        return diff / 3600
+        let today = NSCalendar.currentCalendar().startOfDayForDate(NSDate())
+        let diff = Int(expireDate.timeIntervalSinceDate(today))
+        return diff / SECONDS_IN_DAYS
     }
 }
 
-enum QuantityType {
+enum QuantityType: CustomStringConvertible {
     case unit
     case weight
     case volume
+
+    var description : String {
+        switch self {
+        case .unit: return "units";
+        case .weight: return "lbs";
+        case .volume: return "fl oz";
+        }
+    }
 }
