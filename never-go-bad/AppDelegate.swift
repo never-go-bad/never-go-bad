@@ -15,7 +15,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let vc1 = UIStoryboard(name: "FoodList", bundle: nil).instantiateViewControllerWithIdentifier("FoodListNavigationController") as! UINavigationController
+        let vc2 = UIStoryboard(name: "Recipe", bundle: nil).instantiateViewControllerWithIdentifier("RecipeNavigationController") as! UINavigationController
+        let vc3 = UIStoryboard(name: "Settings", bundle: nil).instantiateViewControllerWithIdentifier("SettingsNavigationController") as! UINavigationController
+            
+        vc1.tabBarItem.title = "Inventory"
+        vc1.tabBarItem.image = UIImage(named: "cart")
+
+        vc2.tabBarItem.title = "Recipe"
+        vc2.tabBarItem.image = UIImage(named: "equalizer")
+
+        vc3.tabBarItem.title = "Settings"
+        vc3.tabBarItem.image = UIImage(named: "gear")
+            
+        let tbc = UITabBarController()
+        tbc.viewControllers = [vc1, vc2, vc3]
+            
+        self.window?.rootViewController = tbc
+        self.window?.backgroundColor = UIColor.whiteColor()
+        self.window?.makeKeyAndVisible()
         return true
     }
 

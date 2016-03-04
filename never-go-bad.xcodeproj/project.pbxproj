@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AD2F00B41C854603006E66DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00B31C854603006E66DA /* AppDelegate.swift */; };
 		AD2F00B61C854603006E66DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00B51C854603006E66DA /* ViewController.swift */; };
-		AD2F00B91C854603006E66DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD2F00B71C854603006E66DA /* Main.storyboard */; };
 		AD2F00BB1C854603006E66DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD2F00BA1C854603006E66DA /* Assets.xcassets */; };
 		AD2F00BE1C854603006E66DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD2F00BC1C854603006E66DA /* LaunchScreen.storyboard */; };
 		AD2F00C91C854603006E66DA /* never_go_badTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00C81C854603006E66DA /* never_go_badTests.swift */; };
@@ -21,6 +20,10 @@
 		AD483A181C86F284000303C2 /* FoodInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A171C86F284000303C2 /* FoodInputViewController.swift */; };
 		AD483A1A1C86F5B7000303C2 /* FoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A191C86F5B7000303C2 /* FoodInputTableViewCell.swift */; };
 		AD483A1C1C8838DD000303C2 /* FoodInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A1B1C8838DD000303C2 /* FoodInput.swift */; };
+		AD483A1F1C897948000303C2 /* FoodList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD483A1E1C897948000303C2 /* FoodList.storyboard */; };
+		AD483A211C897957000303C2 /* Recipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD483A201C897957000303C2 /* Recipe.storyboard */; };
+		AD483A231C897964000303C2 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD483A221C897964000303C2 /* Settings.storyboard */; };
+		AD483A271C897DB1000303C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD483A261C897DB1000303C2 /* Main.storyboard */; };
 		E9A00C747A3B21A429B99F1F /* Pods_never_go_bad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247536C44AD3BA169E3E638D /* Pods_never_go_bad.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +51,6 @@
 		AD2F00B01C854603006E66DA /* never-go-bad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "never-go-bad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2F00B31C854603006E66DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD2F00B51C854603006E66DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AD2F00B81C854603006E66DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD2F00BA1C854603006E66DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD2F00BD1C854603006E66DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD2F00BF1C854603006E66DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +67,10 @@
 		AD483A171C86F284000303C2 /* FoodInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodInputViewController.swift; sourceTree = "<group>"; };
 		AD483A191C86F5B7000303C2 /* FoodInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodInputTableViewCell.swift; sourceTree = "<group>"; };
 		AD483A1B1C8838DD000303C2 /* FoodInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodInput.swift; sourceTree = "<group>"; };
+		AD483A1E1C897948000303C2 /* FoodList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FoodList.storyboard; sourceTree = "<group>"; };
+		AD483A201C897957000303C2 /* Recipe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recipe.storyboard; sourceTree = "<group>"; };
+		AD483A221C897964000303C2 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		AD483A261C897DB1000303C2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,14 +133,13 @@
 		AD2F00B21C854603006E66DA /* never-go-bad */ = {
 			isa = PBXGroup;
 			children = (
+				AD483A1D1C897920000303C2 /* Storyboard */,
 				AD483A111C86DC94000303C2 /* View */,
 				AD483A0C1C86DB08000303C2 /* ViewController */,
 				AD483A0B1C86DAFF000303C2 /* Model */,
 				AD2F00B31C854603006E66DA /* AppDelegate.swift */,
 				AD2F00B51C854603006E66DA /* ViewController.swift */,
-				AD2F00B71C854603006E66DA /* Main.storyboard */,
 				AD2F00BA1C854603006E66DA /* Assets.xcassets */,
-				AD2F00BC1C854603006E66DA /* LaunchScreen.storyboard */,
 				AD2F00BF1C854603006E66DA /* Info.plist */,
 			);
 			path = "never-go-bad";
@@ -184,6 +189,18 @@
 				AD483A191C86F5B7000303C2 /* FoodInputTableViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		AD483A1D1C897920000303C2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AD2F00BC1C854603006E66DA /* LaunchScreen.storyboard */,
+				AD483A261C897DB1000303C2 /* Main.storyboard */,
+				AD483A1E1C897948000303C2 /* FoodList.storyboard */,
+				AD483A201C897957000303C2 /* Recipe.storyboard */,
+				AD483A221C897964000303C2 /* Settings.storyboard */,
+			);
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 		DD73FBC89266FFEDA223E6B7 /* Frameworks */ = {
@@ -303,9 +320,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD483A231C897964000303C2 /* Settings.storyboard in Resources */,
 				AD2F00BE1C854603006E66DA /* LaunchScreen.storyboard in Resources */,
+				AD483A1F1C897948000303C2 /* FoodList.storyboard in Resources */,
+				AD483A271C897DB1000303C2 /* Main.storyboard in Resources */,
+				AD483A211C897957000303C2 /* Recipe.storyboard in Resources */,
 				AD2F00BB1C854603006E66DA /* Assets.xcassets in Resources */,
-				AD2F00B91C854603006E66DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,14 +442,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AD2F00B71C854603006E66DA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD2F00B81C854603006E66DA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AD2F00BC1C854603006E66DA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
