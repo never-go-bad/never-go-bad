@@ -24,6 +24,7 @@
 		AD483A211C897957000303C2 /* Recipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD483A201C897957000303C2 /* Recipe.storyboard */; };
 		AD483A231C897964000303C2 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD483A221C897964000303C2 /* Settings.storyboard */; };
 		AD483A271C897DB1000303C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD483A261C897DB1000303C2 /* Main.storyboard */; };
+		AD483A291C8AA170000303C2 /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A281C8AA170000303C2 /* RecipeListViewController.swift */; };
 		E9A00C747A3B21A429B99F1F /* Pods_never_go_bad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247536C44AD3BA169E3E638D /* Pods_never_go_bad.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		AD483A201C897957000303C2 /* Recipe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recipe.storyboard; sourceTree = "<group>"; };
 		AD483A221C897964000303C2 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		AD483A261C897DB1000303C2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AD483A281C8AA170000303C2 /* RecipeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 		AD483A0C1C86DB08000303C2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AD483A281C8AA170000303C2 /* RecipeListViewController.swift */,
 				AD483A0F1C86DB7C000303C2 /* FoodListViewController.swift */,
 				AD483A171C86F284000303C2 /* FoodInputViewController.swift */,
 			);
@@ -398,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD483A291C8AA170000303C2 /* RecipeListViewController.swift in Sources */,
 				AD483A181C86F284000303C2 /* FoodInputViewController.swift in Sources */,
 				AD483A1A1C86F5B7000303C2 /* FoodInputTableViewCell.swift in Sources */,
 				AD2F00B61C854603006E66DA /* ViewController.swift in Sources */,
