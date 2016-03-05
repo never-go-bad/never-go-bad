@@ -43,7 +43,24 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foods!.count
     }
-
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let trashed = UITableViewRowAction(style: .Normal, title: "Trashed") { action, index in
+            self.foods?.removeAtIndex(indexPath.row)
+            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+        trashed.backgroundColor = UIColor.lightGrayColor()
+        
+        let consumed = UITableViewRowAction(style: .Normal, title: "Consumed") { action, index in
+            self.foods?.removeAtIndex(indexPath.row)
+            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+        consumed.backgroundColor = UIColor.greenColor()
+        
+        return [consumed, trashed]
+    }
+    
+    
     /*
     // MARK: - Navigation
 
