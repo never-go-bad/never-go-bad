@@ -40,4 +40,13 @@ enum QuantityType: CustomStringConvertible {
         case .volume: return "fl oz";
         }
     }
+    
+    func fromStringValue(value: String) -> QuantityType {
+        switch value {
+        case "units": return .unit;
+        case "lbs": return .weight;
+        case "fl oz": return .volume;
+        default: return .unit;
+        }
+    }
 }

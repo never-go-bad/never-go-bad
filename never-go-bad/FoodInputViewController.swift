@@ -71,6 +71,14 @@ class FoodInputViewController: UIViewController,
     @IBAction func onConfirmButton(sender: UIBarButtonItem) {
         tableView.setEditing(false, animated: false)
         FoodList.addFoodInputs(foodInputs)
+        
+        var foods: [Food] = []
+        for input in foodInputs{
+            foods.append(input.toFood())
+        }
+        
+        FoodService.save(foods)
+        
         self.navigationController?.popViewControllerAnimated(true)
     }
     

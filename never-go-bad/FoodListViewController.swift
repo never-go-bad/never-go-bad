@@ -15,18 +15,19 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        foods = FoodList.getCurrentFoods()
+       // foods = FoodList.getCurrentFoods()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.reloadData()
+        
+        loadFood()
+    
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        foods = FoodList.getCurrentFoods()
-        tableView.reloadData()
+        loadFood()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +42,8 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return foods!.count
+        return foods?.count ?? 0
+
     }
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
@@ -58,6 +60,13 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         consumed.backgroundColor = UIColor.greenColor()
         
         return [consumed, trashed]
+    }
+    
+    func loadFood() {
+        FoodService.get { (foodItems) -> () in
+            self.foods = foodItems
+            self.tableView.reloadData()
+        }
     }
     
     

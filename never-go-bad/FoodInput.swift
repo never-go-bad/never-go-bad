@@ -21,4 +21,14 @@ class FoodInput: NSObject {
         self.quantityType = quantityType
         self.quantity = quantity
     }
+    
+    func expirationDate() -> NSDate {
+        let today = NSCalendar.currentCalendar().startOfDayForDate(NSDate())
+        let expirationDate = today.dateByAddingTimeInterval(Double(daysLeft))
+        return expirationDate
+    }
+    
+    func toFood() -> Food{
+        return Food(name: self.name, expireDate: NSDate(), quantityType: self.quantityType, quantity: self.quantity)
+    }
 }
