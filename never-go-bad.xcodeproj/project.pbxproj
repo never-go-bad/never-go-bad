@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84D924541C8ADF210049D09C /* FoodServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D924531C8ADF210049D09C /* FoodServices.swift */; };
+		84D924541C8ADF210049D09C /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D924531C8ADF210049D09C /* FoodService.swift */; };
+		84D924561C8CE2360049D09C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D924551C8CE2360049D09C /* NotificationService.swift */; };
 		AD2F00B41C854603006E66DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00B31C854603006E66DA /* AppDelegate.swift */; };
 		AD2F00B61C854603006E66DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00B51C854603006E66DA /* ViewController.swift */; };
 		AD2F00BB1C854603006E66DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD2F00BA1C854603006E66DA /* Assets.xcassets */; };
@@ -50,7 +51,8 @@
 		247536C44AD3BA169E3E638D /* Pods_never_go_bad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_never_go_bad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B37664F2B8B3ABAB7AE0F8 /* Pods-never-go-bad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-bad.release.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-bad/Pods-never-go-bad.release.xcconfig"; sourceTree = "<group>"; };
 		76824E770E258698A630750C /* Pods-never-go-bad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-bad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-bad/Pods-never-go-bad.debug.xcconfig"; sourceTree = "<group>"; };
-		84D924531C8ADF210049D09C /* FoodServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodServices.swift; sourceTree = "<group>"; };
+		84D924531C8ADF210049D09C /* FoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodService.swift; sourceTree = "<group>"; };
+		84D924551C8CE2360049D09C /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		AD2F00B01C854603006E66DA /* never-go-bad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "never-go-bad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2F00B31C854603006E66DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD2F00B51C854603006E66DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +117,8 @@
 		84D924521C8ADEFF0049D09C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				84D924531C8ADF210049D09C /* FoodServices.swift */,
+				84D924531C8ADF210049D09C /* FoodService.swift */,
+				84D924551C8CE2360049D09C /* NotificationService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -416,13 +419,14 @@
 				AD483A181C86F284000303C2 /* FoodInputViewController.swift in Sources */,
 				AD483A1A1C86F5B7000303C2 /* FoodInputTableViewCell.swift in Sources */,
 				AD2F00B61C854603006E66DA /* ViewController.swift in Sources */,
+				84D924561C8CE2360049D09C /* NotificationService.swift in Sources */,
 				AD2F00B41C854603006E66DA /* AppDelegate.swift in Sources */,
 				AD483A101C86DB7C000303C2 /* FoodListViewController.swift in Sources */,
 				AD483A161C86EBE3000303C2 /* FoodList.swift in Sources */,
 				AD483A131C86DCC3000303C2 /* FoodListTableViewCell.swift in Sources */,
 				AD483A0E1C86DB56000303C2 /* Food.swift in Sources */,
 				AD483A1C1C8838DD000303C2 /* FoodInput.swift in Sources */,
-				84D924541C8ADF210049D09C /* FoodServices.swift in Sources */,
+				84D924541C8ADF210049D09C /* FoodService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

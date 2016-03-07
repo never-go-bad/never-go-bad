@@ -1,4 +1,5 @@
 PODS:
+  - AFDateHelper (3.1.1)
   - AFNetworking (3.0.4):
     - AFNetworking/NSURLSession (= 3.0.4)
     - AFNetworking/Reachability (= 3.0.4)
@@ -22,12 +23,14 @@ PODS:
     - Bolts/Tasks (~> 1.5)
 
 DEPENDENCIES:
+  - AFDateHelper
   - AFNetworking
   - BDBOAuth1Manager
   - MBProgressHUD
   - Parse
 
 SPEC CHECKSUMS:
+  AFDateHelper: 22d6439a3529a144c89b7e6aa214ebbe4d5c2337
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   BDBOAuth1Manager: 92d17d06f8a648602962304cd2f35ae7394fa001
   Bolts: f52a250053bb517ca874523c3913776359ab3def

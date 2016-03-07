@@ -8,6 +8,7 @@ target 'never-go-bad' do
 	pod "BDBOAuth1Manager"
 	pod "MBProgressHUD"
     pod 'Parse'
+    pod "AFDateHelper"
 end
 
 target 'never-go-badTests' do
