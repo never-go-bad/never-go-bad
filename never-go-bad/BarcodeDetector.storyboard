@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Barcode Detector View Controller-->
+        <scene sceneID="eY5-Pw-s3a">
+            <objects>
+                <viewController storyboardIdentifier="barcodeViewController" id="HM6-F2-Yus" customClass="BarcodeDetectorViewController" customModule="never_go_bad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Eh5-T8-rda"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sdr-pF-iB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HEM-LZ-shm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MX8-Uy-tgn">
+                                <rect key="frame" x="0.0" y="536" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="FEr-bm-fIJ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Cancel" id="0n5-ii-m3V">
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MX8-Uy-tgn" secondAttribute="trailing" id="2Z4-OJ-lXb"/>
+                            <constraint firstItem="Sdr-pF-iB5" firstAttribute="top" secondItem="MX8-Uy-tgn" secondAttribute="bottom" id="EKF-1T-nX9"/>
+                            <constraint firstItem="MX8-Uy-tgn" firstAttribute="leading" secondItem="HEM-LZ-shm" secondAttribute="leading" id="PLJ-oA-Rb4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="0n5-ii-m3V" id="XCu-Aj-FzR"/>
+                        <outlet property="toolbar" destination="MX8-Uy-tgn" id="QjO-du-8kv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6yb-fN-R5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="201"/>
+        </scene>
+    </scenes>
+</document>
