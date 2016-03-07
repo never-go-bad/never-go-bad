@@ -21,14 +21,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJ5-fn-Phm">
                                 <rect key="frame" x="0.0" y="64" width="320" height="72"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aig-Cm-Kyj">
-                                        <rect key="frame" x="48" y="15" width="60" height="41"/>
-                                        <string key="text">Camera
-Button</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmM-eA-rqf" userLabel="Barcode Button">
                                         <rect key="frame" x="232" y="12" width="48" height="48"/>
                                         <state key="normal" image="barcodeButton"/>
@@ -36,12 +28,19 @@ Button</string>
                                             <action selector="onDidTapBarcodeButton:" destination="SAO-Sb-fXc" eventType="touchUpInside" id="LOx-xu-QAw"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VM7-xD-HVN">
+                                        <rect key="frame" x="40" y="12" width="48" height="48"/>
+                                        <state key="normal" image="cameraButton"/>
+                                        <connections>
+                                            <action selector="onDidTapCameraButton:" destination="SAO-Sb-fXc" eventType="touchUpInside" id="i8H-bQ-QMq"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="qmM-eA-rqf" secondAttribute="trailing" constant="40" id="PBs-cF-8nR"/>
-                                    <constraint firstItem="Aig-Cm-Kyj" firstAttribute="centerY" secondItem="zJ5-fn-Phm" secondAttribute="centerY" id="c3h-Gt-MRB"/>
-                                    <constraint firstItem="Aig-Cm-Kyj" firstAttribute="leading" secondItem="zJ5-fn-Phm" secondAttribute="leadingMargin" constant="40" id="gjB-VG-REQ"/>
+                                    <constraint firstItem="VM7-xD-HVN" firstAttribute="leading" secondItem="zJ5-fn-Phm" secondAttribute="leading" constant="40" id="ZHm-Hf-PVE"/>
+                                    <constraint firstItem="VM7-xD-HVN" firstAttribute="centerY" secondItem="zJ5-fn-Phm" secondAttribute="centerY" id="aYF-TP-rz9"/>
                                     <constraint firstAttribute="height" constant="72" id="kAL-EG-uE1"/>
                                     <constraint firstItem="qmM-eA-rqf" firstAttribute="centerY" secondItem="zJ5-fn-Phm" secondAttribute="centerY" id="ufh-pF-wAR"/>
                                 </constraints>
@@ -313,6 +312,7 @@ Button</string>
     </scenes>
     <resources>
         <image name="barcodeButton" width="48" height="48"/>
+        <image name="cameraButton" width="48" height="48"/>
         <image name="cart" width="24" height="24"/>
     </resources>
 </document>

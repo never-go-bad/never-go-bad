@@ -8,13 +8,22 @@
 
 import UIKit
 import MBProgressHUD
+import UIImage_Categories
+import CloudSight
 
 class FoodInputViewController: UIViewController,
-    UITableViewDelegate, UITableViewDataSource, BarcodeDelegate {
+    UITableViewDelegate, UITableViewDataSource,
+    BarcodeDelegate,
+    UIImagePickerControllerDelegate, UINavigationControllerDelegate,
+    CloudSightQueryDelegate
+
+{
 
     @IBOutlet var topView: UIView!
     @IBOutlet weak var tableView: UITableView!
     var foodInputs: [FoodInput] = []
+    private var query: CloudSightQuery? //Must be declared here to ensure that the reference will stay live while query is being performed
+    private var progressDialog: MBProgressHUD?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +33,9 @@ class FoodInputViewController: UIViewController,
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.setEditing(true, animated: true)
 
-        // Do any additional setup after loading the view.
+        //André's keys
+        CloudSightConnection.sharedInstance().consumerKey = "zyLoq-b0FIdsivIIm8MtHg"
+        CloudSightConnection.sharedInstance().consumerSecret = "aH4RFQLr5gqfcOQuKxtNhA"
     }
 
     override func didReceiveMemoryWarning() {
@@ -116,4 +127,64 @@ class FoodInputViewController: UIViewController,
 
     }
    
+    @IBAction func onDidTapCameraButton(sender: AnyObject) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .Camera
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController,
+        didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+            let image = info[UIImagePickerControllerEditedImage] as! UIImage
+            sendToCloudSight(image)
+            picker.dismissViewControllerAnimated(true, completion:nil)
+    }
+    
+    func sendToCloudSight(image:UIImage) {
+        let resizedImage = image.resizedImageWithContentMode(.ScaleAspectFill, bounds: CGSizeMake(1024, 1024), interpolationQuality: .Default)
+        let data = UIImageJPEGRepresentation(resizedImage, 0.7)
+        query = CloudSightQuery(image: data, atLocation: CGPointMake(0.5, 0.5), withDelegate: self, atPlacemark: nil, withDeviceId: String(UIDevice.currentDevice().identifierForVendor))
+        query?.start()
+        progressDialog = MBProgressHUD.showHUDAddedTo(topView, animated: true)
+        progressDialog!.labelText = "Please be patient..."
+        progressDialog!.show(true)
+    }
+    
+    func cloudSightQueryDidFail(query: CloudSightQuery!, withError error: NSError!) {
+        dispatch_async(dispatch_get_main_queue()) {
+            self.progressDialog?.hide(true)
+            self.progressDialog = nil
+            self.showNonIdentifiedFoodDialog()
+        }
+     }
+    
+    func cloudSightQueryDidFinishIdentifying(query: CloudSightQuery!) {
+        dispatch_async(dispatch_get_main_queue()) {
+            self.progressDialog?.hide(true)
+            self.progressDialog = nil
+            
+            let matchedFood = matchFood(query.title)
+            if (!matchedFood.isEmpty) {
+                for food in matchedFood {
+                    self.appendFood(food.name)
+                }
+            } else {
+                self.showNonIdentifiedFoodDialog()
+            }
+
+        }
+        
+        
+    }
+
+    func showNonIdentifiedFoodDialog() {
+        let alertDialog = UIAlertView(title: "Sorry!",
+            message: "We could not identify any food.",
+            delegate: nil,
+            cancelButtonTitle: "OK")
+        alertDialog.show()
+    }
+
 }

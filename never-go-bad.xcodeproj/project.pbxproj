@@ -14,6 +14,7 @@
 		996A56A31C8D3E3B009F94FA /* BarcodeDetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A56A21C8D3E3B009F94FA /* BarcodeDetectorViewController.swift */; };
 		996A56A51C8D3E58009F94FA /* BarcodeDetector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 996A56A41C8D3E58009F94FA /* BarcodeDetector.storyboard */; };
 		996A56A81C8D3FA8009F94FA /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A56A71C8D3FA8009F94FA /* StringExtensions.swift */; };
+		996A56AA1C8D6FF0009F94FA /* FoodMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A56A91C8D6FF0009F94FA /* FoodMatcher.swift */; };
 		AD2F00B41C854603006E66DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00B31C854603006E66DA /* AppDelegate.swift */; };
 		AD2F00B61C854603006E66DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00B51C854603006E66DA /* ViewController.swift */; };
 		AD2F00BB1C854603006E66DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD2F00BA1C854603006E66DA /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		996A56A21C8D3E3B009F94FA /* BarcodeDetectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeDetectorViewController.swift; sourceTree = "<group>"; };
 		996A56A41C8D3E58009F94FA /* BarcodeDetector.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BarcodeDetector.storyboard; sourceTree = "<group>"; };
 		996A56A71C8D3FA8009F94FA /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		996A56A91C8D6FF0009F94FA /* FoodMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMatcher.swift; sourceTree = "<group>"; };
 		AD2F00B01C854603006E66DA /* never-go-bad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "never-go-bad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2F00B31C854603006E66DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD2F00B51C854603006E66DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		AD483A0B1C86DAFF000303C2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				996A56A91C8D6FF0009F94FA /* FoodMatcher.swift */,
 				996A56A01C8D3BEB009F94FA /* BarcodeResult.swift */,
 				AD483A0D1C86DB56000303C2 /* Food.swift */,
 				AD483A1B1C8838DD000303C2 /* FoodInput.swift */,
@@ -455,6 +458,7 @@
 				AD483A0E1C86DB56000303C2 /* Food.swift in Sources */,
 				AD483A1C1C8838DD000303C2 /* FoodInput.swift in Sources */,
 				996A569F1C8D3BC4009F94FA /* BarcodeService.swift in Sources */,
+				996A56AA1C8D6FF0009F94FA /* FoodMatcher.swift in Sources */,
 				84D924541C8ADF210049D09C /* FoodService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
