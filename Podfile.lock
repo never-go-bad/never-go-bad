@@ -17,24 +17,49 @@ PODS:
     - AFNetworking/NSURLSession
   - BDBOAuth1Manager (2.0.0):
     - AFNetworking/NSURLSession (~> 3.0.0)
+  - BFOAuth (1.0.1)
   - Bolts/Tasks (1.6.0)
+  - CloudSight (1.0.3):
+    - BFOAuth (~> 1.0)
+    - RequestUtils (~> 1.1)
+  - ELCodable (0.0.1)
   - MBProgressHUD (0.9.2)
   - Parse (1.12.0):
     - Bolts/Tasks (~> 1.5)
+  - RequestUtils (1.1.2)
+  - UIImage-Categories (1.0.0)
 
 DEPENDENCIES:
   - AFDateHelper
   - AFNetworking
   - BDBOAuth1Manager
+  - CloudSight
+  - ELCodable (from `https://github.com/aoriani/ELCodable.git`, commit `a5ae19f7cabb0b078fd47e0e969077711e13f12d`)
   - MBProgressHUD
   - Parse
+  - UIImage-Categories
+
+EXTERNAL SOURCES:
+  ELCodable:
+    :commit: a5ae19f7cabb0b078fd47e0e969077711e13f12d
+    :git: https://github.com/aoriani/ELCodable.git
+
+CHECKOUT OPTIONS:
+  ELCodable:
+    :commit: a5ae19f7cabb0b078fd47e0e969077711e13f12d
+    :git: https://github.com/aoriani/ELCodable.git
 
 SPEC CHECKSUMS:
   AFDateHelper: 22d6439a3529a144c89b7e6aa214ebbe4d5c2337
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   BDBOAuth1Manager: 92d17d06f8a648602962304cd2f35ae7394fa001
+  BFOAuth: e3c2e4eaae862a89bc301ed6f292d3cd0d6a107b
   Bolts: f52a250053bb517ca874523c3913776359ab3def
+  CloudSight: 7974bacb22ec2db1bfb0f0242d9be7f442a78d77
+  ELCodable: cf628dcbac2398935b0081c6fe4fa3e25594e5c9
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
+  RequestUtils: 0f04f89abca3936c6566e2f4c3ce5d252036bc89
+  UIImage-Categories: a0593f6a7991c99016b9ecadfbd38b3717ff1a73
 
 COCOAPODS: 0.39.0

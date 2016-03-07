@@ -22,7 +22,7 @@ class NotificationService : NSObject {
         let now = NSDate()
         
         // We want to alert 3 days before the expiration date
-        var alertDate = foodItem.expireDate.dateByAddingTimeInterval(NSTimeInterval(-259200)) // Seconds for 3 days
+        let alertDate = foodItem.expireDate.dateByAddingTimeInterval(NSTimeInterval(-259200)) // Seconds for 3 days
        
         let secondsFromNowToAlert =  now.secondsBeforeDate(alertDate)
        

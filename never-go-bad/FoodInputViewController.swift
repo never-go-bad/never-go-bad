@@ -74,7 +74,7 @@ class FoodInputViewController: UIViewController,
         
         var foods: [Food] = []
         for input in foodInputs{
-            var food = input.toFood()
+            let food = input.toFood()
             foods.append(food)
             NotificationService.registerForExpiryAlert(food)
         }

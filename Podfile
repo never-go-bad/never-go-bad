@@ -7,8 +7,12 @@ target 'never-go-bad' do
 	pod "AFNetworking"
 	pod "BDBOAuth1Manager"
 	pod "MBProgressHUD"
-    pod 'Parse'
-    pod "AFDateHelper"
+	pod 'Parse'
+	pod "AFDateHelper"
+	pod 'ELCodable' , :git => 'https://github.com/aoriani/ELCodable.git', :commit => 'a5ae19f7cabb0b078fd47e0e969077711e13f12d'
+	pod 'BDBOAuth1Manager'
+	pod "CloudSight"
+	pod "UIImage-Categories"
 end
 
 target 'never-go-badTests' do
