@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class FoodInputViewController: UIViewController,
-    UITableViewDelegate, UITableViewDataSource {
+    UITableViewDelegate, UITableViewDataSource, BarcodeDelegate {
 
+    @IBOutlet var topView: UIView!
     @IBOutlet weak var tableView: UITableView!
     var foodInputs: [FoodInput] = []
     
@@ -63,9 +65,14 @@ class FoodInputViewController: UIViewController,
             return cell
         }
     }
-    @IBAction func touchAddItemManually(sender: AnyObject) {
-        foodInputs.append(FoodInput(name: "", daysLeft: 1, quantityType: QuantityType.unit, quantity: 1))
+    
+    func appendFood(foodName:String) {
+        foodInputs.append(FoodInput(name: foodName, daysLeft: 1, quantityType: QuantityType.unit, quantity: 1))
         tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: foodInputs.count - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Bottom)
+    }
+    
+    @IBAction func touchAddItemManually(sender: AnyObject) {
+        appendFood("")
     }
 
     @IBAction func onConfirmButton(sender: UIBarButtonItem) {
@@ -84,14 +91,29 @@ class FoodInputViewController: UIViewController,
         self.navigationController?.popViewControllerAnimated(true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func onDidTapBarcodeButton(sender: AnyObject) {
+        let storyBoard = UIStoryboard(name: "BarcodeDetector", bundle: nil)
+        let barcodePresenter = storyBoard.instantiateViewControllerWithIdentifier(BarcodeDetectorViewController.storyBoardId) as! BarcodeDetectorViewController
+        barcodePresenter.delegate = self
+        presentViewController(barcodePresenter, animated: true, completion: nil)
     }
-    */
+    
+    func onBarcodeDetected(barcode barcode: String) {
+        let progress = MBProgressHUD.showHUDAddedTo(topView, animated: true)
+        progress.labelText = "searching food..."
+        progress.show(true)
+        
+        let productFoundClosure: (BarcodeResult) -> Void = {
+            barcodeResult in
+            if (!barcodeResult.response.data.isEmpty) {
+                let foodName = barcodeResult.response.data[0].brand! + " " + barcodeResult.response.data[0].product_name!
+                self.appendFood(foodName)
+            }
+            progress.hide(true)
+        }
+        
+        BarcodeService.sharedInstance.getByUPC(barcode, onSuccess: productFoundClosure, onError: {progress.hide(true)})
 
+    }
+   
 }

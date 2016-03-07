@@ -11,7 +11,7 @@ import AVFoundation
 
 
 protocol BarcodeDelegate {
-    func barcodeController(onBarcodeDetected: String)
+    func onBarcodeDetected(barcode barcode: String)
 }
 
 class BarcodeDetectorViewController: UIViewController,  AVCaptureMetadataOutputObjectsDelegate {
@@ -80,7 +80,13 @@ class BarcodeDetectorViewController: UIViewController,  AVCaptureMetadataOutputO
         captureSession?.stopRunning()
         dismissViewControllerAnimated(true, completion: nil)
         let barcode = String(metadataObject.stringValue.characters.dropFirst())
-        delegate?.barcodeController(barcode)
+        delegate?.onBarcodeDetected(barcode: barcode)
+    }
+    
+    @IBAction func onDidTapCancelButton(sender: AnyObject) {
+        captureSession?.stopRunning()
+        dismissViewControllerAnimated(true, completion: nil)
+        //delegate?.barcodeController(true)
     }
     
 }

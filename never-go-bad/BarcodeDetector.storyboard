@@ -25,6 +25,9 @@
                                 <items>
                                     <barButtonItem title="Cancel" id="0n5-ii-m3V">
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="onDidTapCancelButton:" destination="HM6-F2-Yus" id="xgx-xj-acP"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
