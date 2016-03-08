@@ -267,6 +267,7 @@
 				AD2F00AE1C854603006E66DA /* Resources */,
 				2E9D2528807D960761A77454 /* Embed Pods Frameworks */,
 				49DF5F1A52D0D27248A0CF11 /* Copy Pods Resources */,
+				99FD1E881C8EB0FB009F98CB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -435,6 +436,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-never-go-bad/Pods-never-go-bad-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		99FD1E881C8EB0FB009F98CB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 10c4775730862d0345b14022272bab5bec9df47c 17dd90108fd247f311680d30d41a56d3f35aef40447c63dac5bbec0f91586540";
 		};
 /* End PBXShellScriptBuildPhase section */
 

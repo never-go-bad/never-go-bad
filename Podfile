@@ -13,6 +13,8 @@ target 'never-go-bad' do
 	pod 'BDBOAuth1Manager'
 	pod "CloudSight"
 	pod "UIImage-Categories"
+	pod 'Fabric'
+	pod 'Crashlytics'
 end
 
 target 'never-go-badTests' do

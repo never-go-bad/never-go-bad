@@ -8,6 +8,8 @@
 
 import UIKit
 import Parse
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        Fabric.with([Crashlytics.self])
 
 		Parse.setApplicationId("wNe6DP9lMT96m6TyB39b6x4X8t7z2Tr0nF5RpzH9", clientKey: "4I0keAG1YufRXDUhGXbFPxlLTxM67NjX0Sx54AJ8")
 
