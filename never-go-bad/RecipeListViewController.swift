@@ -31,15 +31,17 @@ class RecipeListViewController: UIViewController, UIWebViewDelegate {
     }
     
     func loadRecipe() {
-        let foods = FoodList.getCurrentFoods().sort { (f1, f2) -> Bool in
-            return f1.expireDate.timeIntervalSinceReferenceDate < f2.expireDate.timeIntervalSinceReferenceDate
+        FoodService.get { (foodItems) -> () in
+            let foods = foodItems.sort { (f1, f2) -> Bool in
+                return f1.expireDate.timeIntervalSinceReferenceDate < f2.expireDate.timeIntervalSinceReferenceDate
+            }
+            let baseUrl = "http://www.epicurious.com/tools/searchresults?type=simple&search="
+            let num = foods.count < 2 ? foods.count : 2
+            let foodsStr = foods[0..<num].map { (food) -> String in
+                food.name
+                }.joinWithSeparator(" ").stringByReplacingOccurrencesOfString(" ", withString: "+")
+            self.webView.loadRequest(NSURLRequest(URL: NSURL(string: baseUrl + foodsStr)!))
         }
-        let baseUrl = "http://www.epicurious.com/tools/searchresults?type=simple&search="
-        let num = foods.count < 2 ? foods.count : 2
-        let foodsStr = foods[0..<num].map { (food) -> String in
-            food.name
-            }.joinWithSeparator(" ").stringByReplacingOccurrencesOfString(" ", withString: "+")
-        webView.loadRequest(NSURLRequest(URL: NSURL(string: baseUrl + foodsStr)!))
     }
 
     var loadingFrameCount = 0
