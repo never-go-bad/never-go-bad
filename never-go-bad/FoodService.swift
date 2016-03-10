@@ -40,7 +40,7 @@ class FoodService {
     class func delete(completion: (foods: [Food]) -> ()) -> Void {
         
         let query = PFQuery(className: "FoodItem")
-        query.whereKey("name", equalTo: "apples")
+       // query.whereKey("Consumed", equalTo: true)
         query.findObjectsInBackgroundWithBlock {
             (objects: [PFObject]?, error: NSError?) -> Void in
             for object in objects! {

@@ -12,10 +12,11 @@ import AFDateHelper
 
 class NotificationService : NSObject {
     
-    class func registerForNotifications(){
-        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
-        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
-    }
+//    class func registerForNotifications(){
+//        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+//        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+//        
+//    }
 
     class func registerForExpiryAlert(foodItem: Food) -> Void {
        
@@ -36,10 +37,11 @@ class NotificationService : NSObject {
 		localNotif.alertBody = "Your \(foodItem.name) is about to expire"
 		localNotif.alertAction = "Report Consumption"
 		localNotif.hasAction = true
-        localNotif.fireDate = NSDate(timeIntervalSinceNow: NSTimeInterval(secondsFromNowToAlert))
+        localNotif.fireDate = NSDate(timeInterval: 10, sinceDate:alertDate )//NSDate(timeIntervalSinceNow: NSTimeInterval(secondsFromNowToAlert))
 		localNotif.soundName = UILocalNotificationDefaultSoundName
 		UIApplication.sharedApplication().scheduleLocalNotification(localNotif)
-		NSTimer.scheduledTimerWithTimeInterval(20, target: self, selector: nil, userInfo: nil, repeats: false)
+       // self.navigationController?.popToRootViewControllerAnimated(true)
+		//NSTimer.scheduledTimerWithTimeInterval(20, target: self, selector: nil, userInfo: nil, repeats: false)
 	}
     
 //    func timeout() {

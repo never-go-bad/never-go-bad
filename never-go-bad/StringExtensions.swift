@@ -8,9 +8,6 @@
 
 import Foundation
 
-
-import Foundation
-
 extension String {
     func contains(aString: String) -> Bool {
         return self.lowercaseString.rangeOfString(aString.lowercaseString) != nil

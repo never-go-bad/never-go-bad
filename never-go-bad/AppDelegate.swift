@@ -42,29 +42,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.window?.backgroundColor = UIColor.whiteColor()
 		self.window?.makeKeyAndVisible()
         
-        // Handle any action if the user opens the application throught the notification. i.e., by clicking on the notification when the application is killed/ removed from background.
-        if let aLaunchOptions = launchOptions { // Checking if there are any launch options.
-            // Check if there are any local notification objects.
-            if let notification = (aLaunchOptions as NSDictionary).objectForKey("UIApplicationLaunchOptionsLocalNotificationKey") as? UILocalNotification {
-                // Handle the notification action on opening. Like updating a table or showing an alert.
-                // notification.alertBody
-                UIAlertController(title: notification.alertTitle, message: notification.alertBody,preferredStyle: .ActionSheet)
-
-            }
-        }
+        
+        let myNotificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Sound], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(myNotificationSettings)
+        //        // Handle any action if the user opens the application throught the notification. i.e., by clicking on the notification when the application is killed/ removed from background.
+//        if let aLaunchOptions = launchOptions { // Checking if there are any launch options.
+//            // Check if there are any local notification objects.
+//            if let notification = (aLaunchOptions as NSDictionary).objectForKey("UIApplicationLaunchOptionsLocalNotificationKey") as? UILocalNotification {
+//                // Handle the notification action on opening. Like updating a table or showing an alert.
+//                // notification.alertBody
+//                UIAlertController(title: notification.alertTitle, message: notification.alertBody,preferredStyle: .ActionSheet)
+//
+//            }
+    //}
 
         
 		return true
 	}
     
-    func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
-    {
-        NotificationService.registerForNotifications()
-        
-      
-        return true        
-    }
-    
+//    func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+//    {
+//        NotificationService.registerForNotifications()
+//        
+//      
+//        return true        
+//    }
+//    
 	func applicationWillResignActive(application: UIApplication) {
 		// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
 		// Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

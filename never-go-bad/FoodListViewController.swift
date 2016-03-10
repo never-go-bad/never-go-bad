@@ -34,7 +34,11 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return foods?.count ?? 0
+    }
 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cellIdentifier: String = "FoodListTableViewCell"
@@ -73,6 +77,10 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
             let cellIndexPath: NSIndexPath = tableView.indexPathForCell(cell)!
             foods?.removeAtIndex(cellIndexPath.row)
             self.tableView.deleteRowsAtIndexPaths([cellIndexPath], withRowAnimation: .Automatic)
+            FoodService.delete({ (foods) -> () in
+                self.foods = foods
+                self.tableView.reloadData()
+            })
             print("Consumed Clicked")
         } else if index == 1 {
             let cellIndexPath: NSIndexPath = tableView.indexPathForCell(cell)!
@@ -88,12 +96,6 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
     func swipeableTableViewCellShouldHideUtilityButtonsOnSwipe(cell: SWTableViewCell!) -> Bool {
         return true
     }
-
-
-
-	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return foods?.count ?? 0
-	}
 
 
 	func loadFood() {
