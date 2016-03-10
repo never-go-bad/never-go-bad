@@ -15,7 +15,7 @@ target 'never-go-bad' do
 	pod "UIImage-Categories"
 	pod 'Fabric'
 	pod 'Crashlytics'
-    pod 'MGSwipeTableCell'
+    pod 'SWTableViewCell', '~> 0.3.7'
 end
 
 target 'never-go-badTests' do

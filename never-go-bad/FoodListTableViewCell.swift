@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import MGSwipeTableCell
+import SWTableViewCell
 
-class FoodListTableViewCell: MGSwipeTableCell {
+class FoodListTableViewCell: SWTableViewCell {
 
     @IBOutlet weak var foodNameLabel: UILabel!
     @IBOutlet weak var daysLeftLabel: UILabel!
