@@ -24,7 +24,7 @@ class NotificationService : NSObject {
         // We want to alert 3 days before the expiration date
         let alertDate = foodItem.expireDate.dateByAddingTimeInterval(NSTimeInterval(-259200)) // Seconds for 3 days
        
-        let secondsFromNowToAlert = 2 * 60 //now.secondsBeforeDate(alertDate)
+        let secondsFromNowToAlert = 5 //now.secondsBeforeDate(alertDate)
        
         print(secondsFromNowToAlert)
         
@@ -42,8 +42,8 @@ class NotificationService : NSObject {
 		NSTimer.scheduledTimerWithTimeInterval(20, target: self, selector: nil, userInfo: nil, repeats: false)
 	}
     
-    func timeout() {
-        exit(10)
-    }
-    
+//    func timeout() {
+//        exit(10)
+//    }
+//    
 }

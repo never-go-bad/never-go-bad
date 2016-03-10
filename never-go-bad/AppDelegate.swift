@@ -47,7 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Check if there are any local notification objects.
             if let notification = (aLaunchOptions as NSDictionary).objectForKey("UIApplicationLaunchOptionsLocalNotificationKey") as? UILocalNotification {
                 // Handle the notification action on opening. Like updating a table or showing an alert.
-                UIAlertController(title: notification.alertTitle, message: notification.alertBody, preferredStyle: .ActionSheet)
+                // notification.alertBody
+                UIAlertController(title: notification.alertTitle, message: notification.alertBody,preferredStyle: .ActionSheet)
 
             }
         }
@@ -91,13 +92,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Showing reminder details in an alertview
         
         let alertController = UIAlertController(title: notification.alertTitle, message: notification.alertBody, preferredStyle: .Alert)
-        self.window?.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
         
         //self.window?.rootViewController?
         
         //presentViewController(alertController, animated: true, completion: nil)
         
       //  UIAlertView(title: notification.alertTitle, message: notification.alertBody, delegate: nil, cancelButtonTitle: "OK").show()
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            NSLog("OK Pressed")
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+            UIAlertAction in
+            NSLog("Cancel Pressed")
+        }
+        
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        self.window?.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
         
         print("Received Notification")
     }

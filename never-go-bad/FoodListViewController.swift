@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MGSwipeTableCell
 
-class FoodListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FoodListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MGSwipeTableCellDelegate {
 
     var foods: [Food]?
     @IBOutlet weak var tableView: UITableView!
@@ -41,17 +42,38 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    
+//    
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+//    {
+//        let reuseIdentifier = "FoodListTableViewCell"
+//        var cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier) as! FoodListTableViewCell!
+//        if cell == nil
+//        {
+//            cell = MGSwipeTableCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: reuseIdentifier) as! FoodListTableViewCell
+//        }
+//       cell.delegate = self //optional
+//       cell.food = foods![indexPath.row]
+//       
+//        //configure left buttons
+//        cell.leftButtons = [MGSwipeButton(title: "Delete",  backgroundColor: UIColor.redColor())]
+//        cell.leftSwipeSettings.transition = MGSwipeTransition.Rotate3D
+//        
+//        //configure right buttons
+//        cell.rightButtons = [MGSwipeButton(title: "Consumed", backgroundColor: UIColor.greenColor())
+//            ,MGSwipeButton(title: "Trashed",backgroundColor: UIColor.lightGrayColor())]
+//        cell.rightSwipeSettings.transition = MGSwipeTransition.Rotate3D
+//        
+//
+//        return cell
+//    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foods?.count ?? 0
 
     }
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let trashed = UITableViewRowAction(style: .Normal, title: "Trashed") { action, index in
-            self.foods?.removeAtIndex(indexPath.row)
-            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-        }
-        trashed.backgroundColor = UIColor.lightGrayColor()
         
         let consumed = UITableViewRowAction(style: .Normal, title: "Consumed") { action, index in
             self.foods?.removeAtIndex(indexPath.row)
@@ -59,8 +81,32 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         consumed.backgroundColor = UIColor.greenColor()
         
-        return [consumed, trashed]
+        let trashed = UITableViewRowAction(style: .Normal, title: "Trashed") { action, index in
+            self.foods?.removeAtIndex(indexPath.row)
+            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+        trashed.backgroundColor = UIColor.lightGrayColor()
+        
+        let delete = UITableViewRowAction(style: .Normal, title: "Delete") { action, index in
+            self.foods?.removeAtIndex(indexPath.row)
+            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+        delete.backgroundColor = UIColor.redColor()
+        
+        return [consumed, trashed, delete]
+        
+        
+        
     }
+  
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+
     
     func loadFood() {
         FoodService.get { (foodItems) -> () in
@@ -68,6 +114,23 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
             self.tableView.reloadData()
         }
     }
+    
+    
+//    func deleteFood(indexPath: NSIndexPath) {
+//        FoodService.
+//        
+//    }
+    
+    func consumed(indexPath: NSIndexPath) {
+        foods?.removeAtIndex(indexPath.row)
+        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
+    }
+    
+    func trashed(indexPath: NSIndexPath) {
+        foods?.removeAtIndex(indexPath.row)
+        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
+    }
+    
     
     
     /*
