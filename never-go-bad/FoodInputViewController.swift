@@ -98,6 +98,7 @@ class FoodInputViewController: UIViewController,
         }
         
         FoodService.save(foods)
+        tableView.reloadData()
         
         self.navigationController?.popViewControllerAnimated(true)
     }

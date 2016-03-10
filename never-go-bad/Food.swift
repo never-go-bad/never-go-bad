@@ -9,16 +9,24 @@
 import UIKit
 
 class Food: NSObject {
+    var objectId: String
     var name: String
     var expireDate: NSDate
     var quantityType: QuantityType
     var quantity: Float
+    
+    convenience init(objectId: String, name: String, expireDate: NSDate, quantityType: QuantityType, quantity: Float){
+        self.init(name: name, expireDate: expireDate, quantityType: quantityType, quantity: quantity)
+        self.objectId = objectId
+    }
+
     
     init(name: String, expireDate: NSDate, quantityType: QuantityType, quantity: Float) {
         self.name = name
         self.expireDate = expireDate
         self.quantityType = quantityType
         self.quantity = quantity
+        self.objectId = ""
     }
     
     func daysLeft() -> Int {
