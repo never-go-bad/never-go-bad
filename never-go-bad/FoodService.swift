@@ -13,6 +13,8 @@ class FoodService {
 
 	class func save(foodItems: [Food]) -> Bool
 	{
+        let installation = PFInstallation.currentInstallation()
+        
 		for item in foodItems {
 			let foodItem = PFObject(className: "FoodItem")
 			foodItem["objectId"] = item.objectId
@@ -20,7 +22,7 @@ class FoodService {
 			foodItem["expirationDate"] = item.expireDate
 			foodItem["quantityType"] = String(item.quantityType)
 			foodItem["quantity"] = item.quantity
-			// foodItem["daysLeft"]
+			foodItem["installationId"] = installation
 
 			foodItem.saveInBackgroundWithBlock { (successful, error) -> Void in
 				if successful
@@ -49,10 +51,11 @@ class FoodService {
 	}
 
 	class func get(completion: (foods: [Food]) -> ()) -> Void {
-
+        
 		let query = PFQuery(className: "FoodItem")
-		// query.whereKey("playerName", equalTo:"Sean Plott")
-		query.findObjectsInBackgroundWithBlock {
+		query.whereKey("installationId", equalTo:PFInstallation.currentInstallation())
+		
+        query.findObjectsInBackgroundWithBlock {
 			(objects: [PFObject]?, error: NSError?) -> Void in
 
 			if error == nil {
