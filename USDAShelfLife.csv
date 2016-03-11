@@ -1,0 +1,223 @@
+FoodItemName,ShelfLife
+Butter,2 Months
+Buttermilk,2 Weeks
+Hard Cheese,6 Months
+Soft Cheese,1 Month
+Coffee Creamer,3 Weeks
+Cottage cheese,2 Weeks
+Cream,2 Weeks
+Dips,2 Weeks
+Egg substitutes,1 Week
+Eggs,5 Weeks
+Kefir,1 Week
+Margarine,6 Months
+Milk,1 Week
+Pudding,3 Weeks
+Sour cream,4 Weeks
+Whipped cream,4 Weeks
+Yogurt,2 Weeks
+Beef,5 Days
+Lamb,5 Days
+Veal,5 Days
+Pork,5 Days
+Goat,5 Days
+Pork,5 Days
+Venison,5 Days
+Variety meats,2 Days
+Goat,2 Days
+Bacon,1 Week
+Corned beef,1 Week
+Ham,1 Week
+Hot dogs,2 Weeks
+Sausage,1 Week
+"Stuffed, raw pork chops",2 Days
+Kabobs,2 Days
+Jerky,2 Months
+Chicken,2 Days
+Turkey,2 Days
+Duckling,2 Days
+Goose,2 Days
+Pheasant,2 Days
+Quail,2 Days
+Capon,2 Days
+Cornish Hens,2 Days
+Giblets,2 Days
+Chicken nuggets,4 Days
+Fried chicken,4 Days
+Rotisserie chicken,4 Days
+Fish,4 Days
+Scallops,3 Days
+"Shrimp, crayfish",3 Days
+Squid,3 Days
+"Shucked clams, mussels, and oysters",3 Days
+Crab meat,10 Days
+Herring,
+Tofu,6 Months
+Miso,1 Week
+Soy flour,1 Year
+Leftovers,4 Days
+Dinners,2 Weeks
+Guacamole,4 Days
+Hummus,7 Days
+Olives,3 Months
+Salads,5 Days
+"Soup, stews",4 Days
+Casseroles,4 Days
+Bread,3 Weeks
+Tortillas,3 Months
+Commercial cakes and muffins,10 Days
+Cheesecake,7 days
+Cookies,3 Days
+Doughnuts,2 Days
+Fruit cake,1 Month
+"Pastries, danish",12 Months
+Pies,4 Days
+Quiche,5 Days
+Baking powder,3 Months
+Baking soda,3 Months
+Biscuit or pancake mix,2 Months
+"Cake, brownie, bread mixes",2 Months
+Chocolate,3 Months
+Cocoa,3 Months
+Cornmeal,4 Months
+Cornstarch,1 Month
+Extracts,4 Months
+Flour,1 Year
+Flour,8 Months
+Frosting or icing,3 Weeks
+Gelatin,1 Month
+Oils,4 Months
+Tamarind paste,3 Months
+Chili powder,3 Months
+Seasoning blends,2 Months
+Flavored or herb mixes,2 Months
+Garlic,1 Month
+Herbs,6 Months
+Spice,6 Months
+Sugar,6 Months
+Tube cans,1 Month
+Apple,6 Days
+Apricots,1 Week
+Avocados,3 Days
+Bananas,1 Week
+Berries,7 Days
+Blueberries,10 Days
+Citrus fruit,3 Weeks
+Coconut,3 Weeks
+Cranberries,2 Months
+Dates,12 Months
+Grapes,1 Week
+Guava,4 Days
+Kiwi fruit,6 Days
+Melons,6 Days
+"Papaya, mango, feijoa, passionfruit, casaha melon",2 Weeks
+"Peaches, nectarines, plums, pears, sapote",1 Week
+Pineapple,7 Days
+Plantains,5 Days
+Pomegranate,1 Month
+"Artichokes, whole",2 Weeks
+Asparagus,4 Days
+Bamboo shoots,2 Weeks
+Beans and peas,5 Days
+Beets,2 Weeks
+Bok choy,3 Days
+Broccoli and broccoli raab (rapini),5 Days
+Brussels sprouts,5 Days
+Cabbage,2 Weeks
+"Carrots, parsnips",3 Weeks
+Cauliflower,5 Days
+Celery,2 Weeks
+Corn on the cob,2 Days
+Cucumbers,6 Days
+Eggplant,7 Days
+Garlic,14 Days
+Ginger root,3 Weeks
+Greens,4 Days
+Herbs,10 Days
+Leeks,2 Weeks
+Lettuce,2 Weeks
+Lettuce,7 Days
+Mushrooms,7 Days
+Okra,3 Days
+Onions,2 Months
+Spring Onions,1 Week
+Peppers,14 Days
+Potatoes,2 Weeks
+Pumpkins,5 Months
+Radishes,14 Days
+Rhubarb,7 Days
+Rutabagas,3 Weeks
+Squash,5 Days
+Winter Squash,3 Months
+Tamarind,3 Months
+Taro,3 Days
+Tomatoes,6 Days
+Turnips,2 Weeks
+Yuca/cassava,3 Days
+Ice cream,4 Months
+Ice pops,10 Days
+Juice concentrates,1 Month
+Pancakes,2 Days
+Waffles, 2 Days
+Sausages,2 Days
+"Sherbet, sorbet",2 Days
+"Shrimp, shellfish",2 Days
+Soy crumbles and hot dogs,4 Days
+Soy meat substitutes,4 Days
+Tempeh,2 Weeks
+Vegetables,4 Days
+Beans,2 Months
+Lentils,2 Months
+Pasta,2 Months
+Dry egg noodles,3 Months
+Peas,6 Months
+Rice,6 Months
+Rice,6 Months
+Barbecue sauce,4 Months
+Chutney,2 Months
+"Cream sauces, milk solids",1 Month
+Dry gravy mixes,1 Week
+Gravy,2 Days
+Honey,2 Months
+Horseradish,3 Months
+"Jams, jellies, and preserves",12 Months
+"Ketchup, cocktail, or chili sauce",6 Months
+Marinades,6 Months
+Mayonnaise,2 Months
+Mustard,1 Year
+Olives,2 Weeks
+Pickles,3 Months
+Pesto,3 Days
+Salad dressings,3 Months
+Salsa,1 Month
+Sauce mixes,1 Month
+Spaghetti sauce,4 Days
+Soy sauce or teriyaki sauce,1 Month
+Vinegar,3 Months
+Fruit,3 Days
+Vegetables,2 Days
+Dinners,2 Days
+Applesauce,10 Days
+Canned goods,4 Days
+Canned goods,7 Days
+Cereal,6 Months
+Chocolate syrup,6 Months
+Crackers,4 Months
+Graham cracker/animal cracker,2 Months
+Dried Fruits ,6 Months
+Gummy (fruit) snacks,6 Months
+Marshmallows,7 Months
+Milk,5 Days
+Mushrooms,1 Week
+Nuts,6 Months
+Peanut butter,6 Months
+Popcorn,2 Months
+Popcorn,6 Months
+Potato chips,6 Months
+Pretzels,6 Months
+Pudding mixes,2 Months
+Sun dried tomatoes,6 Months
+Syrup,6 Months
+Coffee,1 Year
+Fruit Juices,12 Days
+Tea,3 Months

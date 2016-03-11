@@ -83,7 +83,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
             })
 			foods?.removeAtIndex(cellIndexPath.row)
 			self.tableView.deleteRowsAtIndexPaths([cellIndexPath], withRowAnimation: .Automatic)
-			print("Consumed Clicked")
+//			print("Consumed Clicked")
          
         
 		} else if index == 1 {
@@ -95,8 +95,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
             })
 			foods?.removeAtIndex(cellIndexPath.row)
 			self.tableView.deleteRowsAtIndexPaths([cellIndexPath], withRowAnimation: .Automatic)
-			print("Trashed Clicked")
-           
+//			print("Trashed Clicked")           
 		}
 	}
 
