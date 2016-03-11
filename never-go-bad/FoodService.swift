@@ -23,6 +23,8 @@ class FoodService {
 			foodItem["quantityType"] = String(item.quantityType)
 			foodItem["quantity"] = item.quantity
 			foodItem["installationId"] = installation
+            foodItem["consumed"] = false
+            foodItem["trashed"] = false
 
 			foodItem.saveInBackgroundWithBlock { (successful, error) -> Void in
 				if successful
@@ -38,6 +40,37 @@ class FoodService {
 
 		return true
 	}
+    
+    class func setConsumed(food: Food, completion: () -> ()) -> Void {
+        let query = PFQuery(className: "FoodItem")
+         query.getObjectInBackgroundWithId(food.objectId) {
+            (object, error) -> Void in
+            if error != nil {
+                print(error)
+            } else {
+                if let object = object {
+                    object["consumed"] = true as Bool
+                }
+                object!.saveInBackground()
+            }
+        }}
+    
+    class func setTrashed(food: Food, completion: () -> ()) -> Void {
+        let query = PFQuery(className: "FoodItem")
+        query.getObjectInBackgroundWithId(food.objectId) {
+            (object, error) -> Void in
+            if error != nil {
+                print(error)
+            } else {
+                if let object = object {
+                    object["trashed"] = true as Bool
+                }
+                object!.saveInBackground()
+            }
+        }}
+    
+    
+
 
 	class func delete(food: Food, completion: () -> ()) -> Void {
 		let query = PFQuery(className: "FoodItem")
@@ -48,13 +81,14 @@ class FoodService {
 				object!.deleteInBackground()
 			}
 		}
-	}
+    }
 
 	class func get(completion: (foods: [Food]) -> ()) -> Void {
         
 		let query = PFQuery(className: "FoodItem")
 		query.whereKey("installationId", equalTo:PFInstallation.currentInstallation())
-		
+		query.whereKey("consumed", equalTo: false)
+        query.whereKey("trashed", equalTo: false)
         query.findObjectsInBackgroundWithBlock {
 			(objects: [PFObject]?, error: NSError?) -> Void in
 
@@ -75,7 +109,9 @@ class FoodService {
 							name: (object["name"] as? String)!,
 							expireDate: (object["expirationDate"] as? NSDate)!,
 							quantityType: QuantityType.unit,
-							quantity: (object["quantity"] as? Float)!)
+							quantity: (object["quantity"] as? Float)!,
+                            consumed: (object["consumed"] as? Bool)!,
+                            trashed: (object["trashed"] as? Bool)!)
 
 						foodItems.append(food)
 					}

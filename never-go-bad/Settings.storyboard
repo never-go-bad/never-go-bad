@@ -35,15 +35,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lMJ-8i-82s">
-                                <rect key="frame" x="201" y="116" width="67" height="142"/>
-                            </pickerView>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kom-1M-Uor">
                                 <rect key="frame" x="210" y="273" width="97" height="34"/>
                                 <date key="date" timeIntervalSinceReferenceDate="479348415.10037899">
                                     <!--2016-03-11 00:20:15 +0000-->
                                 </date>
                             </datePicker>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lMJ-8i-82s">
+                                <rect key="frame" x="201" y="116" width="67" height="142"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

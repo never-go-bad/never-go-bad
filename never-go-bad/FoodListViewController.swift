@@ -76,14 +76,27 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 	func swipeableTableViewCell(cell: SWTableViewCell!, didTriggerRightUtilityButtonWithIndex index: Int) {
 		if index == 0 {
 			let cellIndexPath: NSIndexPath = tableView.indexPathForCell(cell)!
+            let foodConsumed = foods?[cellIndexPath.row]
+            foodConsumed?.consumed = true
+            FoodService.setConsumed(foodConsumed!, completion: { () -> () in
+            self.tableView.reloadData()
+            })
 			foods?.removeAtIndex(cellIndexPath.row)
 			self.tableView.deleteRowsAtIndexPaths([cellIndexPath], withRowAnimation: .Automatic)
 			print("Consumed Clicked")
+         
+        
 		} else if index == 1 {
 			let cellIndexPath: NSIndexPath = tableView.indexPathForCell(cell)!
+            let foodTrashed = foods?[cellIndexPath.row]
+            foodTrashed?.consumed = true
+            FoodService.setTrashed(foodTrashed!, completion: { () -> () in
+                self.tableView.reloadData()
+            })
 			foods?.removeAtIndex(cellIndexPath.row)
 			self.tableView.deleteRowsAtIndexPaths([cellIndexPath], withRowAnimation: .Automatic)
 			print("Trashed Clicked")
+           
 		}
 	}
 
@@ -110,13 +123,16 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 	}
 
 	func consumed(indexPath: NSIndexPath) {
-		foods?.removeAtIndex(indexPath.row)
-		tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
-	}
+//		foods?.removeAtIndex(indexPath.row)
+//		tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
+        
+    }
 
 	func trashed(indexPath: NSIndexPath) {
-		foods?.removeAtIndex(indexPath.row)
-		tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
+//		foods?.removeAtIndex(indexPath.row)
+//		tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
+//        let foodTrashed = foods![indexPath.row]
+//        foodTrashed.trashed = true
 	}
 
 	/*

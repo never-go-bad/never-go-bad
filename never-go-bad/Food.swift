@@ -14,10 +14,14 @@ class Food: NSObject {
     var expireDate: NSDate
     var quantityType: QuantityType
     var quantity: Float
+    var consumed: Bool
+    var trashed: Bool
     
-    convenience init(objectId: String, name: String, expireDate: NSDate, quantityType: QuantityType, quantity: Float){
+    convenience init(objectId: String, name: String, expireDate: NSDate, quantityType: QuantityType, quantity: Float, consumed: Bool, trashed: Bool){
         self.init(name: name, expireDate: expireDate, quantityType: quantityType, quantity: quantity)
         self.objectId = objectId
+        self.consumed = consumed
+        self.trashed = trashed
     }
 
     
@@ -27,6 +31,8 @@ class Food: NSObject {
         self.quantityType = quantityType
         self.quantity = quantity
         self.objectId = ""
+        self.consumed = false
+        self.trashed = false
     }
     
     func daysLeft() -> Int {
