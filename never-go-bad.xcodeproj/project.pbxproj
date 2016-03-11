@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		84D924541C8ADF210049D09C /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D924531C8ADF210049D09C /* FoodService.swift */; };
 		84D924561C8CE2360049D09C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D924551C8CE2360049D09C /* NotificationService.swift */; };
+		84E90C471C92731F003FC83E /* USDAShelfLife.csv in Resources */ = {isa = PBXBuildFile; fileRef = 84E90C461C92731F003FC83E /* USDAShelfLife.csv */; };
 		996A569F1C8D3BC4009F94FA /* BarcodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A569E1C8D3BC4009F94FA /* BarcodeService.swift */; };
 		996A56A11C8D3BEB009F94FA /* BarcodeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A56A01C8D3BEB009F94FA /* BarcodeResult.swift */; };
 		996A56A31C8D3E3B009F94FA /* BarcodeDetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A56A21C8D3E3B009F94FA /* BarcodeDetectorViewController.swift */; };
@@ -60,6 +61,7 @@
 		84D924531C8ADF210049D09C /* FoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodService.swift; sourceTree = "<group>"; };
 		84D924551C8CE2360049D09C /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		84D924621C915D470049D09C /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
+		84E90C461C92731F003FC83E /* USDAShelfLife.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = USDAShelfLife.csv; path = ../../../Desktop/USDAShelfLife.csv; sourceTree = "<group>"; };
 		996A569E1C8D3BC4009F94FA /* BarcodeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
 		996A56A01C8D3BEB009F94FA /* BarcodeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeResult.swift; sourceTree = "<group>"; };
 		996A56A21C8D3E3B009F94FA /* BarcodeDetectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeDetectorViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		AD2F00B21C854603006E66DA /* never-go-bad */ = {
 			isa = PBXGroup;
 			children = (
+				84E90C461C92731F003FC83E /* USDAShelfLife.csv */,
 				84D924621C915D470049D09C /* Bridging-Header.h */,
 				996A56A61C8D3F99009F94FA /* Extensions */,
 				84D924521C8ADEFF0049D09C /* Services */,
@@ -373,6 +376,7 @@
 				AD483A1F1C897948000303C2 /* FoodList.storyboard in Resources */,
 				AD483A271C897DB1000303C2 /* Main.storyboard in Resources */,
 				AD483A211C897957000303C2 /* Recipe.storyboard in Resources */,
+				84E90C471C92731F003FC83E /* USDAShelfLife.csv in Resources */,
 				AD2F00BB1C854603006E66DA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
