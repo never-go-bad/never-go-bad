@@ -29,11 +29,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="Kom-1M-Uor">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="Kom-1M-Uor">
                                 <rect key="frame" x="82" y="350" width="157" height="51"/>
                                 <date key="date" timeIntervalSinceReferenceDate="479348415.10037899">
                                     <!--2016-03-11 00:20:15 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="timePickerComplete:" destination="aAu-F2-kuw" eventType="valueChanged" id="Wl9-Py-gXr"/>
+                                </connections>
                             </datePicker>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lMJ-8i-82s">
                                 <rect key="frame" x="87" y="101" width="105" height="180"/>

@@ -99,7 +99,7 @@ class FoodInputViewController: UIViewController,
             let food = input.toFood()
             foods.append(food)
             print(defaults.integerForKey("daysBeforeToFire"))
-            NotificationService.registerForExpiryAlert(food, daysBeforeToFire: defaults.integerForKey("daysBeforeToFire"))
+            NotificationService.registerForExpiryAlert(food, daysBeforeToFire: defaults.integerForKey("daysBeforeToFire"), timeToFire: defaults.objectForKey("timeToAlert") as! NSDate)
         }
         
         FoodService.save(foods)

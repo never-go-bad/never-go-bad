@@ -18,16 +18,25 @@ class NotificationService : NSObject {
 //        
 //    }
 
-    class func registerForExpiryAlert(foodItem: Food, daysBeforeToFire: Int) -> Void {
+    class func registerForExpiryAlert(foodItem: Food, daysBeforeToFire: Int, timeToFire: NSDate) -> Void {
        
         let now = NSDate()
-        let timeIntervalInSeconds = NSTimeInterval(daysBeforeToFire * -86400)
+        var fireDate = foodItem.expireDate.dateBySubtractingHours(daysBeforeToFire * 24 )
+        //fireDate.d
+        print(foodItem.expireDate)
+        print(fireDate)
+        print(timeToFire.hour())
+        print(timeToFire.minute())
+        fireDate = fireDate.dateByAddingHours(timeToFire.hour())
+        fireDate = fireDate.dateByAddingMinutes(timeToFire.minute())
+        print(fireDate)
+        //var dateComponents: NSDateComponents = NSDateComponents()
         
         // We want to alert 3 days before the expiration date
-        let alertDate = foodItem.expireDate.dateByAddingTimeInterval(timeIntervalInSeconds) // Seconds for 3 days
+    //    let alertDate = foodItem.expireDate.dateByAddingTimeInterval(timeIntervalInSeconds) // Seconds for 3 days
         print("daysBeforeToFire \(daysBeforeToFire)")
         print("expireDate \(foodItem.expireDate)")
-        print("alertDate \(alertDate)")
+      //  print("alertDate \(alertDate)")
         let secondsFromNowToAlert = 5 //now.secondsBeforeDate(alertDate)
         
         print(secondsFromNowToAlert)
@@ -52,7 +61,7 @@ class NotificationService : NSObject {
         localNotif.alertBody = "Your \(foodItem.name) is about to expire"
         localNotif.alertAction = "Report Consumption"
         localNotif.hasAction = true
-        localNotif.fireDate = NSDate(timeInterval: 10, sinceDate:alertDate )//NSDate(timeIntervalSinceNow: NSTimeInterval(secondsFromNowToAlert))
+        localNotif.fireDate = NSDate(timeInterval: 10, sinceDate:fireDate)//NSDate(timeIntervalSinceNow: NSTimeInterval(secondsFromNowToAlert))
         localNotif.soundName = UILocalNotificationDefaultSoundName
         UIApplication.sharedApplication().scheduleLocalNotification(localNotif)
     

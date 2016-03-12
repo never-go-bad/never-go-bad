@@ -27,7 +27,11 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
 		let index = pickerDays.indexOf(defaults.integerForKey("daysBeforeToFire"))
 		alertDaysPickerView.selectRow(index!, inComponent: 0, animated: true)
 		self.view.addSubview(alertDaysPickerView)
-
+        
+        alertTimePicker.date = defaults.objectForKey("timeToAlert") as! NSDate
+        alertDaysPickerView.selectRow(index!, inComponent: 0, animated: true)
+        
+        
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -58,27 +62,35 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
 
 		defaults.setInteger(pickerDays[row], forKey: "daysBeforeToFire")
 		defaults.synchronize()
-		
 	}
 
-//    @IBAction func onUpdateButtonClicked(sender: AnyObject) {
-//    
-//        
-//    }
-    @IBAction func onSaveButtonClicked(sender: AnyObject) {
-        
-        presentViewController(TabViewControllerHelper.createTabBarController(), animated: true, completion: nil)
-        
-            }
-        
-    }
-	/*
-	 // MARK: - Navigation
+	@IBAction func onSaveButtonClicked(sender: AnyObject) {
 
-	 // In a storyboard-based application, you will often want to do a little preparation before navigation
-	 override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-	 // Get the new view controller using segue.destinationViewController.
-	 // Pass the selected object to the new view controller.
-	 }
-	 */
+		presentViewController(TabViewControllerHelper.createTabBarController(), animated: true, completion: nil)
+	}
+
+	@IBAction func timePickerComplete(sender: AnyObject) {
+        
+        var timer = sender as! UIDatePicker
+        var selectedTimeHour = timer.date.hour()
+        var selectedTimeMinute = timer.date.minute()
+        
+        defaults.setObject(timer.date, forKey: "timeToAlert")
+		//alertTimePicker = UIDatePicker()
+		//alertTimePicker.datePickerMode = UIDatePickerMode.Time
+		//alertTimePicker.addTarget(self, action: Selector("handleTimePicker:"), forControlEvents: UIControlEvents.ValueChanged)
+	}
+
+	
+}
+
+/*
+ // MARK: - Navigation
+
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+ // Get the new view controller using segue.destinationViewController.
+ // Pass the selected object to the new view controller.
+ }
+ */
 
