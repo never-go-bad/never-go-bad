@@ -9,39 +9,25 @@
 import UIKit
 
 var DAYS_LEFT_PICKER_VIEW = 1
-var TYPE_PICKER_VIEW = 2
-
 class FoodInputTableViewCell: UITableViewCell,
 UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
     var daysLeftPickerStrings = ["1 day", "2 days", "3 days", "4 days", "5 days", "6 days", "1 week", "2 weeks", "3 weeks", "1 month", "2 months"]
     var daysLeftPickerValues = [1, 2, 3, 4, 5, 6, 7, 14, 21, 30, 60]
     
-    var typePickerStrings = ["unit", "lb", "fl oz"]
-    var typePickerValues = [QuantityType.unit, QuantityType.weight, QuantityType.volume]
-    
-
     var daysLeftPickerView: UIPickerView?
-    var typePickerView: UIPickerView?
     
     @IBOutlet weak var foodNameTextField: UITextField!
     @IBOutlet weak var daysLeftTextField: UITextField!
-    @IBOutlet weak var typeTextField: UITextField!
-    @IBOutlet weak var quantityTextField: UITextField!
     
     var foodInput: FoodInput? {
         didSet {
             if let foodInput = foodInput {
                 foodNameTextField.text = foodInput.name
-                quantityTextField.text = "\(foodInput.quantity)"
                 
                 if let idx = daysLeftPickerValues.indexOf(foodInput.daysLeft) {
                     daysLeftPickerView?.selectRow(idx, inComponent: 0, animated: false)
                     daysLeftTextField.text = daysLeftPickerStrings[idx]
-                }
-                if let idx = typePickerValues.indexOf(foodInput.quantityType) {
-                    typePickerView?.selectRow(idx, inComponent: 0, animated: false)
-                    typeTextField.text = typePickerStrings[idx]
                 }
             }
         }
@@ -56,13 +42,6 @@ UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
         daysLeftPickerView!.dataSource = self
         daysLeftPickerView!.delegate = self
         daysLeftPickerView!.tag = DAYS_LEFT_PICKER_VIEW
-        
-        typePickerView = UIPickerView()
-        typeTextField.inputView = typePickerView
-        typeTextField.delegate = self
-        typePickerView!.dataSource = self
-        typePickerView!.delegate = self
-        typePickerView!.tag = TYPE_PICKER_VIEW
         
         // Initialization code
     }
@@ -82,7 +61,7 @@ UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
         if pickerView.tag == DAYS_LEFT_PICKER_VIEW {
             return daysLeftPickerStrings.count
         } else {
-            return typePickerStrings.count
+            return -1
         }
     }
     
@@ -90,7 +69,7 @@ UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
         if pickerView.tag == DAYS_LEFT_PICKER_VIEW {
             return daysLeftPickerStrings[row]
         } else {
-            return typePickerStrings[row]
+            return nil
         }
     }
     
@@ -98,16 +77,10 @@ UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
         if pickerView.tag == DAYS_LEFT_PICKER_VIEW {
             daysLeftTextField.text = daysLeftPickerStrings[row]
             foodInput?.daysLeft = daysLeftPickerValues[row]
-        } else {
-            typeTextField.text = typePickerStrings[row]
-            foodInput?.quantityType = typePickerValues[row]
         }
     }
     @IBAction func foodNameTextFieldChanged(sender: UITextField) {
         foodInput?.name = sender.text!
-    }
-    @IBAction func quantityTextFieldChanged(sender: UITextField) {
-        foodInput?.quantity = Float(sender.text!) ?? 1.0
     }
  
     

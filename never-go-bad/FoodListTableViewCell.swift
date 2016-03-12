@@ -13,7 +13,6 @@ class FoodListTableViewCell: SWTableViewCell {
 
     @IBOutlet weak var foodNameLabel: UILabel!
     @IBOutlet weak var daysLeftLabel: UILabel!
-    @IBOutlet weak var quantityLabel: UILabel!
     
     var food: Food? {
         didSet {
@@ -31,7 +30,6 @@ class FoodListTableViewCell: SWTableViewCell {
                 } else {
                     daysLeftLabel.text = "\(daysLeft/30) months"
                 }
-                quantityLabel.text = "\(food.quantity) \(food.quantityType)"
             }
         }
     }
