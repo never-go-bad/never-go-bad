@@ -9,7 +9,7 @@
         <!--Food Input View Controller-->
         <scene sceneID="46z-oN-XJn">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="SAO-Sb-fXc" customClass="FoodInputViewController" customModule="never_go_bad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FoodInput" automaticallyAdjustsScrollViewInsets="NO" id="SAO-Sb-fXc" customClass="FoodInputViewController" customModule="never_go_bad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sBf-Rb-aFG"/>
                         <viewControllerLayoutGuide type="bottom" id="kjU-jf-luU"/>
@@ -21,7 +21,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJ5-fn-Phm">
                                 <rect key="frame" x="0.0" y="64" width="320" height="72"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmM-eA-rqf" userLabel="Barcode Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmM-eA-rqf" userLabel="Barcode Button">
                                         <rect key="frame" x="232" y="12" width="48" height="48"/>
                                         <state key="normal" image="barcodeButton"/>
                                         <connections>
@@ -53,7 +53,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="stI-PH-JEw" id="wdB-o1-lep">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8od-7f-IVI">
@@ -129,7 +129,7 @@
                                         <rect key="frame" x="0.0" y="148" width="320" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wBs-Ep-6XT" id="cWp-69-Muc">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="85.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qg7-o3-ikh">
@@ -207,7 +207,7 @@
         <!--Food List View Controller-->
         <scene sceneID="HkI-aJ-HKN">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="mXp-rU-jiT" customClass="FoodListViewController" customModule="never_go_bad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FoodList" automaticallyAdjustsScrollViewInsets="NO" id="mXp-rU-jiT" customClass="FoodListViewController" customModule="never_go_bad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gMt-dm-ZVs"/>
                         <viewControllerLayoutGuide type="bottom" id="i3N-4m-HR9"/>
@@ -224,16 +224,16 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vCA-2b-IHe" id="b3w-TV-inI">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="111.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="111"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC1-sX-AyH">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC1-sX-AyH">
                                                     <rect key="frame" x="12" y="36" width="51" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.5 lb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnC-MJ-vjQ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1.5 lb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnC-MJ-vjQ">
                                                     <rect key="frame" x="82" y="37" width="40" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>

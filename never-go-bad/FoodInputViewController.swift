@@ -18,9 +18,13 @@ class FoodInputViewController: UIViewController,
     CloudSightQueryDelegate
 
 {
+    
+    let defaults = NSUserDefaults.standardUserDefaults()
 
     @IBOutlet var topView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    
+  //  var daysBeforeToFire: Int = 3
     var foodInputs: [FoodInput] = []
     private var query: CloudSightQuery? //Must be declared here to ensure that the reference will stay live while query is being performed
     private var progressDialog: MBProgressHUD?
@@ -94,7 +98,8 @@ class FoodInputViewController: UIViewController,
         for input in foodInputs{
             let food = input.toFood()
             foods.append(food)
-            NotificationService.registerForExpiryAlert(food)
+            print(defaults.integerForKey("daysBeforeToFire"))
+            NotificationService.registerForExpiryAlert(food, daysBeforeToFire: defaults.integerForKey("daysBeforeToFire"))
         }
         
         FoodService.save(foods)

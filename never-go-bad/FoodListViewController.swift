@@ -13,6 +13,8 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 
 	var foods: [Food]?
 	@IBOutlet weak var tableView: UITableView!
+    
+    //var daysBeforeToFire: Int = 3
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -83,8 +85,6 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
             })
 			foods?.removeAtIndex(cellIndexPath.row)
 			self.tableView.deleteRowsAtIndexPaths([cellIndexPath], withRowAnimation: .Automatic)
-//			print("Consumed Clicked")
-         
         
 		} else if index == 1 {
 			let cellIndexPath: NSIndexPath = tableView.indexPathForCell(cell)!
@@ -95,7 +95,6 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
             })
 			foods?.removeAtIndex(cellIndexPath.row)
 			self.tableView.deleteRowsAtIndexPaths([cellIndexPath], withRowAnimation: .Automatic)
-//			print("Trashed Clicked")           
 		}
 	}
 
@@ -121,18 +120,6 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 		tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
 	}
 
-	func consumed(indexPath: NSIndexPath) {
-//		foods?.removeAtIndex(indexPath.row)
-//		tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
-        
-    }
-
-	func trashed(indexPath: NSIndexPath) {
-//		foods?.removeAtIndex(indexPath.row)
-//		tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
-//        let foodTrashed = foods![indexPath.row]
-//        foodTrashed.trashed = true
-	}
 
 	/*
 	 // MARK: - Navigation

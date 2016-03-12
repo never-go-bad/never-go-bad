@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="KtJ-7A-uHa">
             <objects>
-                <viewController id="aAu-F2-kuw" sceneMemberID="viewController">
+                <viewController id="aAu-F2-kuw" customClass="SettingsViewController" customModule="never_go_bad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QbA-4t-nux"/>
                         <viewControllerLayoutGuide type="bottom" id="bzi-8P-MkF"/>
@@ -23,31 +23,41 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alert before (in days) :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTd-8t-RAc">
-                                <rect key="frame" x="14" y="129" width="169" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alert before (# of Days):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTd-8t-RAc">
+                                <rect key="frame" x="6" y="101" width="184" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time to send Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7e-yt-czQ">
-                                <rect key="frame" x="8" y="273" width="184" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="Kom-1M-Uor">
-                                <rect key="frame" x="195" y="273" width="120" height="34"/>
+                                <rect key="frame" x="82" y="350" width="157" height="51"/>
                                 <date key="date" timeIntervalSinceReferenceDate="479348415.10037899">
                                     <!--2016-03-11 00:20:15 +0000-->
                                 </date>
                             </datePicker>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lMJ-8i-82s">
-                                <rect key="frame" x="210" y="108" width="49" height="145"/>
+                                <rect key="frame" x="87" y="101" width="105" height="180"/>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time to send Notifications :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7e-yt-czQ">
+                                <rect key="frame" x="4" y="284" width="188" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4DA-mI-NSG"/>
+                    <navigationItem key="navigationItem" id="4DA-mI-NSG">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="h7g-4j-flY">
+                            <connections>
+                                <action selector="onSaveButtonClicked:" destination="aAu-F2-kuw" id="gkO-Ts-XdC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="alertDaysPickerView" destination="lMJ-8i-82s" id="LU1-Ff-5zq"/>
+                        <outlet property="alertTimePicker" destination="Kom-1M-Uor" id="gAC-Fb-9Ni"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kuU-Fh-xq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

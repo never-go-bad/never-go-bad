@@ -15,30 +15,14 @@ import Crashlytics
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
+    
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
 		Fabric.with([Crashlytics.self])
 
 		Parse.setApplicationId("wNe6DP9lMT96m6TyB39b6x4X8t7z2Tr0nF5RpzH9", clientKey: "4I0keAG1YufRXDUhGXbFPxlLTxM67NjX0Sx54AJ8")
 
-		let vc1 = UIStoryboard(name: "FoodList", bundle: nil).instantiateViewControllerWithIdentifier("FoodListNavigationController") as! UINavigationController
-		let vc2 = UIStoryboard(name: "Recipe", bundle: nil).instantiateViewControllerWithIdentifier("RecipeNavigationController") as! UINavigationController
-		let vc3 = UIStoryboard(name: "Settings", bundle: nil).instantiateViewControllerWithIdentifier("SettingsNavigationController") as! UINavigationController
-
-		vc1.tabBarItem.title = "Inventory"
-		vc1.tabBarItem.image = UIImage(named: "cart")
-
-		vc2.tabBarItem.title = "Recipe"
-		vc2.tabBarItem.image = UIImage(named: "equalizer")
-
-		vc3.tabBarItem.title = "Settings"
-		vc3.tabBarItem.image = UIImage(named: "gear")
-
-		let tbc = UITabBarController()
-		tbc.viewControllers = [vc1, vc2, vc3]
-
-		self.window?.rootViewController = tbc
+        self.window?.rootViewController = TabViewControllerHelper.createTabBarController()
 		self.window?.backgroundColor = UIColor.whiteColor()
 		self.window?.makeKeyAndVisible()
 
@@ -77,6 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationDidEnterBackground(application: UIApplication) {
 		// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
 		// If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
 	}
 
 	func applicationWillEnterForeground(application: UIApplication) {

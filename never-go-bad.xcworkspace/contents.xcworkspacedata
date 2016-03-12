@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SettingsViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:never-go-bad.xcodeproj">
    </FileRef>
    <FileRef
