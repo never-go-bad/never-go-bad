@@ -18,6 +18,7 @@
 		996A56A81C8D3FA8009F94FA /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A56A71C8D3FA8009F94FA /* StringExtensions.swift */; };
 		99BCE65D1C93EF4E00CE0A91 /* RecipeSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BCE65C1C93EF4E00CE0A91 /* RecipeSearchResult.swift */; };
 		99BCE65F1C93F80800CE0A91 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BCE65E1C93F80800CE0A91 /* Result.swift */; };
+		99BCE6611C94081A00CE0A91 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BCE6601C94081A00CE0A91 /* RecipeService.swift */; };
 		AD2F00B41C854603006E66DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00B31C854603006E66DA /* AppDelegate.swift */; };
 		AD2F00B61C854603006E66DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00B51C854603006E66DA /* ViewController.swift */; };
 		AD2F00BB1C854603006E66DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD2F00BA1C854603006E66DA /* Assets.xcassets */; };
@@ -79,6 +80,7 @@
 		996A56A71C8D3FA8009F94FA /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		99BCE65C1C93EF4E00CE0A91 /* RecipeSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSearchResult.swift; sourceTree = "<group>"; };
 		99BCE65E1C93F80800CE0A91 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		99BCE6601C94081A00CE0A91 /* RecipeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
 		AD2F00B01C854603006E66DA /* never-go-bad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "never-go-bad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2F00B31C854603006E66DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD2F00B51C854603006E66DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				84D924531C8ADF210049D09C /* FoodService.swift */,
 				84D924551C8CE2360049D09C /* NotificationService.swift */,
 				ADCA41DF1C94FFAD002164BF /* FoodDictionaryService.swift */,
+				99BCE6601C94081A00CE0A91 /* RecipeService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				996A56A31C8D3E3B009F94FA /* BarcodeDetectorViewController.swift in Sources */,
 				AD483A181C86F284000303C2 /* FoodInputViewController.swift in Sources */,
 				AD483A1A1C86F5B7000303C2 /* FoodInputTableViewCell.swift in Sources */,
+				99BCE6611C94081A00CE0A91 /* RecipeService.swift in Sources */,
 				AD2F00B61C854603006E66DA /* ViewController.swift in Sources */,
 				84D924561C8CE2360049D09C /* NotificationService.swift in Sources */,
 				AD2F00B41C854603006E66DA /* AppDelegate.swift in Sources */,

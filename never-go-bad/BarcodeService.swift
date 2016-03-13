@@ -10,14 +10,14 @@ import Foundation
 import BDBOAuth1Manager
 import ELCodable
 
+typealias NetTask = NSURLSessionDataTask!
+
 class BarcodeService {
-    typealias NetTask = NSURLSessionDataTask!
-    
-    private let session = SessioManager()
+    private let session = SessionManager()
     
     static let sharedInstance = BarcodeService()
     
-    private class SessioManager: BDBOAuth1SessionManager {
+    private class SessionManager: BDBOAuth1SessionManager {
         let consumerKey = "w4u8Bq87NzbCCYOdMvCjYzetKrvQDiaXPFVKmG5R"
         let consumerSecret = "dci5dQqHK8FXOtkh0Y5Su1vXOT7K4gu4qiwQ6qyh"
         let baseUrl = NSURL(string: "http://api.v3.factual.com")
