@@ -12,9 +12,16 @@ class RecipeSearchViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    private var dataSource: RecipeDataSource!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.estimatedRowHeight = 140
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        dataSource = RecipeDataSource(forTable: tableView)
+        dataSource.searchFor("banana")
 
     }
 

@@ -1,5 +1,5 @@
 //
-//  Result.swift
+//  Recipe.swift
 //  never-go-bad
 //
 //  Created by Andre Oriani on 3/11/16.

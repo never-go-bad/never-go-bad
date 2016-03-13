@@ -46,7 +46,12 @@ class RecipeService {
         let pageSize = 20
         let pageOffset = (page - 1) * pageSize + 1
         
-        var queryParams = ["search": searchTerm, "pageNumber": String(page), "pageSize": String(pageSize), "resultOffset" : String(pageOffset)]
+        var queryParams = ["search": searchTerm,
+            "pageNumber": String(page),
+            "pageSize": String(pageSize),
+            "resultOffset" : String(pageOffset),
+            "sort": "1" /* by rating */
+        ]
         
         for restriction in dietaryRestrictions {
             queryParams["att"] = restriction.rawValue

@@ -4,19 +4,20 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'never-go-bad' do
-	pod "AFNetworking"
-	pod "BDBOAuth1Manager"
-	pod "MBProgressHUD"
+	pod 'AFNetworking'
+	pod 'BDBOAuth1Manager'
+	pod 'MBProgressHUD'
 	pod 'Parse'
-	pod "AFDateHelper"
+	pod 'AFDateHelper'
 	pod 'ELCodable' , :git => 'https://github.com/aoriani/ELCodable.git', :commit => 'a5ae19f7cabb0b078fd47e0e969077711e13f12d'
 	pod 'BDBOAuth1Manager'
-	pod "CloudSight"
-	pod "UIImage-Categories"
+	pod 'CloudSight'
+	pod 'UIImage-Categories'
 	pod 'Fabric'
 	pod 'Crashlytics'
     pod 'SWTableViewCell', '~> 0.3.7'
 	pod 'CSwiftV'
+    pod 'HCSStarRatingView'
 end
 
 target 'never-go-badTests' do
