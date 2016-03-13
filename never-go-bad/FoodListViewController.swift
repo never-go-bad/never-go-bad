@@ -13,8 +13,8 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 
 	var foods: [Food]?
 	@IBOutlet weak var tableView: UITableView!
-    
-    //var daysBeforeToFire: Int = 3
+
+	// var daysBeforeToFire: Int = 3
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -78,21 +78,20 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 	func swipeableTableViewCell(cell: SWTableViewCell!, didTriggerRightUtilityButtonWithIndex index: Int) {
 		if index == 0 {
 			let cellIndexPath: NSIndexPath = tableView.indexPathForCell(cell)!
-            let foodConsumed = foods?[cellIndexPath.row]
-            foodConsumed?.consumed = true
-            FoodService.setConsumed(foodConsumed!, completion: { () -> () in
-            self.tableView.reloadData()
-            })
+			let foodConsumed = foods?[cellIndexPath.row]
+			foodConsumed?.consumed = true
+			FoodService.setConsumed(foodConsumed!, completion: { () -> () in
+				self.tableView.reloadData()
+			})
 			foods?.removeAtIndex(cellIndexPath.row)
 			self.tableView.deleteRowsAtIndexPaths([cellIndexPath], withRowAnimation: .Automatic)
-        
 		} else if index == 1 {
 			let cellIndexPath: NSIndexPath = tableView.indexPathForCell(cell)!
-            let foodTrashed = foods?[cellIndexPath.row]
-            foodTrashed?.consumed = true
-            FoodService.setTrashed(foodTrashed!, completion: { () -> () in
-                self.tableView.reloadData()
-            })
+			let foodTrashed = foods?[cellIndexPath.row]
+			foodTrashed?.consumed = true
+			FoodService.setTrashed(foodTrashed!, completion: { () -> () in
+				self.tableView.reloadData()
+			})
 			foods?.removeAtIndex(cellIndexPath.row)
 			self.tableView.deleteRowsAtIndexPaths([cellIndexPath], withRowAnimation: .Automatic)
 		}
@@ -112,14 +111,13 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 	func deleteFood(indexPath: NSIndexPath) {
 		let foodToDelete = foods![indexPath.row]
 
-        FoodService.delete(foodToDelete, completion: { () -> () in
-            self.tableView.reloadData()
-        })
+		FoodService.delete(foodToDelete, completion: { () -> () in
+			self.tableView.reloadData()
+		})
 
 		foods?.removeAtIndex(indexPath.row)
 		tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
 	}
-
 
 	/*
 	 // MARK: - Navigation
