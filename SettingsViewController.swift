@@ -11,32 +11,26 @@ import UIKit
 class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
 	@IBOutlet weak var alertDaysPickerView: UIPickerView!
-
 	@IBOutlet weak var alertTimePicker: UIDatePicker!
 
-	var daysSelected: Int!
 	var pickerDays = [1, 2, 3, 4, 5, 6, 7]
-
-	let defaults = NSUserDefaults.standardUserDefaults()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		alertDaysPickerView.delegate = self
 		alertDaysPickerView.dataSource = self
-		let index = pickerDays.indexOf(defaults.integerForKey("daysBeforeToFire")) ?? 0
-		alertDaysPickerView.selectRow(index, inComponent: 0, animated: true)
+
+		let daysBeforeToAlert = SettingsService.getDaysBeforeToAlert()
+		let indexOfDaysBeforeToAlert = pickerDays.indexOf(daysBeforeToAlert)
+		alertDaysPickerView.selectRow(indexOfDaysBeforeToAlert!, inComponent: 0, animated: true)
 		self.view.addSubview(alertDaysPickerView)
-        
-        alertTimePicker.date = defaults.objectForKey("timeToAlert") as! NSDate
-        alertDaysPickerView.selectRow(index!, inComponent: 0, animated: true)
-        
-        
+
+		alertTimePicker.date = SettingsService.getTimeToAlert()
 	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
 	}
 
 	func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -59,38 +53,15 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
 	}
 
 	func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-
-		defaults.setInteger(pickerDays[row], forKey: "daysBeforeToFire")
-		defaults.synchronize()
+		SettingsService.setDaysBeforeToAlert(pickerDays[row])
 	}
 
 	@IBAction func onSaveButtonClicked(sender: AnyObject) {
-
 		presentViewController(TabViewControllerHelper.createTabBarController(), animated: true, completion: nil)
 	}
 
 	@IBAction func timePickerComplete(sender: AnyObject) {
-        
-        var timer = sender as! UIDatePicker
-        var selectedTimeHour = timer.date.hour()
-        var selectedTimeMinute = timer.date.minute()
-        
-        defaults.setObject(timer.date, forKey: "timeToAlert")
-		//alertTimePicker = UIDatePicker()
-		//alertTimePicker.datePickerMode = UIDatePickerMode.Time
-		//alertTimePicker.addTarget(self, action: Selector("handleTimePicker:"), forControlEvents: UIControlEvents.ValueChanged)
+		let timer = sender as! UIDatePicker
+		SettingsService.setTimeToAlert(timer.date)
 	}
-
-	
 }
-
-/*
- // MARK: - Navigation
-
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
- // Get the new view controller using segue.destinationViewController.
- // Pass the selected object to the new view controller.
- }
- */
-

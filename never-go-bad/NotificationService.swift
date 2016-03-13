@@ -11,18 +11,10 @@ import UIKit
 import AFDateHelper
 
 class NotificationService : NSObject {
-    
-//    class func registerForNotifications(){
-//        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
-//        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
-//        
-//    }
 
     class func registerForExpiryAlert(foodItem: Food, daysBeforeToFire: Int, timeToFire: NSDate) -> Void {
-       
-        let now = NSDate()
+        
         var fireDate = foodItem.expireDate.dateBySubtractingHours(daysBeforeToFire * 24 )
-        //fireDate.d
         print(foodItem.expireDate)
         print(fireDate)
         print(timeToFire.hour())
@@ -66,9 +58,4 @@ class NotificationService : NSObject {
         UIApplication.sharedApplication().scheduleLocalNotification(localNotif)
     
 	}
-    
-//    func timeout() {
-//        exit(10)
-//    }
-//    
 }
