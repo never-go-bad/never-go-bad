@@ -48,11 +48,11 @@
                                 <rect key="frame" x="0.0" y="136" width="320" height="383"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodInputTableViewCell" rowHeight="120" id="stI-PH-JEw" customClass="FoodInputTableViewCell" customModule="never_go_bad" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="120"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodInputTableViewCell" rowHeight="54" id="stI-PH-JEw" customClass="FoodInputTableViewCell" customModule="never_go_bad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="stI-PH-JEw" id="wdB-o1-lep">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="53.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8od-7f-IVI">
@@ -77,55 +77,22 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EUA-mK-PAJ">
-                                                    <rect key="frame" x="212" y="46" width="100" height="30"/>
-                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="Jle-N3-Y7t"/>
-                                                        <constraint firstAttribute="width" constant="100" id="tNi-N5-axD"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" placeholder="Amount" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8GA-8G-9NN">
-                                                    <rect key="frame" x="8" y="46" width="199" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="MRD-xR-XHq"/>
-                                                        <constraint firstAttribute="width" constant="199" id="n68-MJ-THB"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                                    <connections>
-                                                        <action selector="quantityTextFieldChanged:" destination="stI-PH-JEw" eventType="editingDidEnd" id="MdF-W3-fgC"/>
-                                                        <action selector="quantityTextFieldChanged:" destination="stI-PH-JEw" eventType="editingChanged" id="Rqd-SK-Z9i"/>
-                                                    </connections>
-                                                </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="8GA-8G-9NN" firstAttribute="top" secondItem="0zu-Ks-Hsu" secondAttribute="bottom" constant="8" id="9ze-Ox-X81"/>
-                                                <constraint firstItem="EUA-mK-PAJ" firstAttribute="leading" secondItem="8GA-8G-9NN" secondAttribute="trailing" constant="5" id="FUT-DP-VK5"/>
-                                                <constraint firstAttribute="trailing" secondItem="EUA-mK-PAJ" secondAttribute="trailing" constant="8" id="FnW-Y8-XLi"/>
                                                 <constraint firstItem="8od-7f-IVI" firstAttribute="leading" secondItem="wdB-o1-lep" secondAttribute="leading" constant="8" id="OeL-lD-7Js"/>
-                                                <constraint firstAttribute="bottom" secondItem="EUA-mK-PAJ" secondAttribute="bottom" constant="8" id="Vzk-Xb-qan"/>
                                                 <constraint firstItem="0zu-Ks-Hsu" firstAttribute="leading" secondItem="8od-7f-IVI" secondAttribute="trailing" constant="8" id="dN2-HG-m4d"/>
-                                                <constraint firstItem="EUA-mK-PAJ" firstAttribute="top" secondItem="8od-7f-IVI" secondAttribute="bottom" constant="8" id="fDN-gA-enM"/>
                                                 <constraint firstItem="8od-7f-IVI" firstAttribute="top" secondItem="wdB-o1-lep" secondAttribute="top" constant="8" id="nUX-bj-Njb"/>
-                                                <constraint firstAttribute="bottom" secondItem="8GA-8G-9NN" secondAttribute="bottom" constant="8" id="qfI-OK-w4q"/>
-                                                <constraint firstItem="8GA-8G-9NN" firstAttribute="top" secondItem="8od-7f-IVI" secondAttribute="bottom" constant="8" id="u5Y-EZ-xPs"/>
                                                 <constraint firstItem="0zu-Ks-Hsu" firstAttribute="top" secondItem="wdB-o1-lep" secondAttribute="top" constant="8" id="vgc-m3-Vub"/>
-                                                <constraint firstItem="8GA-8G-9NN" firstAttribute="leading" secondItem="wdB-o1-lep" secondAttribute="leading" constant="8" id="w88-14-lJO"/>
                                                 <constraint firstAttribute="trailing" secondItem="0zu-Ks-Hsu" secondAttribute="trailing" constant="8" id="z79-BB-bx3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="daysLeftTextField" destination="0zu-Ks-Hsu" id="7sC-lg-LGX"/>
                                             <outlet property="foodNameTextField" destination="8od-7f-IVI" id="njW-J2-ePE"/>
-                                            <outlet property="quantityTextField" destination="8GA-8G-9NN" id="luz-BY-yzH"/>
-                                            <outlet property="typeTextField" destination="EUA-mK-PAJ" id="qHe-td-wdf"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ManuallyAddFoodTableViewCell" id="wBs-Ep-6XT">
-                                        <rect key="frame" x="0.0" y="148" width="320" height="86"/>
+                                        <rect key="frame" x="0.0" y="82" width="320" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wBs-Ep-6XT" id="cWp-69-Muc">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="85.5"/>
