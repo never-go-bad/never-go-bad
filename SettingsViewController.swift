@@ -24,8 +24,8 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
 
 		alertDaysPickerView.delegate = self
 		alertDaysPickerView.dataSource = self
-		let index = pickerDays.indexOf(defaults.integerForKey("daysBeforeToFire"))
-		alertDaysPickerView.selectRow(index!, inComponent: 0, animated: true)
+		let index = pickerDays.indexOf(defaults.integerForKey("daysBeforeToFire")) ?? 0
+		alertDaysPickerView.selectRow(index, inComponent: 0, animated: true)
 		self.view.addSubview(alertDaysPickerView)
         
         alertTimePicker.date = defaults.objectForKey("timeToAlert") as! NSDate

@@ -28,12 +28,10 @@ struct RecipeSearchResult:Decodable {
     }
     
     var recipes: [Recipe]
-    var hasMore: Bool
     
     static func decode(json: JSON?) throws -> RecipeSearchResult {
         return try RecipeSearchResult (
-            recipes: json ==> "recipes",
-            hasMore: json ==> "hasMore"
+            recipes: json ==> "recipes"
         )
     }
     
