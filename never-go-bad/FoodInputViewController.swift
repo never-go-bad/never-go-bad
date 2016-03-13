@@ -14,6 +14,7 @@ import CloudSight
 class FoodInputViewController: UIViewController,
     UITableViewDelegate, UITableViewDataSource,
     BarcodeDelegate,
+    FoodSearchViewControllerDeletage,
     UIImagePickerControllerDelegate, UINavigationControllerDelegate,
     CloudSightQueryDelegate
 
@@ -58,8 +59,12 @@ class FoodInputViewController: UIViewController,
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         editingStyle
         if editingStyle == UITableViewCellEditingStyle.Insert {
-            foodInputs.append(FoodInput(name: "", daysLeft: 1, quantityType: QuantityType.unit, quantity: 1))
-            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+//            foodInputs.append(FoodInput(name: "", daysLeft: 1, quantityType: QuantityType.unit, quantity: 1))
+//            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            //table + clicked
+            pushFoodSearchViewController()
+
+        
         } else if editingStyle == UITableViewCellEditingStyle.Delete {
             foodInputs.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
@@ -87,7 +92,16 @@ class FoodInputViewController: UIViewController,
     }
     
     @IBAction func touchAddItemManually(sender: AnyObject) {
-        appendFood("")
+//        appendFood("")
+        // table + clicked
+        pushFoodSearchViewController()
+    }
+    
+    func pushFoodSearchViewController() {
+        let storyBoard = UIStoryboard(name: "FoodSearch", bundle: nil)
+        let vc = storyBoard.instantiateViewControllerWithIdentifier("FoodSearchViewController") as! FoodSearchViewController
+        vc.delegate = self
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     @IBAction func onConfirmButton(sender: UIBarButtonItem) {
@@ -183,6 +197,12 @@ class FoodInputViewController: UIViewController,
         }
         
         
+    }
+    
+    func foodSearchViewController(sender: FoodSearchViewController, didSelectFoodSearchResult foodName: String, shelfLife: Int) {
+        print("hello hello")
+        self.navigationController?.popViewControllerAnimated(true)
+        appendFood(foodName)
     }
 
     func showNonIdentifiedFoodDialog() {
