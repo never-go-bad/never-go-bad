@@ -30,6 +30,7 @@ class RecipeResultCell: UITableViewCell {
     
     func apply(recipe: RecipeSearchResult.Recipe) {
         titleLabel.text = recipe.name
+        recipeImageView.image = nil
         recipeImageView.fadedSetImageWithUrl(NSURL(string: recipe.image ?? "http://www.epicurious.com/css/i/recipe-img-icon.png")!)
         if let rating = recipe.rating {
             ratingView.hidden = false

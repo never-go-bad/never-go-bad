@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
 class RecipeDataSource: NSObject, UITableViewDataSource {
     
@@ -18,6 +19,9 @@ class RecipeDataSource: NSObject, UITableViewDataSource {
     }
     private var tableView: UITableView
     private var currentSearchTask: NetTask?
+    private var searchTerm = ""
+    private var currentPage = 1
+    private var currentProgressHub: MBProgressHUD?
     
     init(forTable tableView:UITableView) {
         self.tableView = tableView
@@ -26,35 +30,53 @@ class RecipeDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //TODO: No results case
-        return items.count
+        //Don't show "no results" while searching
+        return items.isEmpty ? (currentProgressHub == nil ? 1 : 0) : items.count
     }
     
     func searchFor(terms: String) {
         if currentSearchTask != nil {
             currentSearchTask!.cancel()
+            currentPage = 1
+            currentProgressHub?.hide(false)
+            currentProgressHub = nil
         }
         
+        searchTerm = terms
+        //TODO: Stylize
+        currentProgressHub = MBProgressHUD.showHUDAddedTo(tableView, animated: true)
+        currentProgressHub?.labelText = "Search recipes..."
         currentSearchTask = RecipeService.instance.searchRecipe(
             terms, page: 1,
             dietaryRestrictions: [],
             onSuccess: {
-                result in self.items = result.recipes
+                result in
                 self.currentSearchTask = nil
+                self.currentProgressHub?.hide(true)
+                self.currentProgressHub = nil
+                self.items = result.recipes
             },
             onError: {
-                self.items = []
                 self.currentSearchTask = nil
+                self.currentProgressHub?.hide(true)
+                self.currentProgressHub = nil
+                self.items = []
             }
         )
     }
     
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //TODO: No results case
-        let cell  = tableView.dequeueReusableCellWithIdentifier(RecipeResultCell.id) as! RecipeResultCell
-        cell.apply(items[indexPath.row])
-        return cell
+        if items.isEmpty {
+            return tableView.dequeueReusableCellWithIdentifier("noRecipes")!
+        } else {
+            let cell  = tableView.dequeueReusableCellWithIdentifier(RecipeResultCell.id) as! RecipeResultCell
+            cell.apply(items[indexPath.row])
+            return cell
+        }
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Results for \"\(searchTerm)\""
     }
     
     

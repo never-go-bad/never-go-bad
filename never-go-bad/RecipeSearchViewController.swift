@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecipeSearchViewController: UIViewController {
+class RecipeSearchViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -20,10 +20,21 @@ class RecipeSearchViewController: UIViewController {
         tableView.estimatedRowHeight = 140
         tableView.rowHeight = UITableViewAutomaticDimension
         
+        searchBar.delegate = self
+        
         dataSource = RecipeDataSource(forTable: tableView)
         dataSource.searchFor("banana")
 
     }
-
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        if let searchTermFull = searchBar.text {
+            let searchTerm = searchTermFull.trim()
+            if !searchTerm.isEmpty {
+                dataSource.searchFor(searchTerm)
+            }
+        }
+        searchBar.resignFirstResponder()
+    }
 
 }

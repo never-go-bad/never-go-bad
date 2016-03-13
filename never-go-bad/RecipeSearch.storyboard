@@ -18,12 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Type ingredients" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KjC-Bz-nUO">
+                            <searchBar contentMode="redraw" placeholder="Type ingredients" translatesAutoresizingMaskIntoConstraints="NO" id="KjC-Bz-nUO">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="KPS-at-sIQ"/>
                                 </constraints>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
                                     <string>Title</string>
@@ -94,6 +94,27 @@
                                             <outlet property="recipeImageView" destination="1ih-ht-kKl" id="GFu-fN-k75"/>
                                             <outlet property="titleLabel" destination="9Hq-Om-zPp" id="049-4Y-NNl"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="noRecipes" id="Oj1-VG-MrQ">
+                                        <rect key="frame" x="0.0" y="168" width="600" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oj1-VG-MrQ" id="5ze-NR-J5g">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="139"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, no results found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e88-Jw-yA2">
+                                                    <rect key="frame" x="200" y="52" width="201" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="e88-Jw-yA2" firstAttribute="centerX" secondItem="5ze-NR-J5g" secondAttribute="centerX" id="Qhw-ZP-zE4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="e88-Jw-yA2" secondAttribute="bottom" constant="44" id="YEe-hV-G5I"/>
+                                                <constraint firstItem="e88-Jw-yA2" firstAttribute="top" secondItem="5ze-NR-J5g" secondAttribute="topMargin" constant="44" id="eKd-pf-lKh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
