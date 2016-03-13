@@ -20,6 +20,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
 
 		alertDaysPickerView.delegate = self
 		alertDaysPickerView.dataSource = self
+        alertDaysPickerView.selectRow(index, inComponent: 0, animated: true)
 
 		let daysBeforeToAlert = SettingsService.getDaysBeforeToAlert()
 		let indexOfDaysBeforeToAlert = pickerDays.indexOf(daysBeforeToAlert)

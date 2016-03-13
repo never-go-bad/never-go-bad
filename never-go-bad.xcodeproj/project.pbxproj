@@ -20,6 +20,9 @@
 		99BCE65D1C93EF4E00CE0A91 /* RecipeSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BCE65C1C93EF4E00CE0A91 /* RecipeSearchResult.swift */; };
 		99BCE65F1C93F80800CE0A91 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BCE65E1C93F80800CE0A91 /* Result.swift */; };
 		99BCE6611C94081A00CE0A91 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BCE6601C94081A00CE0A91 /* RecipeService.swift */; };
+		99BCE6641C951D5800CE0A91 /* RecipeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BCE6621C951D5800CE0A91 /* RecipeSearchViewController.swift */; };
+		99BCE6671C952A1600CE0A91 /* RecipeSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99BCE6661C952A1600CE0A91 /* RecipeSearch.storyboard */; };
+		99BCE66A1C9532D300CE0A91 /* SettingsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BCE6691C9532D300CE0A91 /* SettingsConstants.swift */; };
 		AD2F00B41C854603006E66DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00B31C854603006E66DA /* AppDelegate.swift */; };
 		AD2F00B61C854603006E66DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00B51C854603006E66DA /* ViewController.swift */; };
 		AD2F00BB1C854603006E66DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD2F00BA1C854603006E66DA /* Assets.xcassets */; };
@@ -83,6 +86,9 @@
 		99BCE65C1C93EF4E00CE0A91 /* RecipeSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSearchResult.swift; sourceTree = "<group>"; };
 		99BCE65E1C93F80800CE0A91 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		99BCE6601C94081A00CE0A91 /* RecipeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
+		99BCE6621C951D5800CE0A91 /* RecipeSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSearchViewController.swift; sourceTree = "<group>"; };
+		99BCE6661C952A1600CE0A91 /* RecipeSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecipeSearch.storyboard; sourceTree = "<group>"; };
+		99BCE6691C9532D300CE0A91 /* SettingsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsConstants.swift; sourceTree = "<group>"; };
 		AD2F00B01C854603006E66DA /* never-go-bad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "never-go-bad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2F00B31C854603006E66DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD2F00B51C854603006E66DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +186,14 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		99BCE6681C9532BC00CE0A91 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				99BCE6691C9532D300CE0A91 /* SettingsConstants.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		AD2F00A71C854603006E66DA = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +220,7 @@
 		AD2F00B21C854603006E66DA /* never-go-bad */ = {
 			isa = PBXGroup;
 			children = (
+				99BCE6681C9532BC00CE0A91 /* Constants */,
 				84E90C4C1C93F710003FC83E /* Helpers */,
 				84D924621C915D470049D09C /* Bridging-Header.h */,
 				996A56A61C8D3F99009F94FA /* Extensions */,
@@ -263,6 +278,7 @@
 				AD483A171C86F284000303C2 /* FoodInputViewController.swift */,
 				84E90C4A1C935C35003FC83E /* SettingsViewController.swift */,
 				ADCA41D71C94EAE0002164BF /* FoodSearchViewController.swift */,
+				99BCE6621C951D5800CE0A91 /* RecipeSearchViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -288,6 +304,7 @@
 				AD483A201C897957000303C2 /* Recipe.storyboard */,
 				AD483A221C897964000303C2 /* Settings.storyboard */,
 				ADCA41D51C94E659002164BF /* FoodSearch.storyboard */,
+				99BCE6661C952A1600CE0A91 /* RecipeSearch.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -411,6 +428,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99BCE6671C952A1600CE0A91 /* RecipeSearch.storyboard in Resources */,
 				996A56A51C8D3E58009F94FA /* BarcodeDetector.storyboard in Resources */,
 				AD483A231C897964000303C2 /* Settings.storyboard in Resources */,
 				ADCA41D61C94E659002164BF /* FoodSearch.storyboard in Resources */,
@@ -518,6 +536,7 @@
 				84D924561C8CE2360049D09C /* NotificationService.swift in Sources */,
 				AD2F00B41C854603006E66DA /* AppDelegate.swift in Sources */,
 				996A56A81C8D3FA8009F94FA /* StringExtensions.swift in Sources */,
+				99BCE6641C951D5800CE0A91 /* RecipeSearchViewController.swift in Sources */,
 				AD483A101C86DB7C000303C2 /* FoodListViewController.swift in Sources */,
 				AD483A161C86EBE3000303C2 /* FoodList.swift in Sources */,
 				AD483A131C86DCC3000303C2 /* FoodListTableViewCell.swift in Sources */,
@@ -525,6 +544,7 @@
 				AD483A1C1C8838DD000303C2 /* FoodInput.swift in Sources */,
 				ADCA41DE1C94F3DA002164BF /* FoodSearchManualTableViewCell.swift in Sources */,
 				996A569F1C8D3BC4009F94FA /* BarcodeService.swift in Sources */,
+				99BCE66A1C9532D300CE0A91 /* SettingsConstants.swift in Sources */,
 				ADCA41DC1C94F1AA002164BF /* FoodSearchTableViewCell.swift in Sources */,
 				ADCA41E01C94FFAD002164BF /* FoodDictionaryService.swift in Sources */,
 				84E90C4E1C93F743003FC83E /* TabViewControllerHelper.swift in Sources */,

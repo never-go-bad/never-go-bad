@@ -14,7 +14,7 @@ class TabViewControllerHelper {
 	class func createTabBarController() -> UITabBarController {
 
 		let vc1 = UIStoryboard(name: "FoodList", bundle: nil).instantiateViewControllerWithIdentifier("FoodListNavigationController") as! UINavigationController
-		let vc2 = UIStoryboard(name: "Recipe", bundle: nil).instantiateViewControllerWithIdentifier("RecipeNavigationController") as! UINavigationController
+		let vc2 = UIStoryboard(name: "RecipeSearch", bundle: nil).instantiateViewControllerWithIdentifier("RecipeSearchNavigationController") as! UINavigationController
 		let vc3 = UIStoryboard(name: "Settings", bundle: nil).instantiateViewControllerWithIdentifier("SettingsNavigationController") as! UINavigationController
 
 		vc1.tabBarItem.title = "Inventory"
