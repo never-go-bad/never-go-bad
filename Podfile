@@ -16,6 +16,7 @@ target 'never-go-bad' do
 	pod 'Fabric'
 	pod 'Crashlytics'
     pod 'SWTableViewCell', '~> 0.3.7'
+	pod 'CSwiftV'
 end
 
 target 'never-go-badTests' do

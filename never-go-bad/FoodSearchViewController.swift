@@ -35,6 +35,8 @@ class FoodSearchViewController: UIViewController,
         searchBar.delegate = self
         searchBar.text = ""
         // Do any additional setup after loading the view.
+        
+        print(FoodDictionaryService.sharedInstance)
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,11 +57,7 @@ class FoodSearchViewController: UIViewController,
             foodSearchResults = nil
         } else {
             // do search, show fake results for now
-            foodSearchResults = [FoodReference]()
-            foodSearchResults?.append(FoodReference(name: "\(searchText)fake1", shelfLife: 1))
-            foodSearchResults?.append(FoodReference(name: "\(searchText)fake2", shelfLife: 2))
-            foodSearchResults?.append(FoodReference(name: "\(searchText)fake3", shelfLife: 3))
-            foundExactMatch = false
+            (foodSearchResults, foundExactMatch) = FoodDictionaryService.searchFoodItemWithPrefix(searchText)
         }
         tableView.reloadData()
     }

@@ -86,8 +86,8 @@ class FoodInputViewController: UIViewController,
         }
     }
     
-    func appendFood(foodName:String) {
-        foodInputs.append(FoodInput(name: foodName, daysLeft: 1, quantityType: QuantityType.unit, quantity: 1))
+    func appendFood(foodName:String, shelfLife: Int) {
+        foodInputs.append(FoodInput(name: foodName, daysLeft: shelfLife, quantityType: QuantityType.unit, quantity: 1))
         tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: foodInputs.count - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Bottom)
     }
     
@@ -138,7 +138,7 @@ class FoodInputViewController: UIViewController,
             barcodeResult in
             if (!barcodeResult.response.data.isEmpty) {
                 let foodName = barcodeResult.response.data[0].brand! + " " + barcodeResult.response.data[0].product_name!
-                self.appendFood(foodName)
+                self.appendFood(foodName, shelfLife: 1)
             }
             progress.hide(true)
         }
@@ -185,10 +185,10 @@ class FoodInputViewController: UIViewController,
             self.progressDialog?.hide(true)
             self.progressDialog = nil
             
-            let matchedFood = matchFood(query.title)
-            if (!matchedFood.isEmpty) {
-                for food in matchedFood {
-                    self.appendFood(food.name)
+            let matchedFoods = FoodDictionaryService.searchFoodItemWithDescription(query.title)
+            if !matchedFoods.isEmpty {
+                for food in matchedFoods {
+                    self.appendFood(food.name, shelfLife: food.shelfLife)
                 }
             } else {
                 self.showNonIdentifiedFoodDialog()
@@ -200,9 +200,8 @@ class FoodInputViewController: UIViewController,
     }
     
     func foodSearchViewController(sender: FoodSearchViewController, didSelectFoodSearchResult foodName: String, shelfLife: Int) {
-        print("hello hello")
         self.navigationController?.popViewControllerAnimated(true)
-        appendFood(foodName)
+        appendFood(foodName, shelfLife: shelfLife)
     }
 
     func showNonIdentifiedFoodDialog() {
