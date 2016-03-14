@@ -29,6 +29,8 @@ class TabViewControllerHelper {
 		let tbc = UITabBarController()
 		tbc.viewControllers = [vc1, vc2, vc3]
         
+        print(NSURL(string: "http://assets.epicurious.com/photos/56325ba083f23b081c8f64c8/1:1/w_120%2Ch_120/2_ICBINB_Best ever_Banana_Bread_Carousel_Hi_Res.jpg"))
+        
         return tbc
 	}
 }

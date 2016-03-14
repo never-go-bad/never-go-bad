@@ -35,6 +35,8 @@ class RecipeSearchViewController: UIViewController, UISearchBarDelegate {
             }
         }
         searchBar.resignFirstResponder()
+        tableView.setContentOffset(CGPointZero, animated: false)
     }
+    
 
 }

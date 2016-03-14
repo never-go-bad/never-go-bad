@@ -12,6 +12,7 @@ import HCSStarRatingView
 class RecipeResultCell: UITableViewCell {
     
     static let id = "recipe"
+    static let defaultImageUrl = "http://www.epicurious.com/css/i/recipe-img-icon.png"
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var recipeImageView: UIImageView!
@@ -31,7 +32,9 @@ class RecipeResultCell: UITableViewCell {
     func apply(recipe: RecipeSearchResult.Recipe) {
         titleLabel.text = recipe.name
         recipeImageView.image = nil
-        recipeImageView.fadedSetImageWithUrl(NSURL(string: recipe.image ?? "http://www.epicurious.com/css/i/recipe-img-icon.png")!)
+        let recipeImageUrl = NSURL(string: recipe.image ?? RecipeResultCell.defaultImageUrl)
+        
+        recipeImageView.fadedSetImageWithUrl(recipeImageUrl ?? NSURL(string: RecipeResultCell.defaultImageUrl)!)
         if let rating = recipe.rating {
             ratingView.hidden = false
             ratingView.value = CGFloat(rating.value.doubleValue)
