@@ -23,10 +23,10 @@
                                     <constraint firstAttribute="height" constant="380" id="Xal-JS-ldt"/>
                                 </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4p-cV-lcM">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4p-cV-lcM">
                                 <rect key="frame" x="0.0" y="20" width="480" height="780"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iyw-uX-oDt">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iyw-uX-oDt">
                                         <rect key="frame" x="0.0" y="0.0" width="480" height="858"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAF-vi-0uk" userLabel="Label Fumet BG">
@@ -118,12 +118,29 @@
                                                             <constraint firstItem="IbQ-nz-aXa" firstAttribute="leading" secondItem="00t-7S-FHP" secondAttribute="trailing" constant="8" id="gHV-9P-gRM"/>
                                                         </constraints>
                                                     </view>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wN-h4-Wzm">
+                                                        <rect key="frame" x="21" y="149" width="451" height="128"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment>
+                                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                                <attributes>
+                                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="lO2-WO-mGr" secondAttribute="trailing" constant="8" id="4rW-kp-VgI"/>
                                                     <constraint firstItem="lO2-WO-mGr" firstAttribute="top" secondItem="BFS-a2-RRK" secondAttribute="top" constant="8" id="8wL-nk-Ogq"/>
                                                     <constraint firstItem="lO2-WO-mGr" firstAttribute="leading" secondItem="BFS-a2-RRK" secondAttribute="leading" constant="8" id="E3F-21-890"/>
+                                                    <constraint firstAttribute="bottom" secondItem="6wN-h4-Wzm" secondAttribute="bottom" constant="10" id="R3f-jo-fw6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6wN-h4-Wzm" secondAttribute="trailing" constant="8" id="cjB-gF-jfd"/>
+                                                    <constraint firstItem="6wN-h4-Wzm" firstAttribute="top" secondItem="lO2-WO-mGr" secondAttribute="bottom" constant="10" id="vmr-oj-pFl"/>
+                                                    <constraint firstItem="6wN-h4-Wzm" firstAttribute="leading" secondItem="BFS-a2-RRK" secondAttribute="leading" constant="8" id="y4i-Vm-Zhl"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -163,6 +180,7 @@
                         <outlet property="ratingLabel" destination="Mvx-29-Bi6" id="SAW-h3-KJx"/>
                         <outlet property="recipeBgImageView" destination="aDU-zX-oux" id="SoR-jG-Vhl"/>
                         <outlet property="recipeLabel" destination="D2u-zA-YJt" id="UAg-Sg-lpp"/>
+                        <outlet property="servingsTimeText" destination="6wN-h4-Wzm" id="2uL-bI-w1h"/>
                         <outlet property="willDoAgainLabel" destination="7ly-iX-qm8" id="skd-TV-bT6"/>
                     </connections>
                 </viewController>

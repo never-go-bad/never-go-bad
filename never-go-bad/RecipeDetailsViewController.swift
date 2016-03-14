@@ -16,6 +16,7 @@ class RecipeDetailsViewController: UIViewController {
     @IBOutlet weak var recipeBgImageView: UIImageView!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var willDoAgainLabel: UILabel!
+    @IBOutlet weak var servingsTimeText: UITextView!
 
     
     override func viewDidLoad() {
@@ -46,6 +47,19 @@ class RecipeDetailsViewController: UIViewController {
         formatter.minimumFractionDigits = 1
         formatter.minimumIntegerDigits = 1
         ratingLabel.text = formatter.stringFromNumber(recipe.rating.value)
+        
+        servingsTimeText.attributedText = decodeString("<b> Teste</b> : testeado")!
     }
   
+    
+    func decodeString(encodedString:String) -> NSAttributedString?
+    {
+        let encodedData = encodedString.dataUsingEncoding(NSUTF8StringEncoding)!
+        do {
+            return try NSAttributedString(data: encodedData, options: [NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType,NSCharacterEncodingDocumentAttribute:NSUTF8StringEncoding], documentAttributes: nil)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+            return nil
+        }
+    }
 }
