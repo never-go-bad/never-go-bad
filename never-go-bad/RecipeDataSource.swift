@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MBProgressHUD
 
-class RecipeDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
+class RecipeDataSource: NSObject, UITableViewDataSource {
     
     private var items: [RecipeSearchResult.Recipe] = [] {
         didSet {
@@ -28,7 +28,6 @@ class RecipeDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
         self.tableView = tableView
         super.init()
         tableView.dataSource = self
-        tableView.delegate = self
         
         // Set up Infinite Scroll loading indicator
         let frame = CGRectMake(0, tableView.contentSize.height, tableView.bounds.size.width, InfiniteScrollActivityView.defaultHeight)
@@ -128,5 +127,7 @@ class RecipeDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
         })
     }
     
-    
+    func getRecipeId(indexPath: NSIndexPath) -> String {
+        return items[indexPath.row].id
+    }
 }

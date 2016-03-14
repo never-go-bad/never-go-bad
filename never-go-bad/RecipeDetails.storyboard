@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Recipe Details View Controller-->
+        <scene sceneID="mPO-e1-4IF">
+            <objects>
+                <viewController storyboardIdentifier="recipeDetails" id="yfB-Ug-3yk" customClass="RecipeDetailsViewController" customModule="never_go_bad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cdz-2Y-CfV"/>
+                        <viewControllerLayoutGuide type="bottom" id="UqY-Yg-gg6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3vJ-ni-GGh">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aDU-zX-oux">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="380"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="380" id="Xal-JS-ldt"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4p-cV-lcM">
+                                <rect key="frame" x="0.0" y="20" width="480" height="780"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iyw-uX-oDt">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="858"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAF-vi-0uk" userLabel="Label Fumet BG">
+                                                <rect key="frame" x="0.0" y="226" width="480" height="120"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Polenta al allio et oglio de la Fiorentina al  Piemonte, Californian variation" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2u-zA-YJt">
+                                                        <rect key="frame" x="-393" y="46" width="1025" height="36"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0022283976510067112" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="D2u-zA-YJt" secondAttribute="trailing" constant="10" id="IEF-OF-GUm"/>
+                                                    <constraint firstAttribute="bottom" secondItem="D2u-zA-YJt" secondAttribute="bottom" constant="10" id="IJn-Cf-xRl"/>
+                                                    <constraint firstItem="D2u-zA-YJt" firstAttribute="leading" secondItem="tAF-vi-0uk" secondAttribute="leading" constant="10" id="V4O-3a-4DW"/>
+                                                    <constraint firstItem="D2u-zA-YJt" firstAttribute="top" secondItem="tAF-vi-0uk" secondAttribute="top" constant="10" id="nhV-Og-9n0"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BFS-a2-RRK" userLabel="Content">
+                                                <rect key="frame" x="0.0" y="346" width="480" height="504"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="BFS-a2-RRK" firstAttribute="top" secondItem="tAF-vi-0uk" secondAttribute="bottom" id="AbD-vv-rsU"/>
+                                            <constraint firstAttribute="bottom" secondItem="BFS-a2-RRK" secondAttribute="bottom" id="HEW-pz-oWv"/>
+                                            <constraint firstAttribute="trailing" secondItem="tAF-vi-0uk" secondAttribute="trailing" id="fnK-g8-7mR"/>
+                                            <constraint firstItem="tAF-vi-0uk" firstAttribute="leading" secondItem="Iyw-uX-oDt" secondAttribute="leading" id="iVx-DM-XOE"/>
+                                            <constraint firstItem="tAF-vi-0uk" firstAttribute="top" secondItem="Iyw-uX-oDt" secondAttribute="top" constant="200" id="sGY-pk-SZy"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Iyw-uX-oDt" firstAttribute="top" secondItem="s4p-cV-lcM" secondAttribute="top" id="Bmr-h7-x7k"/>
+                                    <constraint firstAttribute="trailing" secondItem="Iyw-uX-oDt" secondAttribute="trailing" id="TEk-hh-uSp"/>
+                                    <constraint firstItem="Iyw-uX-oDt" firstAttribute="leading" secondItem="s4p-cV-lcM" secondAttribute="leading" id="WRf-Gz-RLJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Iyw-uX-oDt" secondAttribute="bottom" id="hNJ-79-OSM"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aDU-zX-oux" secondAttribute="trailing" id="CWN-Vf-GbI"/>
+                            <constraint firstItem="aDU-zX-oux" firstAttribute="leading" secondItem="3vJ-ni-GGh" secondAttribute="leading" id="L9i-Yo-KTt"/>
+                            <constraint firstItem="s4p-cV-lcM" firstAttribute="leading" secondItem="3vJ-ni-GGh" secondAttribute="leading" id="VqB-q7-d0H"/>
+                            <constraint firstItem="aDU-zX-oux" firstAttribute="top" secondItem="3vJ-ni-GGh" secondAttribute="top" id="Zbj-Qz-wQA"/>
+                            <constraint firstItem="s4p-cV-lcM" firstAttribute="top" secondItem="Cdz-2Y-CfV" secondAttribute="bottom" id="bi5-l7-V0S"/>
+                            <constraint firstItem="UqY-Yg-gg6" firstAttribute="top" secondItem="s4p-cV-lcM" secondAttribute="bottom" id="eP1-nh-Opu"/>
+                            <constraint firstItem="Iyw-uX-oDt" firstAttribute="width" secondItem="3vJ-ni-GGh" secondAttribute="width" id="r5B-9H-ih7"/>
+                            <constraint firstAttribute="trailing" secondItem="s4p-cV-lcM" secondAttribute="trailing" id="tF7-qM-Agw"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="480" height="800"/>
+                    <connections>
+                        <outlet property="recipeBgImageView" destination="aDU-zX-oux" id="SoR-jG-Vhl"/>
+                        <outlet property="recipeLabel" destination="D2u-zA-YJt" id="UAg-Sg-lpp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HX0-U6-Ch2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478" y="329"/>
+        </scene>
+    </scenes>
+</document>
