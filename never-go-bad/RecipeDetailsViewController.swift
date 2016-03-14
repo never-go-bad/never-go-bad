@@ -14,6 +14,8 @@ class RecipeDetailsViewController: UIViewController {
 
     @IBOutlet weak var recipeLabel: UILabel!
     @IBOutlet weak var recipeBgImageView: UIImageView!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var willDoAgainLabel: UILabel!
 
     
     override func viewDidLoad() {
@@ -38,6 +40,12 @@ class RecipeDetailsViewController: UIViewController {
         }
         
         recipeLabel.text = recipe.name
+        willDoAgainLabel.text = recipe.wouldPrepareAgain
+        let formatter = NSNumberFormatter()
+        formatter.maximumFractionDigits = 1
+        formatter.minimumFractionDigits = 1
+        formatter.minimumIntegerDigits = 1
+        ratingLabel.text = formatter.stringFromNumber(recipe.rating.value)
     }
   
 }
