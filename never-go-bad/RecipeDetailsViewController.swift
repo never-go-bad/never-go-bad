@@ -48,7 +48,7 @@ class RecipeDetailsViewController: UIViewController {
         formatter.minimumIntegerDigits = 1
         ratingLabel.text = formatter.stringFromNumber(recipe.rating.value)
         
-        servingsTimeText.attributedText = decodeString("<b> Teste</b> : testeado")!
+        servingsTimeText.attributedText = decodeString("<ul> <li> heloo</li><li>ola</li></ul>")!
     }
   
     
