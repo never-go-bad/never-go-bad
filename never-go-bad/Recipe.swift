@@ -48,6 +48,7 @@ struct Recipe: Decodable {
     var chefNotes: String?
     var ingredientGroups: [IngredientGroup]
     var preparationStepGroups: [PreparationStepGroup]
+    var html:String
     
     static func decode(json: JSON?) throws -> Recipe {
         return try Recipe(
@@ -61,7 +62,8 @@ struct Recipe: Decodable {
             totalTime: json ==> "totalTime",
             chefNotes: json ==> "chefNotes",
             ingredientGroups: json ==> "ingredientGroups",
-            preparationStepGroups: json ==> "preparationStepGroups"
+            preparationStepGroups: json ==> "preparationStepGroups",
+            html: json ==> "html"
         )
     }
 }

@@ -45,7 +45,7 @@ class RecipeSearchViewController: UIViewController, UISearchBarDelegate, UITable
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let recipeDetailsVC = UIStoryboard(name: "RecipeDetails", bundle: nil).instantiateViewControllerWithIdentifier("recipeDetails") as! RecipeDetailsViewController
-        recipeDetailsVC.recipeId = dataSource.getRecipeId(indexPath)
+        recipeDetailsVC.recipeSummary = dataSource.getRecipeId(indexPath)
         self.navigationController?.pushViewController(recipeDetailsVC, animated: true)
     }
     

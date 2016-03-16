@@ -10,7 +10,7 @@ import UIKit
 
 class RecipeDetailsViewController: UIViewController {
     
-    var recipeId: String!
+    var recipeSummary: RecipeSearchResult.Recipe!
 
     @IBOutlet weak var recipeLabel: UILabel!
     @IBOutlet weak var recipeBgImageView: UIImageView!
@@ -22,7 +22,11 @@ class RecipeDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        RecipeService.instance.retrieveRecipe(withId: recipeId,
+        recipeLabel.text = recipeSummary.name
+        ratingLabel.text = recipeSummary.rating != nil ? formatRating(recipeSummary.rating!.value) : "0.0"
+        
+        
+        RecipeService.instance.retrieveRecipe(withId: recipeSummary.id,
             onSuccess: {
                 //TODO: Add some progress , which will be dismissed here
                 recipe in self.populate(recipe)
@@ -46,11 +50,18 @@ class RecipeDetailsViewController: UIViewController {
         formatter.maximumFractionDigits = 1
         formatter.minimumFractionDigits = 1
         formatter.minimumIntegerDigits = 1
-        ratingLabel.text = formatter.stringFromNumber(recipe.rating.value)
+        ratingLabel.text = formatRating(recipe.rating.value)
         
-        servingsTimeText.attributedText = decodeString("<ul> <li> heloo</li><li>ola</li></ul>")!
+        servingsTimeText.attributedText = decodeString(recipe.html)!
     }
   
+    func formatRating(value: NSDecimalNumber) -> String {
+        let formatter = NSNumberFormatter()
+        formatter.maximumFractionDigits = 1
+        formatter.minimumFractionDigits = 1
+        formatter.minimumIntegerDigits = 1
+        return formatter.stringFromNumber(value)!
+    }
     
     func decodeString(encodedString:String) -> NSAttributedString?
     {

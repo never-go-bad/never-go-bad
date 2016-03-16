@@ -127,7 +127,7 @@ class RecipeDataSource: NSObject, UITableViewDataSource {
         })
     }
     
-    func getRecipeId(indexPath: NSIndexPath) -> String {
-        return items[indexPath.row].id
+    func getRecipeId(indexPath: NSIndexPath) -> RecipeSearchResult.Recipe {
+        return items[indexPath.row]
     }
 }
