@@ -11,20 +11,25 @@ import UIKit
 class RecipeDetailsViewController: UIViewController {
     
     var recipeSummary: RecipeSearchResult.Recipe!
-
+    var lowResImage: String?
+    
     @IBOutlet weak var recipeLabel: UILabel!
     @IBOutlet weak var recipeBgImageView: UIImageView!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var willDoAgainLabel: UILabel!
     @IBOutlet weak var servingsTimeText: UITextView!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setTranslucentNavBar()
+        
         recipeLabel.text = recipeSummary.name
         ratingLabel.text = recipeSummary.rating != nil ? formatRating(recipeSummary.rating!.value) : "0.0"
-        
+        if let lowResImage = recipeSummary.image {
+            recipeBgImageView.fadedSetImageWithUrl(NSURL(string: lowResImage)!)
+        }
+
         
         RecipeService.instance.retrieveRecipe(withId: recipeSummary.id,
             onSuccess: {
@@ -39,9 +44,32 @@ class RecipeDetailsViewController: UIViewController {
         })
     }
     
+    func setTranslucentNavBar() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.translucent = true
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        let shadow = NSShadow()
+        shadow.shadowColor = UIColor.blackColor()
+        shadow.shadowOffset = CGSize(width: 1, height: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSShadowAttributeName: shadow]
+        
+        
+        
+        let barShadow: NSShadow = NSShadow()
+        barShadow.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
+        barShadow.shadowOffset = CGSize(width: 0, height: 1)
+        
+        let navBarTitleTextAttributes = [
+            NSForegroundColorAttributeName: UIColor(red: 255, green: 255, blue: 255, alpha: 1),
+            NSShadowAttributeName: barShadow
+        ]
+        self.navigationItem.backBarButtonItem?.setTitleTextAttributes(navBarTitleTextAttributes, forState: .Normal)
+    }
+    
     func populate(recipe: Recipe) {
         if recipe.image != nil {
-            recipeBgImageView.fadedSetImageWithUrl(NSURL(string: recipe.image!)!)
+            recipeBgImageView.setImageWithURL(NSURL(string: recipe.image!)!)
         }
         
         recipeLabel.text = recipe.name
