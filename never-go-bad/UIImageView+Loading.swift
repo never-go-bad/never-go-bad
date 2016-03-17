@@ -57,6 +57,8 @@ extension UIImageView {
             },
             failure: nil)
     }
+    
+    
 }
 
 func addShadow(toView view:UIView) {
@@ -65,5 +67,16 @@ func addShadow(toView view:UIView) {
     view.layer.shadowRadius = 8.0
     view.layer.shadowOpacity = 0.80
     view.layer.shadowPath = UIBezierPath(rect: view.layer.bounds).CGPath
+}
+
+func imageFromColor(color: UIColor) -> UIImage {
+    let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+    UIGraphicsBeginImageContext(rect.size)
+    let context = UIGraphicsGetCurrentContext()
+    CGContextSetFillColorWithColor(context, color.CGColor)
+    CGContextFillRect(context, rect)
+    let img = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    return img
 }
 

@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aDU-zX-oux">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="380"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="580"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="380" id="Xal-JS-ldt"/>
+                                    <constraint firstAttribute="height" constant="580" id="Xal-JS-ldt"/>
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4p-cV-lcM">
@@ -51,16 +51,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BFS-a2-RRK" userLabel="Content">
-                                                <rect key="frame" x="0.0" y="310" width="480" height="504"/>
+                                                <rect key="frame" x="0.0" y="310" width="481" height="504"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lO2-WO-mGr">
-                                                        <rect key="frame" x="8" y="8" width="464" height="124"/>
+                                                        <rect key="frame" x="8" y="8" width="465" height="124"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="00t-7S-FHP" userLabel="Rating">
                                                                 <rect key="frame" x="8" y="8" width="240" height="105"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="RATING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVo-LW-bFn">
-                                                                        <rect key="frame" x="78" y="17" width="55" height="18"/>
+                                                                        <rect key="frame" x="78" y="17" width="56" height="18"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -150,7 +150,7 @@
                                             <constraint firstAttribute="bottom" secondItem="BFS-a2-RRK" secondAttribute="bottom" id="HEW-pz-oWv"/>
                                             <constraint firstAttribute="trailing" secondItem="tAF-vi-0uk" secondAttribute="trailing" id="fnK-g8-7mR"/>
                                             <constraint firstItem="tAF-vi-0uk" firstAttribute="leading" secondItem="Iyw-uX-oDt" secondAttribute="leading" id="iVx-DM-XOE"/>
-                                            <constraint firstItem="tAF-vi-0uk" firstAttribute="top" secondItem="Iyw-uX-oDt" secondAttribute="top" constant="200" id="sGY-pk-SZy"/>
+                                            <constraint firstItem="tAF-vi-0uk" firstAttribute="top" secondItem="Iyw-uX-oDt" secondAttribute="top" constant="420" id="sGY-pk-SZy"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -181,7 +181,9 @@
                         <outlet property="ratingLabel" destination="Mvx-29-Bi6" id="SAW-h3-KJx"/>
                         <outlet property="recipeBgImageView" destination="aDU-zX-oux" id="SoR-jG-Vhl"/>
                         <outlet property="recipeLabel" destination="D2u-zA-YJt" id="UAg-Sg-lpp"/>
+                        <outlet property="scrollView" destination="s4p-cV-lcM" id="Eps-yx-ngn"/>
                         <outlet property="servingsTimeText" destination="6wN-h4-Wzm" id="2uL-bI-w1h"/>
+                        <outlet property="titleBg" destination="tAF-vi-0uk" id="9vy-ZC-CUT"/>
                         <outlet property="willDoAgainLabel" destination="7ly-iX-qm8" id="skd-TV-bT6"/>
                     </connections>
                 </viewController>

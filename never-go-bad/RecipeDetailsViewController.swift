@@ -8,11 +8,13 @@
 
 import UIKit
 
-class RecipeDetailsViewController: UIViewController {
+class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     
     var recipeSummary: RecipeSearchResult.Recipe!
     var lowResImage: String?
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var titleBg: UIView!
     @IBOutlet weak var recipeLabel: UILabel!
     @IBOutlet weak var recipeBgImageView: UIImageView!
     @IBOutlet weak var ratingLabel: UILabel!
@@ -23,6 +25,8 @@ class RecipeDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         setTranslucentNavBar()
+        
+        scrollView.delegate = self
         
         recipeLabel.text = recipeSummary.name
         ratingLabel.text = recipeSummary.rating != nil ? formatRating(recipeSummary.rating!.value) : "0.0"
@@ -49,22 +53,7 @@ class RecipeDetailsViewController: UIViewController {
         self.navigationController?.navigationBar.translucent = true
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        let shadow = NSShadow()
-        shadow.shadowColor = UIColor.blackColor()
-        shadow.shadowOffset = CGSize(width: 1, height: 1)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSShadowAttributeName: shadow]
         
-        
-        
-        let barShadow: NSShadow = NSShadow()
-        barShadow.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
-        barShadow.shadowOffset = CGSize(width: 0, height: 1)
-        
-        let navBarTitleTextAttributes = [
-            NSForegroundColorAttributeName: UIColor(red: 255, green: 255, blue: 255, alpha: 1),
-            NSShadowAttributeName: barShadow
-        ]
-        self.navigationItem.backBarButtonItem?.setTitleTextAttributes(navBarTitleTextAttributes, forState: .Normal)
     }
     
     func populate(recipe: Recipe) {
@@ -100,5 +89,13 @@ class RecipeDetailsViewController: UIViewController {
             print(error.localizedDescription)
             return nil
         }
+    }
+    
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let fraction = min(scrollView.contentOffset.y/480.0, 1.0)
+        self.navigationController?.navigationBar.setBackgroundImage(imageFromColor(UIColor(red: 0, green: 0, blue: 0, alpha: fraction * 0.5)), forBarMetrics: .Default)
+        
+        
     }
 }
