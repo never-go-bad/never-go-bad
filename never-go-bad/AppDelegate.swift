@@ -38,28 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                UIAlertController(title: notification.alertTitle, message: notification.alertBody,preferredStyle: .ActionSheet)
 //
 //            }
-		// }
-        
-        /*
-        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        // Override point for customization after application launch.
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-        self.window.rootViewController = self.viewController;
-        [self.window makeKeyAndVisible];
-        
-        self.uiss = [UISS configureWithDefaultJSONFile]; //Import From defualt uiss.json file in supporting files.
-        self.uiss.statusWindowEnabled = YES; //enables status bar at top of app.
-        return YES;
-        */
-        
-
-        /*
-        let uiss = UISS.configureWithJSONFilePath("never-go-bad/uiss.json")
-        uiss.statusWindowEnabled = true
-        uiss.autoReloadEnabled = true
-        uiss.autoReloadTimeInterval = 1
-        */
-        
+		// }        
         
         NUISettings.initWithStylesheet("style")
         self.window?.rootViewController = TabViewControllerHelper.createTabBarController()

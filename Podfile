@@ -18,7 +18,6 @@ target 'never-go-bad' do
     pod 'SWTableViewCell', '~> 0.3.7'
 	pod 'CSwiftV'
     pod 'HCSStarRatingView'
-	pod 'UISS', '1.1.2'
 	pod 'NUI', :head
 end
 

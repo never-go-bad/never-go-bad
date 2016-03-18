@@ -37,7 +37,6 @@ PODS:
   - RequestUtils (1.1.2)
   - SWTableViewCell (0.3.7)
   - UIImage-Categories (1.0.0)
-  - UISS (1.1.2)
 
 DEPENDENCIES:
   - AFDateHelper
@@ -54,7 +53,6 @@ DEPENDENCIES:
   - Parse
   - SWTableViewCell (~> 0.3.7)
   - UIImage-Categories
-  - UISS (= 1.1.2)
 
 EXTERNAL SOURCES:
   ELCodable:
@@ -85,6 +83,5 @@ SPEC CHECKSUMS:
   RequestUtils: 0f04f89abca3936c6566e2f4c3ce5d252036bc89
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
   UIImage-Categories: a0593f6a7991c99016b9ecadfbd38b3717ff1a73
-  UISS: 98e791bc0680d3263edfc2a99caf645b6573db1f
 
 COCOAPODS: 0.39.0
