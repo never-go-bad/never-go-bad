@@ -33,6 +33,9 @@
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAF-vi-0uk" userLabel="Label Fumet BG">
                                                 <rect key="frame" x="0.0" y="226" width="480" height="89"/>
                                                 <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dropShadow" translatesAutoresizingMaskIntoConstraints="NO" id="3UQ-OZ-rCT">
+                                                        <rect key="frame" x="0.0" y="-6" width="480" height="88"/>
+                                                    </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Polenta al allio et oglio de la Fiorentina al  Piemonte, Californian variation" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2u-zA-YJt">
                                                         <rect key="frame" x="-393" y="46" width="1025" height="36"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -42,12 +45,15 @@
                                                         <size key="shadowOffset" width="2" height="2"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.0022283976510067112" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="3UQ-OZ-rCT" firstAttribute="top" secondItem="tAF-vi-0uk" secondAttribute="top" id="5DD-Pp-64d"/>
                                                     <constraint firstAttribute="trailing" secondItem="D2u-zA-YJt" secondAttribute="trailing" constant="10" id="IEF-OF-GUm"/>
                                                     <constraint firstAttribute="bottom" secondItem="D2u-zA-YJt" secondAttribute="bottom" constant="10" id="IJn-Cf-xRl"/>
                                                     <constraint firstItem="D2u-zA-YJt" firstAttribute="leading" secondItem="tAF-vi-0uk" secondAttribute="leading" constant="10" id="V4O-3a-4DW"/>
+                                                    <constraint firstItem="3UQ-OZ-rCT" firstAttribute="leading" secondItem="tAF-vi-0uk" secondAttribute="leading" id="fbX-C0-l3q"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3UQ-OZ-rCT" secondAttribute="trailing" id="i65-jz-iDh"/>
                                                     <constraint firstItem="D2u-zA-YJt" firstAttribute="top" secondItem="tAF-vi-0uk" secondAttribute="top" constant="10" id="nhV-Og-9n0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="3UQ-OZ-rCT" secondAttribute="bottom" id="ulb-77-plD"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BFS-a2-RRK" userLabel="Content">
@@ -192,4 +198,7 @@
             <point key="canvasLocation" x="478" y="329"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dropShadow" width="320" height="94"/>
+    </resources>
 </document>
