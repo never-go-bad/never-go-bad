@@ -53,7 +53,6 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         self.navigationController?.navigationBar.translucent = true
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        
     }
     
     func populate(recipe: Recipe) {

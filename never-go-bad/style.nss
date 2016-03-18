@@ -16,13 +16,6 @@ Button {
 }
 
 
-
-NavigationBar {
-    background-tint-color: #FFFFFF;
-    background-color: #333333;
-    font-color: #FFFFFF;
-}
-
 Table {
     separator-style: none;
 }

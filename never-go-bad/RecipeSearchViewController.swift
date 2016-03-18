@@ -52,4 +52,9 @@ class RecipeSearchViewController: UIViewController, UISearchBarDelegate, UITable
     func scrollViewDidScroll(scrollView: UIScrollView) {
         dataSource.scrollViewDidScroll(scrollView)
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = nil
+    }
 }

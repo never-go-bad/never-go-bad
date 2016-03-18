@@ -44,12 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = TabViewControllerHelper.createTabBarController()
         self.window?.backgroundColor = UIColor.whiteColor()
         self.window?.makeKeyAndVisible()
-
-        // manually setting status bar color here
-        let view = UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, 20))
-        view.backgroundColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
-        self.window?.rootViewController?.view.addSubview(view)
-
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
         return true
 	}
 
