@@ -19,7 +19,7 @@ Button {
 
 NavigationBar {
     background-tint-color: #FFFFFF;
-    background-color: #888888;
+    background-color: #333333;
     font-color: #FFFFFF;
 }
 

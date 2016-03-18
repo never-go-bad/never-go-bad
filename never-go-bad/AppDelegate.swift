@@ -60,13 +60,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         uiss.autoReloadTimeInterval = 1
         */
         
-        UINavigationBar.appearance().barStyle = .Default
-            
+        
         NUISettings.initWithStylesheet("style")
         self.window?.rootViewController = TabViewControllerHelper.createTabBarController()
         self.window?.backgroundColor = UIColor.whiteColor()
         self.window?.makeKeyAndVisible()
-		return true
+
+        // manually setting status bar color here
+        let view = UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, 20))
+        view.backgroundColor = UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+        self.window?.rootViewController?.view.addSubview(view)
+
+        return true
 	}
 
 //    func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
