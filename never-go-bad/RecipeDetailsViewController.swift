@@ -93,7 +93,7 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let fraction = min(scrollView.contentOffset.y/480.0, 1.0)
-        self.navigationController?.navigationBar.setBackgroundImage(imageFromColor(UIColor(red: 0, green: 0, blue: 0, alpha: fraction * 0.5)), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.setBackgroundImage(imageFromColor(UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: fraction)), forBarMetrics: .Default)
         
         
     }
