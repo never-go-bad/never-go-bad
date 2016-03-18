@@ -10,6 +10,7 @@ import UIKit
 import Parse
 import Fabric
 import Crashlytics
+import NUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,9 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		Parse.setApplicationId("wNe6DP9lMT96m6TyB39b6x4X8t7z2Tr0nF5RpzH9", clientKey: "4I0keAG1YufRXDUhGXbFPxlLTxM67NjX0Sx54AJ8")
 
-        self.window?.rootViewController = TabViewControllerHelper.createTabBarController()
-		self.window?.backgroundColor = UIColor.whiteColor()
-		self.window?.makeKeyAndVisible()
 
 		let myNotificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Sound], categories: nil)
         application.registerUserNotificationSettings(myNotificationSettings)
@@ -42,6 +40,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            }
 		// }
         
+        /*
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        // Override point for customization after application launch.
+        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+        self.window.rootViewController = self.viewController;
+        [self.window makeKeyAndVisible];
+        
+        self.uiss = [UISS configureWithDefaultJSONFile]; //Import From defualt uiss.json file in supporting files.
+        self.uiss.statusWindowEnabled = YES; //enables status bar at top of app.
+        return YES;
+        */
+        
+
+        /*
+        let uiss = UISS.configureWithJSONFilePath("never-go-bad/uiss.json")
+        uiss.statusWindowEnabled = true
+        uiss.autoReloadEnabled = true
+        uiss.autoReloadTimeInterval = 1
+        */
+        
+        UINavigationBar.appearance().barStyle = .Default
+            
+        NUISettings.initWithStylesheet("style")
+        self.window?.rootViewController = TabViewControllerHelper.createTabBarController()
+        self.window?.backgroundColor = UIColor.whiteColor()
+        self.window?.makeKeyAndVisible()
 		return true
 	}
 

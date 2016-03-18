@@ -10,5 +10,6 @@
 #define Bridging_Header_h
 
 #import "SWTableViewCell.h"
+#import <NUIParse/NUIParse.h>
 
 #endif /* Bridging_Header_h */
