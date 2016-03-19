@@ -267,6 +267,6 @@
         <image name="barcodeButton" width="48" height="48"/>
         <image name="cameraButton" width="48" height="48"/>
         <image name="cart" width="24" height="24"/>
-        <image name="tree" width="128" height="128"/>
+        <image name="tree" width="64" height="64"/>
     </resources>
 </document>

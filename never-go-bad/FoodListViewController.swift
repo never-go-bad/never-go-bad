@@ -82,14 +82,14 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 
 	func getLeftUtilityButtonsToCell() -> NSMutableArray {
 		let leftutilityButtons: NSMutableArray = NSMutableArray()
-		leftutilityButtons.sw_addUtilityButtonWithColor(UIColor.redColor(), title: NSLocalizedString("Delete", comment: ""))
+		leftutilityButtons.sw_addUtilityButtonWithColor(UIColor.grayColor(), title: NSLocalizedString("Delete", comment: ""))
 		return leftutilityButtons
 	}
 
 	func getRightUtilityButtonsToCell() -> NSMutableArray {
 		let rightUtilityButtons: NSMutableArray = NSMutableArray()
-		rightUtilityButtons.sw_addUtilityButtonWithColor(UIColor.greenColor(), title: NSLocalizedString("Consumed", comment: ""))
-		rightUtilityButtons.sw_addUtilityButtonWithColor(UIColor.lightGrayColor(), title: NSLocalizedString("Trashed", comment: ""))
+        rightUtilityButtons.sw_addUtilityButtonWithColor(UIColor(red:0.494, green:0.827, blue:0.129, alpha:1.00), icon: UIImage(named: "Gone"))
+        rightUtilityButtons.sw_addUtilityButtonWithColor(UIColor(red:0.996, green:0.220 ,blue:0.141, alpha:1.00), icon: UIImage(named: "Trash"))
 		return rightUtilityButtons
 	}
 
@@ -111,7 +111,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 			FoodService.setConsumed(foodConsumed!, completion: { () -> () in
 				self.tableView.reloadData()
 			})
-			foods?.removeAtIndex(cellIndexPath.row)
+			foods?[cellIndexPath.section].removeAtIndex(cellIndexPath.row)
 			self.tableView.deleteRowsAtIndexPaths([cellIndexPath], withRowAnimation: .Automatic)
 		} else if index == 1 {
 			let cellIndexPath: NSIndexPath = tableView.indexPathForCell(cell)!
@@ -120,7 +120,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 			FoodService.setTrashed(foodTrashed!, completion: { () -> () in
 				self.tableView.reloadData()
 			})
-			foods?.removeAtIndex(cellIndexPath.row)
+            foods?[cellIndexPath.section].removeAtIndex(cellIndexPath.row)
 			self.tableView.deleteRowsAtIndexPaths([cellIndexPath], withRowAnimation: .Automatic)
 		}
 	}
@@ -153,7 +153,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 			self.tableView.reloadData()
 		})
 
-		foods?.removeAtIndex(indexPath.row)
+        foods?[indexPath.section].removeAtIndex(indexPath.row)
 		tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
 	}
 
