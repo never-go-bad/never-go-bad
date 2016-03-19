@@ -8,19 +8,16 @@
 
 import UIKit
 
-class RecipeSearchViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate {
+class RecipeSearchViewController: UIViewController, UISearchBarDelegate, UICollectionViewDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UICollectionView!
     private var dataSource: RecipeDataSource!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.estimatedRowHeight = 140
-        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.delegate = self
-        
         searchBar.delegate = self
         
         dataSource = RecipeDataSource(forTable: tableView)
@@ -40,13 +37,11 @@ class RecipeSearchViewController: UIViewController, UISearchBarDelegate, UITable
         tableView.setContentOffset(CGPointZero, animated: false)
     }
     
-
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let recipeDetailsVC = UIStoryboard(name: "RecipeDetails", bundle: nil).instantiateViewControllerWithIdentifier("recipeDetails") as! RecipeDetailsViewController
         recipeDetailsVC.recipeSummary = dataSource.getRecipeId(indexPath)
         self.navigationController?.pushViewController(recipeDetailsVC, animated: true)
+
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {

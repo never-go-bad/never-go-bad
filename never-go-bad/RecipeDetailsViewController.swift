@@ -32,6 +32,8 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         ratingLabel.text = recipeSummary.rating != nil ? formatRating(recipeSummary.rating!.value) : "0.0"
         if let lowResImage = recipeSummary.image {
             recipeBgImageView.fadedSetImageWithUrl(NSURL(string: lowResImage)!)
+        } else {
+            recipeBgImageView.image = UIImage(named: "genericFood")
         }
 
         

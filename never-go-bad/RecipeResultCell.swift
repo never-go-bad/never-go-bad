@@ -9,25 +9,28 @@
 import UIKit
 import HCSStarRatingView
 
-class RecipeResultCell: UITableViewCell {
+class RecipeResultCell: UICollectionViewCell {
     
     static let id = "recipe"
     static let defaultImageUrl = "http://www.epicurious.com/css/i/recipe-img-icon.png"
 
+
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var recipeImageView: UIImageView!
-    @IBOutlet weak var ratingView: HCSStarRatingView!
+    @IBOutlet weak var starsView: HCSStarRatingView!
+    @IBOutlet weak var card: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        card.layer.shadowOffset = CGSizeMake(1, 1)
+        card.layer.shadowColor = UIColor.blackColor().CGColor
+        card.layer.shadowRadius = 2.0
+        card.layer.shadowOpacity = 0.60
+        card.layer.shadowPath = UIBezierPath(rect: card.layer.bounds).CGPath
+        card.layer.cornerRadius = 2.0
         
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     func apply(recipe: RecipeSearchResult.Recipe) {
         titleLabel.text = recipe.name
@@ -36,10 +39,10 @@ class RecipeResultCell: UITableViewCell {
         
         recipeImageView.fadedSetImageWithUrl(recipeImageUrl ?? NSURL(string: RecipeResultCell.defaultImageUrl)!)
         if let rating = recipe.rating {
-            ratingView.hidden = false
-            ratingView.value = CGFloat(rating.value.doubleValue)
+            starsView.hidden = false
+            starsView.value = CGFloat(rating.value.doubleValue)
         } else {
-            ratingView.hidden = true
+            starsView.hidden = true
         }
         
     }

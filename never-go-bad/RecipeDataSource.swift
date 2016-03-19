@@ -10,21 +10,21 @@ import Foundation
 import UIKit
 import MBProgressHUD
 
-class RecipeDataSource: NSObject, UITableViewDataSource {
+class RecipeDataSource: NSObject, UICollectionViewDataSource {
     
     private var items: [RecipeSearchResult.Recipe] = [] {
         didSet {
             tableView.reloadData()
         }
     }
-    private var tableView: UITableView
+    private var tableView: UICollectionView
     private var currentSearchTask: NetTask? = nil
     private var searchTerm = ""
     private var currentPage = 1
     private var currentProgressHub: MBProgressHUD?
     private var loadingMoreView:InfiniteScrollActivityView!
     
-    init(forTable tableView:UITableView) {
+    init(forTable tableView:UICollectionView) {
         self.tableView = tableView
         super.init()
         tableView.dataSource = self
@@ -40,10 +40,6 @@ class RecipeDataSource: NSObject, UITableViewDataSource {
         tableView.contentInset = insets
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //Don't show "no results" while searching
-        return items.isEmpty ? (currentProgressHub == nil ? 1 : 0) : items.count
-    }
     
     func searchFor(terms: String) {
         if currentSearchTask != nil {
@@ -76,18 +72,25 @@ class RecipeDataSource: NSObject, UITableViewDataSource {
         )
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
+//    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return "Results for \"\(searchTerm)\""
+//    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //Don't show "no results" while searching
+        //return items.isEmpty ? (currentProgressHub == nil ? 1 : 0) : items.count
+        return items.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         if items.isEmpty {
-            return tableView.dequeueReusableCellWithIdentifier("noRecipes")!
+            return tableView.dequeueReusableCellWithReuseIdentifier("noRecipes", forIndexPath: indexPath)
         } else {
-            let cell  = tableView.dequeueReusableCellWithIdentifier(RecipeResultCell.id) as! RecipeResultCell
+            let cell  = tableView.dequeueReusableCellWithReuseIdentifier(RecipeResultCell.id, forIndexPath: indexPath) as! RecipeResultCell
             cell.apply(items[indexPath.row])
             return cell
         }
-    }
-    
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Results for \"\(searchTerm)\""
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
