@@ -17,11 +17,12 @@ class FoodListTableViewCell: SWTableViewCell {
     var food: Food? {
         didSet {
             if let food = food {
+                print(food.daysLeft(), food.expireDate)
                 foodNameLabel.text = food.name
                 let daysLeft = food.daysLeft()
-                if daysLeft < 0 {
+                if daysLeft <= 0 {
                     daysLeftLabel.text = "Expired"
-                } else if daysLeft == 0 {
+                } else if daysLeft == 1 {
                     daysLeftLabel.text = "Today"
                 } else if daysLeft < 7 {
                     daysLeftLabel.text = "\(daysLeft) days"
@@ -29,6 +30,10 @@ class FoodListTableViewCell: SWTableViewCell {
                     daysLeftLabel.text = "\(daysLeft/7) weeks"
                 } else {
                     daysLeftLabel.text = "\(daysLeft/30) months"
+                }
+                
+                if daysLeft < 7 {
+                    daysLeftLabel.hidden = true
                 }
             }
         }

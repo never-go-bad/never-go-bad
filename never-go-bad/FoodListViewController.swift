@@ -11,7 +11,7 @@ import SWTableViewCell
 
 class FoodListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate {
 
-	var foods: [Food]?
+	var foods: [[Food]]?
 	@IBOutlet weak var tableView: UITableView!
 
 	// var daysBeforeToFire: Int = 3
@@ -36,9 +36,37 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 8
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Expired!"
+        } else if section == 1 {
+            return "Today!"
+        } else if section < 7 {
+            return "\(section) Days Left"
+        } else {
+            return "More Than a Week"
+        }
+    }
 
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if let foods = foods {
+            return foods[section].count > 0 ? UITableViewAutomaticDimension : 0
+        } else {
+            return 0
+        }
+    }
+    
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return foods?.count ?? 0
+        if let foods = foods {
+            return foods[section].count
+        } else {
+            return 0
+        }
 	}
 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -48,7 +76,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 		cell.leftUtilityButtons = self.getLeftUtilityButtonsToCell() as [AnyObject]
 		cell.rightUtilityButtons = self.getRightUtilityButtonsToCell() as [AnyObject]
 
-		cell.food = foods![indexPath.row]
+		cell.food = foods![indexPath.section][indexPath.row]
 		return cell
 	}
 
@@ -74,11 +102,11 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 			deleteFood(cellIndexPath)
 		}
 	}
-
+    
 	func swipeableTableViewCell(cell: SWTableViewCell!, didTriggerRightUtilityButtonWithIndex index: Int) {
 		if index == 0 {
 			let cellIndexPath: NSIndexPath = tableView.indexPathForCell(cell)!
-			let foodConsumed = foods?[cellIndexPath.row]
+			let foodConsumed = foods?[cellIndexPath.section][cellIndexPath.row]
 			foodConsumed?.consumed = true
 			FoodService.setConsumed(foodConsumed!, completion: { () -> () in
 				self.tableView.reloadData()
@@ -87,7 +115,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 			self.tableView.deleteRowsAtIndexPaths([cellIndexPath], withRowAnimation: .Automatic)
 		} else if index == 1 {
 			let cellIndexPath: NSIndexPath = tableView.indexPathForCell(cell)!
-			let foodTrashed = foods?[cellIndexPath.row]
+			let foodTrashed = foods?[cellIndexPath.section][cellIndexPath.row]
 			foodTrashed?.consumed = true
 			FoodService.setTrashed(foodTrashed!, completion: { () -> () in
 				self.tableView.reloadData()
@@ -103,13 +131,23 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 
 	func loadFood() {
 		FoodService.get { (foodItems) -> () in
-			self.foods = foodItems
+            self.foods = [[Food]](count: 8, repeatedValue: [Food]())
+            for food in foodItems {
+                let daysLeft = food.daysLeft()
+                if daysLeft <= 0 {
+                    self.foods![0].append(food)
+                } else if daysLeft <= 6 {
+                    self.foods![daysLeft].append(food)
+                } else {
+                    self.foods![7].append(food)
+                }
+            }
 			self.tableView.reloadData()
 		}
 	}
 
 	func deleteFood(indexPath: NSIndexPath) {
-		let foodToDelete = foods![indexPath.row]
+		let foodToDelete = foods![indexPath.section][indexPath.row]
 
 		FoodService.delete(foodToDelete, completion: { () -> () in
 			self.tableView.reloadData()

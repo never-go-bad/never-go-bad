@@ -81,9 +81,8 @@ class FoodService {
 	}
 
 	class func get(completion: (foods: [Food]) -> ()) -> Void {
-
 		let query = PFQuery(className: "FoodItem")
-		query.whereKey("installationId", equalTo: PFInstallation.currentInstallation())
+//		query.whereKey("installationId", equalTo: PFInstallation.currentInstallation())
 		query.whereKey("consumed", equalTo: false)
 		query.whereKey("trashed", equalTo: false)
 		query.findObjectsInBackgroundWithBlock {
