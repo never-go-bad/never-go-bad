@@ -21,9 +21,29 @@ class RecipeSearchViewController: UIViewController, UISearchBarDelegate, UIColle
         searchBar.delegate = self
         
         dataSource = RecipeDataSource(forTable: tableView)
-        //TODO: Change to use the about to expire food
-        dataSource.searchFor("banana")
+        searchAboutToExpireFood()
+        
+    }
 
+    func searchAboutToExpireFood() {
+        FoodService.get {
+            foodList in
+            let sortedFood = foodList.sort {
+                return $0.expireDate.timeIntervalSinceReferenceDate < $1.expireDate.timeIntervalSinceReferenceDate
+            }
+            let count = min(sortedFood.count, 2)
+            let foodSearchStr = sortedFood[0..<count].map{ (food) -> String in
+                food.name
+                }.joinWithSeparator(" ").trim()
+            if foodSearchStr.isEmpty {
+                self.searchBar.text = "banana"
+            } else {
+                self.searchBar.text = foodSearchStr
+            }
+            
+            self.searchBarSearchButtonClicked(self.searchBar)
+            
+        }
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
