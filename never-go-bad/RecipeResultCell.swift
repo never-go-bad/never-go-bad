@@ -28,9 +28,7 @@ class RecipeResultCell: UICollectionViewCell {
         card.layer.shadowOpacity = 0.60
         card.layer.shadowPath = UIBezierPath(rect: card.layer.bounds).CGPath
         card.layer.cornerRadius = 2.0
-        
     }
-
     
     func apply(recipe: RecipeSearchResult.Recipe) {
         titleLabel.text = recipe.name
