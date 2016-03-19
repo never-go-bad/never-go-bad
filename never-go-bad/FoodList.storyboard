@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Food Input View Controller-->
+        <!--Add Items-->
         <scene sceneID="46z-oN-XJn">
             <objects>
                 <viewController storyboardIdentifier="FoodInput" automaticallyAdjustsScrollViewInsets="NO" id="SAO-Sb-fXc" customClass="FoodInputViewController" customModule="never_go_bad" customModuleProvider="target" sceneMemberID="viewController">
@@ -198,8 +198,8 @@
                             <constraint firstItem="wf7-9x-niz" firstAttribute="top" secondItem="zJ5-fn-Phm" secondAttribute="bottom" id="nvb-J6-nyo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hdc-sz-SgX">
-                        <barButtonItem key="rightBarButtonItem" title="Confirm" id="mxB-q0-NFW">
+                    <navigationItem key="navigationItem" title="Add Items" id="hdc-sz-SgX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="mxB-q0-NFW">
                             <connections>
                                 <action selector="onConfirmButton:" destination="SAO-Sb-fXc" id="GPe-tN-YYd"/>
                             </connections>
@@ -305,7 +305,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Items" id="SDV-R9-nej">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="QHf-Sj-n3m">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QHf-Sj-n3m">
                             <connections>
                                 <segue destination="SAO-Sb-fXc" kind="push" id="8iW-7D-5Sg"/>
                             </connections>
