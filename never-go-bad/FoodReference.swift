@@ -18,4 +18,22 @@ class FoodReference: NSObject {
         self.shelfLife = shelfLife
         self.photoUrl = photoUrl
     }
+
+    var shelfLifeString: String {
+        get {
+            if shelfLife == 1 {
+                return "1 day"
+            } else if shelfLife < 7 {
+                return "\(shelfLife) days"
+            } else if shelfLife == 7 {
+                return "1 week"
+            } else if shelfLife < 30 {
+                return "\(shelfLife / 7) weeks"
+            } else if shelfLife == 30 {
+                return "1 month"
+            } else {
+                return "\(shelfLife / 30) months"
+            }
+        }
+    }
 }

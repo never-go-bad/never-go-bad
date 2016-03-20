@@ -12,8 +12,8 @@ var DAYS_LEFT_PICKER_VIEW = 1
 class FoodInputTableViewCell: UITableViewCell,
 UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
-    var daysLeftPickerStrings = ["1 day", "2 days", "3 days", "4 days", "5 days", "6 days", "1 week", "2 weeks", "3 weeks", "1 month", "2 months"]
-    var daysLeftPickerValues = [1, 2, 3, 4, 5, 6, 7, 14, 21, 30, 60]
+    var daysLeftPickerStrings = ["1 day", "2 days", "3 days", "4 days", "5 days", "6 days", "1 week", "2 weeks", "3 weeks", "1 month", "2 months", "3 months", "4 months", "5 months", "6 months", "7 months", "8 months", "9 months", "10 months", "11 months", "12 months"]
+    var daysLeftPickerValues = [1, 2, 3, 4, 5, 6, 7, 14, 21, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330, 360]
     
     var daysLeftPickerView: UIPickerView?
     

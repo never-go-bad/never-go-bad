@@ -270,7 +270,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="3 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC1-sX-AyH">
                                                     <rect key="frame" x="257.5" y="33.5" width="50.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -282,7 +282,6 @@
                                                 <constraint firstItem="bC1-sX-AyH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9Kv-K0-30z" secondAttribute="trailing" constant="8" id="QCH-3b-m73"/>
                                                 <constraint firstItem="Jbt-88-fdp" firstAttribute="centerY" secondItem="9Kv-K0-30z" secondAttribute="centerY" id="RV7-fc-PqK"/>
                                                 <constraint firstAttribute="bottom" secondItem="ruD-8y-fdX" secondAttribute="bottom" id="Vsh-EW-mEk"/>
-                                                <constraint firstItem="ruD-8y-fdX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9Kv-K0-30z" secondAttribute="bottom" constant="12" id="Wl1-Am-KRI"/>
                                                 <constraint firstItem="9Kv-K0-30z" firstAttribute="leading" secondItem="Jbt-88-fdp" secondAttribute="trailing" constant="20" id="fju-bW-INJ"/>
                                                 <constraint firstItem="Jbt-88-fdp" firstAttribute="leading" secondItem="b3w-TV-inI" secondAttribute="leading" constant="20" id="nBg-Ah-eg1"/>
                                                 <constraint firstItem="9Kv-K0-30z" firstAttribute="centerY" secondItem="bC1-sX-AyH" secondAttribute="centerY" id="nKr-T3-YsE"/>
