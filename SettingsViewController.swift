@@ -18,15 +18,25 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
 
 	@IBOutlet weak var alertDaysPickerView: UIPickerView!
 	@IBOutlet weak var alertTimePicker: UIDatePicker!
+    
 
     @IBOutlet weak var tableView: UITableView!
 	var pickerDays = [1, 2, 3, 4, 5, 6, 7]
+    var categories: [[String: AnyObject]]!
     
     var switchStates = [Int:Bool]?()
     weak var delegate: SettingsViewControllerDelegate?
+    
+    struct Objects {
+        
+        var sectionName : String!
+        var sectionObjects : [AnyObject]!
+    }
+    
+    var objectArray = [Objects]()
 
     
-    let dieteryConsiderationDictionary: [[String: String]] =
+    let dieteryConsiderationDictionary: [[String: AnyObject]] =
     [["name" : "Healthy", "code" : "652"],
         ["name" : "Vegan", "code" : "656"],
         ["name" : "LowCholesterol", "code" : "655"],
@@ -43,16 +53,19 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         
         tableView.delegate = self
         tableView.dataSource = self
-//        
-//       tableView.estimatedRowHeight = 60
-//        tableView.rowHeight = UITableViewAutomaticDimension
-//
+
 		let daysBeforeToAlert = SettingsService.getDaysBeforeToAlert()
 		let indexOfDaysBeforeToAlert = pickerDays.indexOf(daysBeforeToAlert)
 		alertDaysPickerView.selectRow(indexOfDaysBeforeToAlert!, inComponent: 0, animated: true)
 		self.view.addSubview(alertDaysPickerView)
 
 		alertTimePicker.date = SettingsService.getTimeToAlert()
+//        
+//        let dieteryCon = SettingsService.getDieteryConsiderations()
+//        let indexOfdieteryCon = tableView.indexPathsForSelectedRows(dieteryCon)
+//        
+        
+        categories =  dieteryConsiderationDictionary
         
 	}
 
@@ -69,17 +82,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
 	}
 	func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
 		return ("\(pickerDays[row]) Days" )
-        
-       // "expireDate \(foodItem.expireDate)"
-	}
-
-//	func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-//		return 36.0
-//	}
-//
-//	func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-//		return 36.0
-//	}
+     }
 
 	func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		SettingsService.setDaysBeforeToAlert(pickerDays[row])
@@ -92,7 +95,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         if(switchStates != nil){
             for (row, isSelected) in switchStates!
             {
-                selectedCategories.append(dieteryConsiderationDictionary[row]["code"]!)
+                selectedCategories.append(dieteryConsiderationDictionary[row]["code"]! as! String)
             }
             if selectedCategories.count > 0
             {
@@ -127,10 +130,10 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("DieteryConsiderationCell", forIndexPath: indexPath) as! DieteryConsiderationCell
-        cell.dieteryConsiderationLabel.text = dieteryConsiderationDictionary[indexPath.row]["name"]
-        cell.delegate = self
-        //cell.onSwitch.on = switchStates![indexPath.row]!
+        cell.dieteryConsiderationLabel.text = dieteryConsiderationDictionary[indexPath.row]["name"]! as! String
+      //TODO: Set Switch State based on SettingService NSUserDefaults - just the BOOL
         
+        //  cell.onSwitch.on = SettingsService.
         
         if(switchStates != nil) {
             cell.onSwitch.on = switchStates![indexPath.row] ?? false

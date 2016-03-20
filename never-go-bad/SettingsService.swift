@@ -45,18 +45,18 @@ class SettingsService{
         defaults.setObject(time, forKey: "timeToAlert")
     }
     
-    class func getDieteryConsiderations()->[String : String]{
-        var preference = defaults.valueForKey("dieteryConsideration") as? [String : String]
+    class func getDieteryConsiderations()->[[String : Bool]]{
+        var preference = defaults.objectForKey("dieteryConsideration") as? [[String : Bool]]
         
         if(preference ==  nil)
         {
-            preference = ["Healthy" : "652"]
+            preference = [["Healthy" : true]]
         }
         
         return preference!
     }
     
-    class func setDieteryConsideratons(dieteryConsideration: [String : String]){
-        defaults.setValue(dieteryConsideration, forKey: "dieteryConsideration")
+    class func setDieteryConsideratons(dieteryConsideration: [[String : Bool]]){
+        defaults.setObject(dieteryConsideration, forKey: "dieteryConsideration")
     }
 }
