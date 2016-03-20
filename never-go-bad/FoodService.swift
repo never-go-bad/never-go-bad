@@ -20,7 +20,9 @@ class FoodService {
 			foodItem["objectId"] = item.objectId
 			foodItem["name"] = item.name
 			foodItem["expirationDate"] = item.expireDate
-            foodItem["photoUrl"] = item.photoUrl
+            if item.photoUrl != nil {
+                foodItem["photoUrl"] = item.photoUrl
+            }
 			foodItem["quantityType"] = String(item.quantityType)
 			foodItem["quantity"] = item.quantity
 			foodItem["installationId"] = installation
