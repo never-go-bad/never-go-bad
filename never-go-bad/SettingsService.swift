@@ -44,4 +44,19 @@ class SettingsService{
     class func setTimeToAlert(time : NSDate){
         defaults.setObject(time, forKey: "timeToAlert")
     }
+    
+    class func getDieteryConsiderations()->[String : String]{
+        var preference = defaults.valueForKey("dieteryConsideration") as? [String : String]
+        
+        if(preference ==  nil)
+        {
+            preference = ["Healthy" : "652"]
+        }
+        
+        return preference!
+    }
+    
+    class func setDieteryConsideratons(dieteryConsideration: [String : String]){
+        defaults.setValue(dieteryConsideration, forKey: "dieteryConsideration")
+    }
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Settings View Controller-->
@@ -17,20 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2G-nr-vgb">
-                                <rect key="frame" x="128" y="72" width="64" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert before (# of Days):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTd-8t-RAc">
+                                <rect key="frame" x="6" y="303" width="184" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="xrx-oO-8zG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alert before (# of Days):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTd-8t-RAc">
-                                <rect key="frame" x="6" y="101" width="184" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="Kom-1M-Uor">
-                                <rect key="frame" x="82" y="350" width="157" height="51"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="Kom-1M-Uor">
+                                <rect key="frame" x="0.0" y="224" width="320" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="wWZ-Av-cwf"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="479348415.10037899">
                                     <!--2016-03-11 00:20:15 +0000-->
                                 </date>
@@ -38,17 +38,66 @@
                                     <action selector="timePickerComplete:" destination="aAu-F2-kuw" eventType="valueChanged" id="Wl9-Py-gXr"/>
                                 </connections>
                             </datePicker>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lMJ-8i-82s">
-                                <rect key="frame" x="87" y="101" width="105" height="180"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time to send Notifications :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7e-yt-czQ">
-                                <rect key="frame" x="4" y="284" width="188" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time to send Notifications :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7e-yt-czQ">
+                                <rect key="frame" x="4" y="182" width="227" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="32" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wRa-aQ-xNd">
+                                <rect key="frame" x="0.0" y="64" width="320" height="105"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DieteryConsiderationCell" rowHeight="32" id="msu-tb-ZTs" customClass="DieteryConsiderationCell" customModule="never_go_bad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="32"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="msu-tb-ZTs" id="ECb-uA-cFF">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="31"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffT-Mi-5dd">
+                                                    <rect key="frame" x="14" y="0.0" width="151" height="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DoO-cq-7cX">
+                                                    <rect key="frame" x="254" y="0.0" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dieteryConsiderationLabel" destination="ffT-Mi-5dd" id="s68-XP-ZvY"/>
+                                            <outlet property="onSwitch" destination="DoO-cq-7cX" id="J5W-uT-sRK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMJ-8i-82s">
+                                <rect key="frame" x="0.0" y="352" width="320" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aTd-8t-RAc" firstAttribute="top" secondItem="Kom-1M-Uor" secondAttribute="bottom" constant="28" id="5gl-Vf-fif"/>
+                            <constraint firstAttribute="trailing" secondItem="aTd-8t-RAc" secondAttribute="trailing" constant="130" id="AWo-Ry-XV0"/>
+                            <constraint firstAttribute="trailing" secondItem="y7e-yt-czQ" secondAttribute="trailing" constant="128" id="CFw-Si-aQL"/>
+                            <constraint firstItem="wRa-aQ-xNd" firstAttribute="leading" secondItem="JG5-c1-qgz" secondAttribute="leading" id="DrU-FF-MN7"/>
+                            <constraint firstItem="aTd-8t-RAc" firstAttribute="top" secondItem="Kom-1M-Uor" secondAttribute="bottom" constant="28" id="EvN-q8-2l6"/>
+                            <constraint firstItem="wRa-aQ-xNd" firstAttribute="top" secondItem="QbA-4t-nux" secondAttribute="bottom" id="LPn-zh-Zsv"/>
+                            <constraint firstItem="y7e-yt-czQ" firstAttribute="top" secondItem="wRa-aQ-xNd" secondAttribute="bottom" constant="13" id="PdG-hd-2De"/>
+                            <constraint firstItem="bzi-8P-MkF" firstAttribute="top" secondItem="lMJ-8i-82s" secondAttribute="bottom" id="UiM-Dm-ta8"/>
+                            <constraint firstItem="y7e-yt-czQ" firstAttribute="leading" secondItem="JG5-c1-qgz" secondAttribute="leading" constant="4" id="Uim-8h-yw6"/>
+                            <constraint firstItem="Kom-1M-Uor" firstAttribute="top" secondItem="y7e-yt-czQ" secondAttribute="bottom" constant="8" id="XL9-lY-jBQ"/>
+                            <constraint firstItem="lMJ-8i-82s" firstAttribute="top" secondItem="aTd-8t-RAc" secondAttribute="bottom" constant="28" id="k1E-Zp-21N"/>
+                            <constraint firstAttribute="trailing" secondItem="Kom-1M-Uor" secondAttribute="trailing" id="lH5-oa-YO5"/>
+                            <constraint firstItem="y7e-yt-czQ" firstAttribute="top" secondItem="wRa-aQ-xNd" secondAttribute="bottom" constant="13" id="pKo-n1-IRj"/>
+                            <constraint firstAttribute="trailing" secondItem="lMJ-8i-82s" secondAttribute="trailing" id="pVp-hR-Wy5"/>
+                            <constraint firstItem="aTd-8t-RAc" firstAttribute="leading" secondItem="JG5-c1-qgz" secondAttribute="leading" constant="6" id="qho-JR-PrH"/>
+                            <constraint firstItem="lMJ-8i-82s" firstAttribute="leading" secondItem="JG5-c1-qgz" secondAttribute="leading" id="uGG-4M-hlE"/>
+                            <constraint firstItem="Kom-1M-Uor" firstAttribute="leading" secondItem="JG5-c1-qgz" secondAttribute="leading" id="xlE-Oy-evy"/>
+                            <constraint firstAttribute="trailing" secondItem="wRa-aQ-xNd" secondAttribute="trailing" id="z9I-ke-E2D"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4DA-mI-NSG">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="h7g-4j-flY">
@@ -60,6 +109,7 @@
                     <connections>
                         <outlet property="alertDaysPickerView" destination="lMJ-8i-82s" id="LU1-Ff-5zq"/>
                         <outlet property="alertTimePicker" destination="Kom-1M-Uor" id="gAC-Fb-9Ni"/>
+                        <outlet property="tableView" destination="wRa-aQ-xNd" id="iMp-jy-uSd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kuU-Fh-xq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
