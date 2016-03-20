@@ -17,23 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Never Go Bad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAi-Jb-dCO">
-                                <rect key="frame" x="95" y="272" width="131" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="QcW-1M-LGk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WAi-Jb-dCO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dCg-RS-zMN"/>
-                            <constraint firstItem="WAi-Jb-dCO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jli-32-28D"/>
+                            <constraint firstItem="QcW-1M-LGk" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="3ge-Dc-EXQ"/>
+                            <constraint firstAttribute="trailing" secondItem="QcW-1M-LGk" secondAttribute="trailing" id="ROS-hY-3fG"/>
+                            <constraint firstItem="QcW-1M-LGk" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="fOg-Ex-u5f"/>
+                            <constraint firstItem="QcW-1M-LGk" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="pCa-7G-7aO"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="QcW-1M-LGk" secondAttribute="bottom" id="u9G-vE-PQF"/>
+                            <constraint firstAttribute="trailing" secondItem="QcW-1M-LGk" secondAttribute="trailing" id="vdA-4O-5AX"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="168.53333333333333" y="381.50666666666666"/>
+            <point key="canvasLocation" x="168" y="381"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Splash" width="320" height="568"/>
+    </resources>
 </document>
