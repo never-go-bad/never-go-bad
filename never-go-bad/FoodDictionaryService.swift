@@ -26,7 +26,8 @@ class FoodDictionaryService {
                 
                 for line in csv.rows {
                     print(line)
-                    foodReferences.append(FoodReference(name: line[0], shelfLife: Int(line[1].trim())!))
+                    let photoUrl: String? = line[2].trim().length == 0 ? nil : line[2].trim()
+                    foodReferences.append(FoodReference(name: line[0], shelfLife: Int(line[1].trim())!, photoUrl: photoUrl))
                 }
             }
             catch {/* error handling here */}

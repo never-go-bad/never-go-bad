@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -119,7 +119,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="stI-PH-JEw" id="wdB-o1-lep">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="53.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8od-7f-IVI">
@@ -162,7 +162,7 @@
                                         <rect key="frame" x="0.0" y="82" width="320" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wBs-Ep-6XT" id="cWp-69-Muc">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="85.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qg7-o3-ikh">
@@ -244,7 +244,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vCA-2b-IHe" id="b3w-TV-inI">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="111.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Food name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kv-K0-30z">
@@ -268,7 +268,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="3 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC1-sX-AyH">
-                                                    <rect key="frame" x="257" y="33" width="51" height="21"/>
+                                                    <rect key="frame" x="257.5" y="33.5" width="50.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -282,6 +282,7 @@
                                                 <constraint firstItem="bC1-sX-AyH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9Kv-K0-30z" secondAttribute="trailing" constant="8" id="QCH-3b-m73"/>
                                                 <constraint firstItem="Jbt-88-fdp" firstAttribute="centerY" secondItem="9Kv-K0-30z" secondAttribute="centerY" id="RV7-fc-PqK"/>
                                                 <constraint firstAttribute="bottom" secondItem="ruD-8y-fdX" secondAttribute="bottom" id="Vsh-EW-mEk"/>
+                                                <constraint firstItem="ruD-8y-fdX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9Kv-K0-30z" secondAttribute="bottom" constant="12" id="Wl1-Am-KRI"/>
                                                 <constraint firstItem="9Kv-K0-30z" firstAttribute="leading" secondItem="Jbt-88-fdp" secondAttribute="trailing" constant="20" id="fju-bW-INJ"/>
                                                 <constraint firstItem="Jbt-88-fdp" firstAttribute="leading" secondItem="b3w-TV-inI" secondAttribute="leading" constant="20" id="nBg-Ah-eg1"/>
                                                 <constraint firstItem="9Kv-K0-30z" firstAttribute="centerY" secondItem="bC1-sX-AyH" secondAttribute="centerY" id="nKr-T3-YsE"/>
@@ -290,6 +291,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="daysLeftLabel" destination="bC1-sX-AyH" id="tI0-fi-Arh"/>
+                                            <outlet property="foodImageView" destination="Jbt-88-fdp" id="qot-vF-Uey"/>
                                             <outlet property="foodNameLabel" destination="9Kv-K0-30z" id="2br-TM-HTo"/>
                                         </connections>
                                     </tableViewCell>

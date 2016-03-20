@@ -13,6 +13,7 @@ class FoodListTableViewCell: SWTableViewCell {
 
     @IBOutlet weak var foodNameLabel: UILabel!
     @IBOutlet weak var daysLeftLabel: UILabel!
+    @IBOutlet weak var foodImageView: UIImageView!
     
     var food: Food? {
         didSet {
@@ -34,6 +35,13 @@ class FoodListTableViewCell: SWTableViewCell {
                 
                 if daysLeft < 7 {
                     daysLeftLabel.hidden = true
+                }
+                
+                foodImageView.image = nil
+                if let photoUrl = food.photoUrl {
+                    foodImageView.setImageWithURL(NSURL(string: photoUrl)!)
+                } else {
+                    foodImageView.image = UIImage(named: "tree")
                 }
             }
         }

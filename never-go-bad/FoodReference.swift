@@ -11,11 +11,11 @@ import UIKit
 class FoodReference: NSObject {
     var name: String
     var shelfLife: Int // days, from USDA database
-    var photoUrl: String? //
+    var photoUrl: String?
     
-    init(name: String, shelfLife: Int) {
+    init(name: String, shelfLife: Int, photoUrl: String?) {
         self.name = name
         self.shelfLife = shelfLife
-        self.photoUrl = nil // nil for now yes
+        self.photoUrl = photoUrl
     }
 }

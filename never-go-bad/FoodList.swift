@@ -32,6 +32,7 @@ class FoodList: NSObject {
             foods?.append(Food(
                 name: foodInput.name,
                 expireDate: today.dateByAddingTimeInterval(Double.init(foodInput.daysLeft * SECONDS_IN_DAYS)),
+                photoUrl: foodInput.photoUrl,
                 quantityType: foodInput.quantityType,
                 quantity: foodInput.quantity))
         }

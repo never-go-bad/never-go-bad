@@ -81,8 +81,8 @@ CloudSightQueryDelegate
 		}
 	}
 
-	func appendFood(foodName: String, shelfLife: Int) {
-		foodInputs.append(FoodInput(name: foodName, daysLeft: shelfLife, quantityType: QuantityType.unit, quantity: 1))
+    func appendFood(foodName: String, shelfLife: Int, photoUrl: String?) {
+        foodInputs.append(FoodInput(name: foodName, daysLeft: shelfLife, photoUrl: photoUrl, quantityType: QuantityType.unit, quantity: 1))
 		tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: foodInputs.count - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Bottom)
 	}
 
@@ -134,7 +134,8 @@ CloudSightQueryDelegate
 			barcodeResult in
 			if (!barcodeResult.response.data.isEmpty) {
 				let foodName = barcodeResult.response.data[0].brand! + " " + barcodeResult.response.data[0].product_name!
-				self.appendFood(foodName, shelfLife: 1)
+                let photoUrl = barcodeResult.response.data[0].image_urls?[0]
+				self.appendFood(foodName, shelfLife: 1, photoUrl: photoUrl)
 			}
 			progress.hide(true)
 		}
@@ -183,7 +184,7 @@ CloudSightQueryDelegate
 			let matchedFoods = FoodDictionaryService.searchFoodItemWithDescription(query.title)
 			if !matchedFoods.isEmpty {
 				for food in matchedFoods {
-					self.appendFood(food.name, shelfLife: food.shelfLife)
+					self.appendFood(food.name, shelfLife: food.shelfLife, photoUrl: food.photoUrl)
 				}
 			} else {
 				self.showNonIdentifiedFoodDialog()
@@ -191,9 +192,9 @@ CloudSightQueryDelegate
 		}
 	}
 
-	func foodSearchViewController(sender: FoodSearchViewController, didSelectFoodSearchResult foodName: String, shelfLife: Int) {
+    func foodSearchViewController(sender: FoodSearchViewController, didSelectFoodSearchResult foodName: String, shelfLife: Int, photoUrl: String?) {
 		self.navigationController?.popViewControllerAnimated(true)
-		appendFood(foodName, shelfLife: shelfLife)
+        appendFood(foodName, shelfLife: shelfLife, photoUrl: photoUrl)
 	}
 
 	func showNonIdentifiedFoodDialog() {

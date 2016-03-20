@@ -20,6 +20,7 @@ class FoodService {
 			foodItem["objectId"] = item.objectId
 			foodItem["name"] = item.name
 			foodItem["expirationDate"] = item.expireDate
+            foodItem["photoUrl"] = item.photoUrl
 			foodItem["quantityType"] = String(item.quantityType)
 			foodItem["quantity"] = item.quantity
 			foodItem["installationId"] = installation
@@ -104,6 +105,7 @@ class FoodService {
 							objectId: obj, //
 							name: (object["name"] as? String)!,
 							expireDate: (object["expirationDate"] as? NSDate)!,
+                            photoUrl: (object["photoUrl"] as? String) ?? nil,
 							quantityType: QuantityType.unit,
 							quantity: (object["quantity"] as? Float)!,
 							consumed: (object["consumed"] as? Bool)!,
