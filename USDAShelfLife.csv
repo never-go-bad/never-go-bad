@@ -1,209 +1,209 @@
-FoodItemName,ShelfLife
-Butter,60,http://www.thefoodcoach.com.au/img/food/374.jpg
-Buttermilk,14,
-Hard Cheese,180,http://www.s283038869.onlinehome.us/homefamily/wp-content/uploads/2011/07/108225p9colijia.jpg
-Soft Cheese,30,http://www.eatbydate.com/wp-content/uploads/brie_cheese.jpg
-Coffee Creamer,21,
-Cottage cheese,14,
-Cream,14,
-Dips,14,
-Egg substitutes,7
-Eggs,30,http://www.thefoodcoach.com.au/img/food/289.jpg
-Kefir,7,
-Margarine,180,http://www.thefoodcoach.com.au/img/food/384.jpg
-Milk,7,https://pixabay.com/static/uploads/photo/2014/09/04/05/27/milk-435295_960_720.png
-Pudding,21,
-Sour cream,30,
-Whipped cream,30,
-Yogurt,14,
-Beef,5,http://www.thefoodcoach.com.au/img/food/256.jpg
-Lamb,5,http://www.thefoodcoach.com.au/img/food/294.jpg
-Veal,5,
-Pork,5,
-Goat,5,
-Venison,5,
-Variety meats,2,
-Bacon,7,
-Corned beef,7,
-Ham,7,http://www.thefoodcoach.com.au/img/food/292.jpg
-Hot dogs,14,
-Sausage,7,
-"Stuffed, raw pork chops",2,
-Kabobs,2,
-Jerky,60,
-Chicken,2,http://www.thefoodcoach.com.au/img/food/283.jpg
-Turkey,2,
-Duckling,2,
-Goose,2,
-Pheasant,2,
-Quail,2,
-Capon,2,
-Cornish Hens,2,
-Giblets,2,
-Chicken nuggets,4,
-Fried chicken,4,
-Rotisserie chicken,4,
-Fish,4,http://www.thefoodcoach.com.au/img/food/219.jpg
-Scallops,3,
-"Shrimp, crayfish",3,
-Squid,3,
-Shucked clams,3,
-mussels,3,
-oysters,3,
-Crab meat,10,
-Herring,14,
-Tofu,180,
-Miso,7,
-Soy flour,360,
-Guacamole,4,http://d5bzqyuki558t.cloudfront.net/cms-assets/system/asset_versions/attachments/000/000/221/original/_0016_Guac.png
-Hummus,7,
-Olives,90,http://www.thefoodcoach.com.au/img/food/117.jpg
-Salads,5,
-"Soup, stews",4
-Casseroles,4
-Bread,21,http://www.thefoodcoach.com.au/img/food/262.jpg
-Tortillas,90,
-Commercial cakes,10,http://www.thefoodcoach.com.au/img/food/631.jpg
-muffins,10,
-Cheesecake,7,
-Cookies,3,
-Doughnuts,2,
-Fruit cake,30,
-"Pastries, danish",360,
-Pies,4,
-Quiche,5,
-Baking powder,90,
-Baking soda,90,
-Biscuit or pancake mix,60,
-"Cake, brownie, bread mixes",60
-Chocolate,90,http://www.thefoodcoach.com.au/img/food/286.jpg
-Cocoa,90,
-Cornmeal,120,
-Cornstarch,30,
-Extracts,120,
-Flour,240,
-Frosting or icing,21,
-Gelatin,30,
-Oils,120,http://www.thefoodcoach.com.au/img/food/118.jpg
-Tamarind paste,90,
-Chili powder,90,
-Seasoning blends,60,
-Flavored or herb mixes,60,
-Herbs,180,
-Spice,180,
-Sugar,180,
-Tube cans,30,
+FoodItemName,ShelfLife,photo
 Apple,6,http://www.thefoodcoach.com.au/img/food/595.jpg
+Applesauce,10,
 Apricots,7,http://www.thefoodcoach.com.au/img/food/3.jpg
-Avocados,3,http://www.thefoodcoach.com.au/img/food/10.jpg
-Bananas,7,http://www.thefoodcoach.com.au/img/food/474.jpg
-Berries,7,http://www.thefoodcoach.com.au/img/food/571.jpg
-Blueberries,10,http://www.thefoodcoach.com.au/img/food/266.jpg
-Citrus fruit,21,
-Coconut,21,http://www.thefoodcoach.com.au/img/food/44.jpg
-Cranberries,60,http://www.thefoodcoach.com.au/img/food/46.jpg
-Dates,360,http://www.thefoodcoach.com.au/img/food/54.jpg
-Grapes,7,http://www.thefoodcoach.com.au/img/food/70.jpg
-Guava,4,http://www.thefoodcoach.com.au/img/food/72.jpg
-Kiwi fruit,6,http://www.thefoodcoach.com.au/img/food/80.jpg
-Melons,6,
-Papaya,14,http://www.thefoodcoach.com.au/img/food/130.jpg
-Mango,14,http://www.thefoodcoach.com.au/img/food/96.jpg
-Feijoa,14,http://www.thefoodcoach.com.au/img/food/637.jpg
-Passionfruit,14,http://www.thefoodcoach.com.au/img/food/134.jpg
-Casaha melon,14,
-Peaches,7,http://www.thefoodcoach.com.au/img/food/137.jpg
-Nectarines,7,http://www.thefoodcoach.com.au/img/food/111.jpg
-Plums,7,http://www.thefoodcoach.com.au/img/food/150.jpg
-Pears,7,http://www.thefoodcoach.com.au/img/food/139.jpg
-Sapote,7,
-Pineapple,7,http://www.thefoodcoach.com.au/img/food/148.jpg
-Plantains,5,
-Pomegranate,30,http://www.thefoodcoach.com.au/img/food/408.jpg
 Artichokes,14,http://www.thefoodcoach.com.au/img/food/7.jpg
 Asparagus,4,http://www.thefoodcoach.com.au/img/food/9.jpg
+Avocados,3,http://www.thefoodcoach.com.au/img/food/10.jpg
+Bacon,7,
+Baking powder,90,
+Baking soda,90,
 Bamboo shoots,14,
+Bananas,7,http://www.thefoodcoach.com.au/img/food/474.jpg
+Barbecue sauce,120,
+Beans,60,http://www.thefoodcoach.com.au/img/food/598.jpg
+Beef,5,http://www.thefoodcoach.com.au/img/food/256.jpg
 Beets,14,http://www.thefoodcoach.com.au/img/food/18.jpg
+Berries,7,http://www.thefoodcoach.com.au/img/food/571.jpg
+Biscuit or pancake mix,60,
+Blueberries,10,http://www.thefoodcoach.com.au/img/food/266.jpg
 Bok choy,3,http://www.thefoodcoach.com.au/img/food/8.jpg
+Bread,21,http://www.thefoodcoach.com.au/img/food/262.jpg
 Broccoli,5,http://www.thefoodcoach.com.au/img/food/23.jpg
 Brussels sprouts,5,http://www.thefoodcoach.com.au/img/food/25.jpg
+Butter,60,http://www.thefoodcoach.com.au/img/food/374.jpg
+Buttermilk,14,
 Cabbage,14,http://www.thefoodcoach.com.au/img/food/26.jpg
+"Cake, brownie, bread mixes",60,
+Capon,2,
 Carrots,21,http://www.thefoodcoach.com.au/img/food/30.jpg
-Parsnips,21,
+Casaha melon,14,
+Casseroles,4,
 Cauliflower,5,http://www.thefoodcoach.com.au/img/food/32.jpg
 Celery,14,http://www.thefoodcoach.com.au/img/food/35.jpg
-Corn on the cob,2,
-Cucumbers,6,http://www.thefoodcoach.com.au/img/food/47.jpg
-Eggplant,7,http://www.thefoodcoach.com.au/img/food/57.jpg
-Garlic,14,http://www.thefoodcoach.com.au/img/food/66.jpg
-Ginger root,21,http://www.thefoodcoach.com.au/img/food/68.jpg
-Leeks,14,http://www.thefoodcoach.com.au/img/food/83.jpg
-Lettuce,14,http://www.thefoodcoach.com.au/img/food/652.jpg
-Mushrooms,7,http://www.thefoodcoach.com.au/img/food/515.jpg
-Okra,3,http://www.thefoodcoach.com.au/img/food/116.jpg
-Onions,60,
-Spring Onions,7,http://www.thefoodcoach.com.au/img/food/296.jpg
-Peppers,14,
-Potatoes,14,http://www.thefoodcoach.com.au/img/food/410.jpg
-Pumpkins,150,http://www.thefoodcoach.com.au/img/food/154.jpg
-Radishes,14,http://www.thefoodcoach.com.au/img/food/157.jpg
-Rhubarb,7,http://www.thefoodcoach.com.au/img/food/160.jpg
-Rutabagas,21,
-Squash,5,
-Winter Squash,90,
-Tamarind,90,
-Taro,3,
-Tomatoes,6,http://www.thefoodcoach.com.au/img/food/190.jpg
-Turnips,14,
-Yuca/cassava,3,
-Ice cream,120,
-Ice pops,10,
-Juice concentrates,30,
-Pancakes,2,
-Waffles,2,
-"Sherbet, sorbet",2,
-"Shrimp, shellfish",2,
-Soy crumbles and hot dogs,4,
-Soy meat substitutes,4,
-Tempeh,14,
-Vegetables,4,
-Beans,60,http://www.thefoodcoach.com.au/img/food/598.jpg
-Lentils,60,http://www.thefoodcoach.com.au/img/food/85.jpg
-Pasta,60,http://www.thefoodcoach.com.au/img/food/297.jpg
-Dry egg noodles,90,
-Peas,180,http://www.thefoodcoach.com.au/img/food/143.jpg
-Rice,180,http://www.thefoodcoach.com.au/img/food/161.jpg
-Barbecue sauce,120,
+Cereal,180,
+Cheesecake,7,
+Chicken,2,http://www.thefoodcoach.com.au/img/food/283.jpg
+Chicken nuggets,4,
+Chili powder,90,
+Chocolate,90,http://www.thefoodcoach.com.au/img/food/286.jpg
+Chocolate syrup,180,
 Chutney,60,
+Citrus fruit,21,
+Cocoa,90,
+Coconut,21,http://www.thefoodcoach.com.au/img/food/44.jpg
+Coffee,360,
+Coffee Creamer,21,
+Commercial cakes,10,http://www.thefoodcoach.com.au/img/food/631.jpg
+Cookies,3,
+Corn on the cob,2,
+Corned beef,7,
+Cornish Hens,2,
+Cornmeal,120,
+Cornstarch,30,
+Cottage cheese,14,
+Crab meat,10,
+Crackers,120,
+Cranberries,60,http://www.thefoodcoach.com.au/img/food/46.jpg
+Cream,14,
+Cucumbers,6,http://www.thefoodcoach.com.au/img/food/47.jpg
+Dates,360,http://www.thefoodcoach.com.au/img/food/54.jpg
+Dips,14,
+Doughnuts,2,
+Dried Fruits,180,
+Dry egg noodles,90,
 Dry gravy mixes,7,
+Duckling,2,
+Egg substitutes,7,
+Eggplant,7,http://www.thefoodcoach.com.au/img/food/57.jpg
+Eggs,30,http://www.thefoodcoach.com.au/img/food/289.jpg
+Extracts,120,
+Feijoa,14,http://www.thefoodcoach.com.au/img/food/637.jpg
+Fish,4,http://www.thefoodcoach.com.au/img/food/219.jpg
+Flavored or herb mixes,60,
+Flour,240,
+Fried chicken,4,
+Frosting or icing,21,
+Fruit cake,30,
+Garlic,14,http://www.thefoodcoach.com.au/img/food/66.jpg
+Gelatin,30,
+Giblets,2,
+Ginger root,21,http://www.thefoodcoach.com.au/img/food/68.jpg
+Goat,5,
+Goose,2,
+Grapes,7,http://www.thefoodcoach.com.au/img/food/70.jpg
 Gravy,2,
+Guacamole,4,http://d5bzqyuki558t.cloudfront.net/cms-assets/system/asset_versions/attachments/000/000/221/original/_0016_Guac.png
+Guava,4,http://www.thefoodcoach.com.au/img/food/72.jpg
+Ham,7,http://www.thefoodcoach.com.au/img/food/292.jpg
+Hard Cheese,180,http://www.s283038869.onlinehome.us/homefamily/wp-content/uploads/2011/07/108225p9colijia.jpg
+Herbs,180,
+Herring,14,
 Honey,60,
 Horseradish,90,http://www.thefoodcoach.com.au/img/food/76.jpg
+Hot dogs,14,
+Hummus,7,
+Ice cream,120,
+Ice pops,10,
 "Jams, jellies, and preserves",360,
+Jerky,60,
+Juice concentrates,30,
+Kabobs,2,
+Kefir,7,
 "Ketchup, cocktail, or chili sauce",180,
+Kiwi fruit,6,http://www.thefoodcoach.com.au/img/food/80.jpg
+Lamb,5,http://www.thefoodcoach.com.au/img/food/294.jpg
+Leeks,14,http://www.thefoodcoach.com.au/img/food/83.jpg
+Lentils,60,http://www.thefoodcoach.com.au/img/food/85.jpg
+Lettuce,14,http://www.thefoodcoach.com.au/img/food/652.jpg
+Mango,14,http://www.thefoodcoach.com.au/img/food/96.jpg
+Margarine,180,http://www.thefoodcoach.com.au/img/food/384.jpg
 Marinades,180,
-Mayonnaise,60,
-Mustard,360,
-Pickles,90
-Pesto,3,
-Salad dressings,90,
-Salsa,30,
-Sauce mixes,30,
-Spaghetti sauce,4,
-Soy sauce or teriyaki sauce,30,
-Vinegar,90,
-Applesauce,10,
-Cereal,180,
-Chocolate syrup,180,
-Crackers,120,
-Dried Fruits,180,
 Marshmallows,210,
+Mayonnaise,60,
+Melons,6,
+Milk,7,https://pixabay.com/static/uploads/photo/2014/09/04/05/27/milk-435295_960_720.png
+Miso,7,
+Mushrooms,7,http://www.thefoodcoach.com.au/img/food/515.jpg
+Mustard,360,
+Nectarines,7,http://www.thefoodcoach.com.au/img/food/111.jpg
 Nuts,180,http://www.thefoodcoach.com.au/img/food/597.jpg
+Oils,120,http://www.thefoodcoach.com.au/img/food/118.jpg
+Okra,3,http://www.thefoodcoach.com.au/img/food/116.jpg
+Olives,90,http://www.thefoodcoach.com.au/img/food/117.jpg
+Onions,60,
+Pancakes,2,
+Papaya,14,http://www.thefoodcoach.com.au/img/food/130.jpg
+Parsnips,21,
+Passionfruit,14,http://www.thefoodcoach.com.au/img/food/134.jpg
+Pasta,60,http://www.thefoodcoach.com.au/img/food/297.jpg
+"Pastries, danish",360,
+Peaches,7,http://www.thefoodcoach.com.au/img/food/137.jpg
 Peanut butter,180,
+Pears,7,http://www.thefoodcoach.com.au/img/food/139.jpg
+Peas,180,http://www.thefoodcoach.com.au/img/food/143.jpg
+Peppers,14,
+Pesto,3,
+Pheasant,2,
+Pickles,90,
+Pies,4,
+Pineapple,7,http://www.thefoodcoach.com.au/img/food/148.jpg
+Plantains,5,
+Plums,7,http://www.thefoodcoach.com.au/img/food/150.jpg
+Pomegranate,30,http://www.thefoodcoach.com.au/img/food/408.jpg
 Popcorn,180,
+Pork,5,
 Potato chips,180,
+Potatoes,14,http://www.thefoodcoach.com.au/img/food/410.jpg
+Pudding,21,
 Pudding mixes,60,
+Pumpkins,150,http://www.thefoodcoach.com.au/img/food/154.jpg
+Quail,2,
+Quiche,5,
+Radishes,14,http://www.thefoodcoach.com.au/img/food/157.jpg
+Rhubarb,7,http://www.thefoodcoach.com.au/img/food/160.jpg
+Rice,180,http://www.thefoodcoach.com.au/img/food/161.jpg
+Rotisserie chicken,4,
+Rutabagas,21,
+Salad dressings,90,
+Salads,5,
+Salsa,30,
+Sapote,7,
+Sauce mixes,30,
+Sausage,7,
+Scallops,3,
+Seasoning blends,60,
+"Sherbet, sorbet",2,
+"Shrimp, crayfish",3,
+"Shrimp, shellfish",2,
+Shucked clams,3,
+Soft Cheese,30,http://www.eatbydate.com/wp-content/uploads/brie_cheese.jpg
+"Soup, stews",4,
+Sour cream,30,
+Soy crumbles and hot dogs,4,
+Soy flour,360,
+Soy meat substitutes,4,
+Soy sauce or teriyaki sauce,30,
+Spaghetti sauce,4,
+Spice,180,
+Spring Onions,7,http://www.thefoodcoach.com.au/img/food/296.jpg
+Squash,5,
+Squid,3,
+"Stuffed, raw pork chops",2,
+Sugar,180,
 Sun dried tomatoes,180,
 Syrup,180,
-Coffee,360,
+Tamarind,90,
+Tamarind paste,90,
+Taro,3,
 Tea,90,
+Tempeh,14,
+Tofu,180,
+Tomatoes,6,http://www.thefoodcoach.com.au/img/food/190.jpg
+Tortillas,90,
+Tube cans,30,
+Turkey,2,
+Turnips,14,
+Variety meats,2,
+Veal,5,
+Vegetables,4,
+Venison,5,
+Vinegar,90,
+Waffles,2,
+Whipped cream,30,
+Winter Squash,90,
+Yogurt,14,
+Yuca/cassava,3,
+muffins,10,
+mussels,3,
+oysters,3,
