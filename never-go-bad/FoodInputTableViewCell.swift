@@ -17,6 +17,7 @@ UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
     var daysLeftPickerView: UIPickerView?
     
+    @IBOutlet weak var foodImageView: UIImageView!
     @IBOutlet weak var foodNameTextField: UITextField!
     @IBOutlet weak var daysLeftTextField: UITextField!
     
@@ -29,6 +30,14 @@ UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
                     daysLeftPickerView?.selectRow(idx, inComponent: 0, animated: false)
                     daysLeftTextField.text = daysLeftPickerStrings[idx]
                 }
+                
+                foodImageView.image = nil
+                if let photoUrl = foodInput.photoUrl {
+                    foodImageView.setImageWithURL(NSURL(string: photoUrl)!)
+                } else {
+                    foodImageView.image = UIImage(named: "tree")
+                }
+
             }
         }
     }
