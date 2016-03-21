@@ -12,6 +12,7 @@ class RecipeSearchViewController: UIViewController, UISearchBarDelegate, UIColle
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UICollectionView!
+    @IBOutlet weak var emptyView: UIView!
     private var dataSource: RecipeDataSource!
 
     override func viewDidLoad() {
@@ -20,7 +21,7 @@ class RecipeSearchViewController: UIViewController, UISearchBarDelegate, UIColle
         tableView.delegate = self
         searchBar.delegate = self
         
-        dataSource = RecipeDataSource(forTable: tableView)
+        dataSource = RecipeDataSource(forTable: tableView, withEmpty: emptyView)
         searchAboutToExpireFood()
         
     }

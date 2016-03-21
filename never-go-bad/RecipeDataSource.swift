@@ -23,9 +23,11 @@ class RecipeDataSource: NSObject, UICollectionViewDataSource {
     private var currentPage = 1
     private var currentProgressHub: MBProgressHUD?
     private var loadingMoreView:InfiniteScrollActivityView!
+    private var emptyView: UIView
     
-    init(forTable tableView:UICollectionView) {
+    init(forTable tableView:UICollectionView, withEmpty emptyView:UIView) {
         self.tableView = tableView
+        self.emptyView = emptyView
         super.init()
         tableView.dataSource = self
         
@@ -47,7 +49,9 @@ class RecipeDataSource: NSObject, UICollectionViewDataSource {
             currentPage = 1
             currentProgressHub?.hide(false)
             currentProgressHub = nil
+            
         }
+        emptyView.hidden = true
         
         searchTerm = terms
         //TODO: Stylize
@@ -62,12 +66,14 @@ class RecipeDataSource: NSObject, UICollectionViewDataSource {
                 self.currentProgressHub?.hide(true)
                 self.currentProgressHub = nil
                 self.items = result.recipes
+                self.emptyView.hidden = (!self.items.isEmpty)
             },
             onError: {
                 self.currentSearchTask = nil
                 self.currentProgressHub?.hide(true)
                 self.currentProgressHub = nil
                 self.items = []
+               self.emptyView.hidden = false
             }
         )
     }
