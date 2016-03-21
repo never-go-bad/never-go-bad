@@ -10,7 +10,6 @@
 		84D924541C8ADF210049D09C /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D924531C8ADF210049D09C /* FoodService.swift */; };
 		84D924561C8CE2360049D09C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D924551C8CE2360049D09C /* NotificationService.swift */; };
 		84E90C4B1C935C35003FC83E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E90C4A1C935C35003FC83E /* SettingsViewController.swift */; };
-		84E90C4E1C93F743003FC83E /* TabViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E90C4D1C93F743003FC83E /* TabViewControllerHelper.swift */; };
 		84E90C521C954BD9003FC83E /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E90C511C954BD9003FC83E /* SettingsService.swift */; };
 		996A569F1C8D3BC4009F94FA /* BarcodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A569E1C8D3BC4009F94FA /* BarcodeService.swift */; };
 		996A56A11C8D3BEB009F94FA /* BarcodeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A56A01C8D3BEB009F94FA /* BarcodeResult.swift */; };
@@ -50,7 +49,6 @@
 		AD483A291C8AA170000303C2 /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A281C8AA170000303C2 /* RecipeListViewController.swift */; };
 		AD7EA1FF1C9A547800314FB1 /* style.nss in Resources */ = {isa = PBXBuildFile; fileRef = AD7EA1FE1C9A547800314FB1 /* style.nss */; };
 		ADA2BD8B1C9F844C0067A40D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2BD8A1C9F844C0067A40D /* MainTabViewController.swift */; };
-		ADA2BD8D1C9F86990067A40D /* MainTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2BD8C1C9F86990067A40D /* MainTabBarButton.swift */; };
 		ADCA41D61C94E659002164BF /* FoodSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCA41D51C94E659002164BF /* FoodSearch.storyboard */; };
 		ADCA41D81C94EAE0002164BF /* FoodSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCA41D71C94EAE0002164BF /* FoodSearchViewController.swift */; };
 		ADCA41DA1C94EB44002164BF /* FoodReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCA41D91C94EB44002164BF /* FoodReference.swift */; };
@@ -85,7 +83,6 @@
 		84D924551C8CE2360049D09C /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		84D924621C915D470049D09C /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
 		84E90C4A1C935C35003FC83E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../SettingsViewController.swift; sourceTree = "<group>"; };
-		84E90C4D1C93F743003FC83E /* TabViewControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewControllerHelper.swift; sourceTree = "<group>"; };
 		84E90C511C954BD9003FC83E /* SettingsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
 		996A569E1C8D3BC4009F94FA /* BarcodeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
 		996A56A01C8D3BEB009F94FA /* BarcodeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeResult.swift; sourceTree = "<group>"; };
@@ -131,7 +128,6 @@
 		AD483A281C8AA170000303C2 /* RecipeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
 		AD7EA1FE1C9A547800314FB1 /* style.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = style.nss; path = "never-go-bad/style.nss"; sourceTree = SOURCE_ROOT; };
 		ADA2BD8A1C9F844C0067A40D /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
-		ADA2BD8C1C9F86990067A40D /* MainTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarButton.swift; sourceTree = "<group>"; };
 		ADCA41D51C94E659002164BF /* FoodSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FoodSearch.storyboard; sourceTree = "<group>"; };
 		ADCA41D71C94EAE0002164BF /* FoodSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSearchViewController.swift; sourceTree = "<group>"; };
 		ADCA41D91C94EB44002164BF /* FoodReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodReference.swift; sourceTree = "<group>"; };
@@ -188,14 +184,6 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
-		84E90C4C1C93F710003FC83E /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				84E90C4D1C93F743003FC83E /* TabViewControllerHelper.swift */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
 		996A56A61C8D3F99009F94FA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,7 +237,6 @@
 			children = (
 				99BCE66F1C95703300CE0A91 /* DataSources */,
 				99BCE6681C9532BC00CE0A91 /* Constants */,
-				84E90C4C1C93F710003FC83E /* Helpers */,
 				84D924621C915D470049D09C /* Bridging-Header.h */,
 				996A56A61C8D3F99009F94FA /* Extensions */,
 				84D924521C8ADEFF0049D09C /* Services */,
@@ -323,7 +310,6 @@
 				ADCA41DB1C94F1AA002164BF /* FoodSearchTableViewCell.swift */,
 				ADCA41DD1C94F3DA002164BF /* FoodSearchManualTableViewCell.swift */,
 				99BCE66B1C95643200CE0A91 /* RecipeResultCell.swift */,
-				ADA2BD8C1C9F86990067A40D /* MainTabBarButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -570,7 +556,6 @@
 				AD483A181C86F284000303C2 /* FoodInputViewController.swift in Sources */,
 				AD483A1A1C86F5B7000303C2 /* FoodInputTableViewCell.swift in Sources */,
 				99BCE6611C94081A00CE0A91 /* RecipeService.swift in Sources */,
-				ADA2BD8D1C9F86990067A40D /* MainTabBarButton.swift in Sources */,
 				AD2F00B61C854603006E66DA /* ViewController.swift in Sources */,
 				84D924561C8CE2360049D09C /* NotificationService.swift in Sources */,
 				AD2F00B41C854603006E66DA /* AppDelegate.swift in Sources */,
@@ -588,7 +573,6 @@
 				99BCE66A1C9532D300CE0A91 /* SettingsConstants.swift in Sources */,
 				ADCA41DC1C94F1AA002164BF /* FoodSearchTableViewCell.swift in Sources */,
 				ADCA41E01C94FFAD002164BF /* FoodDictionaryService.swift in Sources */,
-				84E90C4E1C93F743003FC83E /* TabViewControllerHelper.swift in Sources */,
 				99BCE6731C96124600CE0A91 /* InfiniteScrollActivityView.swift in Sources */,
 				ADCA41D81C94EAE0002164BF /* FoodSearchViewController.swift in Sources */,
 				84D924541C8ADF210049D09C /* FoodService.swift in Sources */,

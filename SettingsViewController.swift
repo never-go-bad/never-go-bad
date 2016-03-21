@@ -57,7 +57,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
 	}
 
 	@IBAction func onSaveButtonClicked(sender: AnyObject) {
-		presentViewController(TabViewControllerHelper.createTabBarController(), animated: true, completion: nil)
+        // do we need save button?
 	}
 
 	@IBAction func timePickerComplete(sender: AnyObject) {
