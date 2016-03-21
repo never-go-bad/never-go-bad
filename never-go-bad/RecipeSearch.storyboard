@@ -133,20 +133,42 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gr2-TL-lLc" userLabel="emptyView">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noRecipes" translatesAutoresizingMaskIntoConstraints="NO" id="And-jI-fJx">
+                                        <rect key="frame" x="165" y="61" width="271" height="370"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="271" id="5UI-LL-qwc"/>
+                                            <constraint firstAttribute="height" constant="370" id="Wbs-XB-wff"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="And-jI-fJx" firstAttribute="centerX" secondItem="gr2-TL-lLc" secondAttribute="centerX" id="U9P-d2-A9Z"/>
+                                    <constraint firstItem="And-jI-fJx" firstAttribute="centerY" secondItem="gr2-TL-lLc" secondAttribute="centerY" id="xNa-Ak-abq"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1Bx-Td-BLv" firstAttribute="top" secondItem="gr2-TL-lLc" secondAttribute="bottom" id="3wZ-Mb-Gjd"/>
                             <constraint firstAttribute="trailing" secondItem="KjC-Bz-nUO" secondAttribute="trailing" id="Hyj-4G-ppC"/>
                             <constraint firstItem="KjC-Bz-nUO" firstAttribute="top" secondItem="tJ8-vM-Rg4" secondAttribute="bottom" id="JP3-pe-6ij"/>
+                            <constraint firstItem="gr2-TL-lLc" firstAttribute="top" secondItem="KjC-Bz-nUO" secondAttribute="bottom" id="L0v-Ze-8EU"/>
                             <constraint firstItem="IWc-bg-Rwb" firstAttribute="top" secondItem="KjC-Bz-nUO" secondAttribute="bottom" id="OOo-Db-EjK"/>
                             <constraint firstItem="KjC-Bz-nUO" firstAttribute="leading" secondItem="adU-T3-tVf" secondAttribute="leading" id="XCZ-We-UoH"/>
                             <constraint firstItem="1Bx-Td-BLv" firstAttribute="top" secondItem="IWc-bg-Rwb" secondAttribute="bottom" id="Xpb-hC-CWG"/>
+                            <constraint firstItem="gr2-TL-lLc" firstAttribute="leading" secondItem="adU-T3-tVf" secondAttribute="leading" id="cLd-ac-RS7"/>
                             <constraint firstAttribute="trailing" secondItem="IWc-bg-Rwb" secondAttribute="trailing" id="ere-ga-YDf"/>
+                            <constraint firstAttribute="trailing" secondItem="gr2-TL-lLc" secondAttribute="trailing" id="frC-vm-X07"/>
                             <constraint firstItem="IWc-bg-Rwb" firstAttribute="leading" secondItem="adU-T3-tVf" secondAttribute="leading" id="yts-4w-Wdp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Recipes" id="cbU-A1-lfA"/>
                     <connections>
+                        <outlet property="emptyView" destination="gr2-TL-lLc" id="Vjr-DW-WZc"/>
                         <outlet property="searchBar" destination="KjC-Bz-nUO" id="Mfn-Em-HPv"/>
                         <outlet property="tableView" destination="IWc-bg-Rwb" id="QYk-vL-12b"/>
                     </connections>
@@ -182,5 +204,6 @@
         <image name="emptystar" width="20" height="18"/>
         <image name="fullstar" width="18" height="16"/>
         <image name="halfstar" width="20" height="17"/>
+        <image name="noRecipes" width="271" height="370"/>
     </resources>
 </document>

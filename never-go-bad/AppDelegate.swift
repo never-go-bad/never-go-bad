@@ -41,9 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// }        
         
         NUISettings.initWithStylesheet("style")
-        self.window?.rootViewController = TabViewControllerHelper.createTabBarController()
-        self.window?.backgroundColor = UIColor.whiteColor()
-        self.window?.makeKeyAndVisible()
+//        self.window?.rootViewController = TabViewControllerHelper.createTabBarController()
+//        self.window?.backgroundColor = UIColor.whiteColor()
+//        self.window?.makeKeyAndVisible()
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         
         return true

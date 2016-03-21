@@ -20,7 +20,7 @@ class FoodSearchTableViewCell: UITableViewCell {
         didSet {
             if let foodReference = foodReference {
                 foodNameLabel.text = foodReference.name
-                shelfLifeLabel.text = "\(foodReference.shelfLife)"
+                shelfLifeLabel.text = foodReference.shelfLifeString
             }
         }
     }

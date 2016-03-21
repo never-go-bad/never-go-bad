@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Add Items-->
@@ -113,17 +113,17 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="86" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k1I-Cy-Dmm">
                                 <rect key="frame" x="0.0" y="205" width="320" height="363"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodInputTableViewCell" rowHeight="54" id="stI-PH-JEw" customClass="FoodInputTableViewCell" customModule="never_go_bad" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="54"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodInputTableViewCell" rowHeight="94" id="stI-PH-JEw" customClass="FoodInputTableViewCell" customModule="never_go_bad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="stI-PH-JEw" id="wdB-o1-lep">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="stI-PH-JEw" id="wdB-o1-lep">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="93.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8od-7f-IVI">
-                                                    <rect key="frame" x="8" y="8" width="199" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8od-7f-IVI">
+                                                    <rect key="frame" x="84" y="8" width="228" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="hpj-BB-AfS"/>
                                                     </constraints>
@@ -134,8 +134,8 @@
                                                         <action selector="foodNameTextFieldChanged:" destination="stI-PH-JEw" eventType="editingDidEnd" id="BUc-od-ypB"/>
                                                     </connections>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0zu-Ks-Hsu">
-                                                    <rect key="frame" x="215" y="8" width="97" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0zu-Ks-Hsu">
+                                                    <rect key="frame" x="84" y="46" width="97" height="30"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="97" id="JJC-Ap-Jdh"/>
@@ -144,25 +144,36 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="tree" translatesAutoresizingMaskIntoConstraints="NO" id="8Nq-Ra-b7e">
+                                                    <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="64" id="6as-ya-UZU"/>
+                                                        <constraint firstAttribute="width" constant="64" id="kdH-ba-eor"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="8od-7f-IVI" firstAttribute="leading" secondItem="wdB-o1-lep" secondAttribute="leading" constant="8" id="OeL-lD-7Js"/>
-                                                <constraint firstItem="0zu-Ks-Hsu" firstAttribute="leading" secondItem="8od-7f-IVI" secondAttribute="trailing" constant="8" id="dN2-HG-m4d"/>
+                                                <constraint firstItem="8Nq-Ra-b7e" firstAttribute="top" secondItem="wdB-o1-lep" secondAttribute="top" constant="8" id="3CN-tC-9Af"/>
+                                                <constraint firstItem="8Nq-Ra-b7e" firstAttribute="leading" secondItem="wdB-o1-lep" secondAttribute="leading" constant="8" id="Vh2-hE-CdI"/>
+                                                <constraint firstItem="0zu-Ks-Hsu" firstAttribute="leading" secondItem="8Nq-Ra-b7e" secondAttribute="trailing" constant="12" id="afb-4a-M8F"/>
+                                                <constraint firstItem="0zu-Ks-Hsu" firstAttribute="top" secondItem="8od-7f-IVI" secondAttribute="bottom" constant="8" id="bad-Ii-Iv6"/>
+                                                <constraint firstAttribute="trailing" secondItem="8od-7f-IVI" secondAttribute="trailing" constant="8" id="lWq-bb-iNB"/>
+                                                <constraint firstAttribute="bottom" secondItem="8Nq-Ra-b7e" secondAttribute="bottom" constant="8" id="m2B-9z-Qfx"/>
                                                 <constraint firstItem="8od-7f-IVI" firstAttribute="top" secondItem="wdB-o1-lep" secondAttribute="top" constant="8" id="nUX-bj-Njb"/>
-                                                <constraint firstItem="0zu-Ks-Hsu" firstAttribute="top" secondItem="wdB-o1-lep" secondAttribute="top" constant="8" id="vgc-m3-Vub"/>
-                                                <constraint firstAttribute="trailing" secondItem="0zu-Ks-Hsu" secondAttribute="trailing" constant="8" id="z79-BB-bx3"/>
+                                                <constraint firstItem="8od-7f-IVI" firstAttribute="leading" secondItem="8Nq-Ra-b7e" secondAttribute="trailing" constant="12" id="pCI-2X-fdJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="daysLeftTextField" destination="0zu-Ks-Hsu" id="7sC-lg-LGX"/>
+                                            <outlet property="foodImageView" destination="8Nq-Ra-b7e" id="yUY-Sp-g61"/>
                                             <outlet property="foodNameTextField" destination="8od-7f-IVI" id="njW-J2-ePE"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ManuallyAddFoodTableViewCell" id="wBs-Ep-6XT">
-                                        <rect key="frame" x="0.0" y="82" width="320" height="86"/>
+                                        <rect key="frame" x="0.0" y="122" width="320" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wBs-Ep-6XT" id="cWp-69-Muc">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="85.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qg7-o3-ikh">
@@ -236,15 +247,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="112" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iNv-1P-9F6">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="112" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iNv-1P-9F6">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoodListTableViewCell" rowHeight="112" id="vCA-2b-IHe" customClass="FoodListTableViewCell" customModule="never_go_bad" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vCA-2b-IHe" id="b3w-TV-inI">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="111.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Food name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kv-K0-30z">
@@ -268,9 +279,9 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="3 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC1-sX-AyH">
-                                                    <rect key="frame" x="257" y="33" width="51" height="21"/>
+                                                    <rect key="frame" x="257" y="33" width="50.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -290,6 +301,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="daysLeftLabel" destination="bC1-sX-AyH" id="tI0-fi-Arh"/>
+                                            <outlet property="foodImageView" destination="Jbt-88-fdp" id="qot-vF-Uey"/>
                                             <outlet property="foodNameLabel" destination="9Kv-K0-30z" id="2br-TM-HTo"/>
                                         </connections>
                                     </tableViewCell>

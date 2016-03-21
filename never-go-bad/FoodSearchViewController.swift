@@ -9,7 +9,7 @@
 import UIKit
 
 @objc protocol FoodSearchViewControllerDeletage {
-    func foodSearchViewController(sender: FoodSearchViewController, didSelectFoodSearchResult foodName: String, shelfLife: Int)
+    func foodSearchViewController(sender: FoodSearchViewController, didSelectFoodSearchResult foodName: String, shelfLife: Int, photoUrl: String?)
 }
 
 class FoodSearchViewController: UIViewController,
@@ -90,9 +90,10 @@ class FoodSearchViewController: UIViewController,
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if let foodSearchResults = foodSearchResults {
             if indexPath.row < foodSearchResults.count {
-                delegate?.foodSearchViewController(self, didSelectFoodSearchResult: foodSearchResults[indexPath.row].name, shelfLife: foodSearchResults[indexPath.row].shelfLife)
+                let ref = foodSearchResults[indexPath.row]
+                delegate?.foodSearchViewController(self, didSelectFoodSearchResult: ref.name, shelfLife: ref.shelfLife, photoUrl: ref.photoUrl)
             } else {
-                delegate?.foodSearchViewController(self, didSelectFoodSearchResult: searchBar.text!, shelfLife: 1)
+                delegate?.foodSearchViewController(self, didSelectFoodSearchResult: searchBar.text!, shelfLife: 1, photoUrl: nil)
             }
         }
     }

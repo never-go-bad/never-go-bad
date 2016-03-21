@@ -13,27 +13,38 @@ class FoodListTableViewCell: SWTableViewCell {
 
     @IBOutlet weak var foodNameLabel: UILabel!
     @IBOutlet weak var daysLeftLabel: UILabel!
+    @IBOutlet weak var foodImageView: UIImageView!
     
     var food: Food? {
         didSet {
             if let food = food {
                 print(food.daysLeft(), food.expireDate)
                 foodNameLabel.text = food.name
-                let daysLeft = food.daysLeft()
-                if daysLeft <= 0 {
-                    daysLeftLabel.text = "Expired"
-                } else if daysLeft == 1 {
-                    daysLeftLabel.text = "Today"
-                } else if daysLeft < 7 {
-                    daysLeftLabel.text = "\(daysLeft) days"
-                } else if daysLeft < 30 {
-                    daysLeftLabel.text = "\(daysLeft/7) weeks"
-                } else {
-                    daysLeftLabel.text = "\(daysLeft/30) months"
-                }
-                
+                var daysLeft = food.daysLeft()
                 if daysLeft < 7 {
                     daysLeftLabel.hidden = true
+                } else {
+                    daysLeftLabel.hidden = false
+                    var strs: [String] = []
+                    if daysLeft > 30 {
+                        strs.append("\(daysLeft / 30)m")
+                        daysLeft -= daysLeft / 30 * 30
+                    }
+                    if daysLeft > 7 {
+                        strs.append("\(daysLeft / 7)w")
+                        daysLeft -= daysLeft / 7 * 7
+                    }
+                    if daysLeft > 0 {
+                        strs.append("\(daysLeft)d")
+                    }
+                    daysLeftLabel.text = strs.joinWithSeparator(" ")
+                }
+                
+                foodImageView.image = nil
+                if let photoUrl = food.photoUrl {
+                    foodImageView.setImageWithURL(NSURL(string: photoUrl)!)
+                } else {
+                    foodImageView.image = UIImage(named: "tree")
                 }
             }
         }
