@@ -2,17 +2,24 @@
 import UIKit
 
 
-@objc protocol DieteryConsiderationCellDelegate {
-    optional func dieteryConsiderationCell(dieteryConsiderationCell: DieteryConsiderationCell, didChangeValue value: Bool)
-}
+//@objc protocol DieteryConsiderationCellDelegate {
+//    optional func dieteryConsiderationCell(dieteryConsiderationCell: DieteryConsiderationCell, didChangeValue value: Bool)
+//}
 
 class DieteryConsiderationCell: UITableViewCell {
     
-    weak var delegate: DieteryConsiderationCellDelegate?
+    //weak var delegate: DieteryConsiderationCellDelegate?
     
     @IBOutlet weak var dieteryConsiderationLabel: UILabel!
     @IBOutlet weak var onSwitch: UISwitch!
-    //@IBOutlet weak var onSwitch: SevenSwitch!
+    
+    var dieteryConsideration: DieteryConsideration? {
+        didSet{
+            self.dieteryConsiderationLabel.text = dieteryConsideration!.displayName
+            self.onSwitch.on = SettingsService.getDieteryConsideration(dieteryConsideration!.dietType)
+        }
+    }
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,13 +29,13 @@ class DieteryConsiderationCell: UITableViewCell {
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
-    //
+    
     func switchValueChanged()
     {
-        print ("Switch value changed")
-       delegate?.dieteryConsiderationCell?(self, didChangeValue: onSwitch.on)
+        if(self.dieteryConsideration != nil) {
+            self.dieteryConsideration!.selected = onSwitch.on
+            SettingsService.setDieteryConsideration(dieteryConsideration!.dietType, value: onSwitch.on)
+        }
     }
 }

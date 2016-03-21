@@ -18,9 +18,7 @@ class RecipeService {
     
     static let instance = RecipeService()
     
-    enum DietaryConsideration:String {
-        case Healthy = "652", Vegan = "656", LowCholesterol = "655", Kosher = "645", Raw = "659", KosherPesach = "658"
-    }
+    
     
     func retrieveRecipe(withId epicuriousPath:String, onSuccess: (Recipe) -> Void, onError: () -> Void = {}) -> NetTask {
         return session.GET("recipe/" + epicuriousPath,
@@ -40,7 +38,7 @@ class RecipeService {
         )
     }
     
-    func searchRecipe(searchTerm: String, page:Int = 1, dietaryRestrictions:[DietaryConsideration] = [], onSuccess: (RecipeSearchResult) -> Void, onError: () -> Void = {}) -> NetTask {
+    func searchRecipe(searchTerm: String, page:Int = 1, dietaryRestrictions:[DieteryConsideration] = [], onSuccess: (RecipeSearchResult) -> Void, onError: () -> Void = {}) -> NetTask {
         
         //Not the correct level to make such decision, but let fix 20 recipes as the page size
         let pageSize = 20
@@ -54,7 +52,11 @@ class RecipeService {
         ]
         
         for restriction in dietaryRestrictions {
-            queryParams["att"] = restriction.rawValue
+            let selected: Bool = SettingsService.getDieteryConsideration(restriction.dietType)
+            
+            if(selected){
+                queryParams["att"] = restriction.code
+            }
         }
         
         return session.GET("recipes",

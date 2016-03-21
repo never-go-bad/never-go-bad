@@ -59,7 +59,7 @@ class RecipeDataSource: NSObject, UICollectionViewDataSource {
         currentProgressHub?.labelText = "Search recipes..."
         currentSearchTask = RecipeService.instance.searchRecipe(
             terms, page: 1,
-            dietaryRestrictions: [],
+            dietaryRestrictions: DieteryConsideration.dieteryConsiderations,
             onSuccess: {
                 result in
                 self.currentSearchTask = nil
@@ -124,7 +124,7 @@ class RecipeDataSource: NSObject, UICollectionViewDataSource {
         
         RecipeService.instance.searchRecipe(searchTerm,
             page: currentPage,
-            dietaryRestrictions: [],
+            dietaryRestrictions: DieteryConsideration.dieteryConsiderations,
             onSuccess: {
                 response in
                 self.loadingMoreView!.stopAnimating()

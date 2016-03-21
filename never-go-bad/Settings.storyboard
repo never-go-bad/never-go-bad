@@ -99,13 +99,7 @@
                             <constraint firstAttribute="trailing" secondItem="wRa-aQ-xNd" secondAttribute="trailing" id="z9I-ke-E2D"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4DA-mI-NSG">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="h7g-4j-flY">
-                            <connections>
-                                <action selector="onSaveButtonClicked:" destination="aAu-F2-kuw" id="gkO-Ts-XdC"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="4DA-mI-NSG"/>
                     <connections>
                         <outlet property="alertDaysPickerView" destination="lMJ-8i-82s" id="LU1-Ff-5zq"/>
                         <outlet property="alertTimePicker" destination="Kom-1M-Uor" id="gAC-Fb-9Ni"/>
