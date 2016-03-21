@@ -126,8 +126,8 @@
                                     <constraint firstItem="lDQ-qj-faO" firstAttribute="top" secondItem="Peo-uL-sYa" secondAttribute="top" id="kf8-PE-Svk"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vmp-Ru-hAu" userLabel="Contents View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="491"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vmp-Ru-hAu" userLabel="Contents View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="511"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -138,7 +138,7 @@
                             <constraint firstItem="Vmp-Ru-hAu" firstAttribute="leading" secondItem="9oT-de-G09" secondAttribute="leading" id="P3a-zQ-oGY"/>
                             <constraint firstItem="Peo-uL-sYa" firstAttribute="top" secondItem="Vmp-Ru-hAu" secondAttribute="bottom" id="W87-th-4PS"/>
                             <constraint firstItem="pMn-t6-OIF" firstAttribute="top" secondItem="Peo-uL-sYa" secondAttribute="bottom" id="f0v-Xt-UXk"/>
-                            <constraint firstItem="Vmp-Ru-hAu" firstAttribute="top" secondItem="pXZ-4L-vXM" secondAttribute="bottom" id="ia1-r4-wXG"/>
+                            <constraint firstItem="Vmp-Ru-hAu" firstAttribute="top" secondItem="pXZ-4L-vXM" secondAttribute="bottom" constant="-20" id="ia1-r4-wXG"/>
                             <constraint firstAttribute="trailing" secondItem="Peo-uL-sYa" secondAttribute="trailing" id="ivS-TX-oSa"/>
                             <constraint firstItem="Vmp-Ru-hAu" firstAttribute="trailing" secondItem="9oT-de-G09" secondAttribute="trailing" id="xgY-5J-KIc"/>
                         </constraints>
@@ -158,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GpK-fg-2zD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="170"/>
+            <point key="canvasLocation" x="154" y="170"/>
         </scene>
     </scenes>
     <resources>
