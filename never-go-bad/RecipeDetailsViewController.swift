@@ -17,9 +17,6 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var titleBg: UIView!
     @IBOutlet weak var recipeLabel: UILabel!
     @IBOutlet weak var recipeBgImageView: UIImageView!
-    @IBOutlet weak var ratingLabel: UILabel!
-    @IBOutlet weak var willDoAgainLabel: UILabel!
-    @IBOutlet weak var servingsTimeText: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +26,7 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         scrollView.delegate = self
         
         recipeLabel.text = recipeSummary.name
-        ratingLabel.text = recipeSummary.rating != nil ? formatRating(recipeSummary.rating!.value) : "0.0"
+//        ratingLabel.text = recipeSummary.rating != nil ? formatRating(recipeSummary.rating!.value) : "0.0"
         if let lowResImage = recipeSummary.image {
             recipeBgImageView.fadedSetImageWithUrl(NSURL(string: lowResImage)!)
         } else {
@@ -51,7 +48,7 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func setTranslucentNavBar() {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.setBackgroundImage(imageFromColor(UIColor(red: 0.62, green: 0.02, blue: 0.11, alpha: 0.4)), forBarMetrics: .Default)
         self.navigationController?.navigationBar.translucent = true
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
@@ -62,15 +59,15 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
             recipeBgImageView.setImageWithURL(NSURL(string: recipe.image!)!)
         }
         
-        recipeLabel.text = recipe.name
-        willDoAgainLabel.text = recipe.wouldPrepareAgain
-        let formatter = NSNumberFormatter()
-        formatter.maximumFractionDigits = 1
-        formatter.minimumFractionDigits = 1
-        formatter.minimumIntegerDigits = 1
-        ratingLabel.text = formatRating(recipe.rating.value)
-        
-        servingsTimeText.attributedText = decodeString(recipe.html)!
+//        recipeLabel.text = recipe.name
+//        willDoAgainLabel.text = recipe.wouldPrepareAgain
+//        let formatter = NSNumberFormatter()
+//        formatter.maximumFractionDigits = 1
+//        formatter.minimumFractionDigits = 1
+//        formatter.minimumIntegerDigits = 1
+//        ratingLabel.text = formatRating(recipe.rating.value)
+//        
+//        servingsTimeText.attributedText = decodeString(recipe.html)!
     }
   
     func formatRating(value: NSDecimalNumber) -> String {
@@ -94,9 +91,10 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        let fraction = min(scrollView.contentOffset.y/480.0, 1.0)
-        self.navigationController?.navigationBar.setBackgroundImage(imageFromColor(UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: fraction)), forBarMetrics: .Default)
+        let fraction = min(scrollView.contentOffset.y/360.0, 1.0)
+        self.navigationController?.navigationBar.setBackgroundImage(imageFromColor(UIColor(red: 0.62, green: 0.02, blue: 0.11, alpha: min(0.4 + fraction, 1.0))), forBarMetrics: .Default)
         
-        
+        print(scrollView.contentOffset.y)
+        print(fraction)
     }
 }
