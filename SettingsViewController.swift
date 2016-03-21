@@ -25,12 +25,16 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
 		tableView.delegate = self
 		tableView.dataSource = self
 
+        
 		let daysBeforeToAlert = SettingsService.getDaysBeforeToAlert()
 		let indexOfDaysBeforeToAlert = pickerDays.indexOf(daysBeforeToAlert)
 		alertDaysPickerView.selectRow(indexOfDaysBeforeToAlert!, inComponent: 0, animated: true)
 		self.view.addSubview(alertDaysPickerView)
 
 		alertTimePicker.date = SettingsService.getTimeToAlert()
+        
+        
+        
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -51,6 +55,25 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
 	func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		SettingsService.setDaysBeforeToAlert(pickerDays[row])
 	}
+    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+        
+        var pickerLabel = view as? UILabel;
+        
+        if (pickerLabel == nil)
+        {
+            pickerLabel = UILabel()
+            
+            pickerLabel?.font = UIFont(name: "Montserrat", size: 12)
+            pickerLabel?.textColor = UIColor.blackColor()
+            pickerLabel?.textAlignment = NSTextAlignment.Center
+        }
+        
+        pickerLabel?.text = ("\(pickerDays[row]) Days")
+        
+        return pickerLabel!;
+    }
+    
 
 	@IBAction func timePickerComplete(sender: AnyObject) {
 		let timer = sender as! UIDatePicker
@@ -75,4 +98,10 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
 	func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 		return "Dietery Consideration"
 	}
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        var nav = self.navigationController?.navigationBar
+        nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+    }
 }
