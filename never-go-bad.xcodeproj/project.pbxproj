@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		842ABC4C1C9E6D9000DD137C /* DieteryConsiderationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842ABC4B1C9E6D9000DD137C /* DieteryConsiderationCell.swift */; };
 		843C7D051C9FC94700DDA976 /* DieteryConsideration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C7D041C9FC94700DDA976 /* DieteryConsideration.swift */; };
+		656F93F61DEA67E30E7F8B47 /* Pods_never_go_badUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284738514F9E26A0829D70E0 /* Pods_never_go_badUITests.framework */; };
+		658D359E2C27D576A8744E92 /* Pods_never_go_badTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4717E06E6102647FD0313010 /* Pods_never_go_badTests.framework */; };
+		84AABA01ADB03829FE2C1306 /* Pods_never_go_bad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F523707B30E78FC5D3F05AF /* Pods_never_go_bad.framework */; };
 		84D924541C8ADF210049D09C /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D924531C8ADF210049D09C /* FoodService.swift */; };
 		84D924561C8CE2360049D09C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D924551C8CE2360049D09C /* NotificationService.swift */; };
 		84E90C4B1C935C35003FC83E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E90C4A1C935C35003FC83E /* SettingsViewController.swift */; };
@@ -58,7 +61,6 @@
 		ADCA41DC1C94F1AA002164BF /* FoodSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCA41DB1C94F1AA002164BF /* FoodSearchTableViewCell.swift */; };
 		ADCA41DE1C94F3DA002164BF /* FoodSearchManualTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCA41DD1C94F3DA002164BF /* FoodSearchManualTableViewCell.swift */; };
 		ADCA41E01C94FFAD002164BF /* FoodDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCA41DF1C94FFAD002164BF /* FoodDictionaryService.swift */; };
-		E9A00C747A3B21A429B99F1F /* Pods_never_go_bad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247536C44AD3BA169E3E638D /* Pods_never_go_bad.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,16 +81,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		247536C44AD3BA169E3E638D /* Pods_never_go_bad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_never_go_bad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		74B37664F2B8B3ABAB7AE0F8 /* Pods-never-go-bad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-bad.release.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-bad/Pods-never-go-bad.release.xcconfig"; sourceTree = "<group>"; };
-		76824E770E258698A630750C /* Pods-never-go-bad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-bad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-bad/Pods-never-go-bad.debug.xcconfig"; sourceTree = "<group>"; };
+		0C1DF0C7F1AD916D826495EF /* Pods-never-go-badUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-badUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-badUITests/Pods-never-go-badUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		284738514F9E26A0829D70E0 /* Pods_never_go_badUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_never_go_badUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F523707B30E78FC5D3F05AF /* Pods_never_go_bad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_never_go_bad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		842ABC4B1C9E6D9000DD137C /* DieteryConsiderationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DieteryConsiderationCell.swift; sourceTree = "<group>"; };
 		843C7D041C9FC94700DDA976 /* DieteryConsideration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DieteryConsideration.swift; sourceTree = "<group>"; };
+		4313F45BAC6B00CB76C93079 /* Pods-never-go-bad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-bad.release.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-bad/Pods-never-go-bad.release.xcconfig"; sourceTree = "<group>"; };
+		4717E06E6102647FD0313010 /* Pods_never_go_badTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_never_go_badTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		733A805BFC91CCA75755D71B /* Pods-never-go-badTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-badTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-badTests/Pods-never-go-badTests.release.xcconfig"; sourceTree = "<group>"; };
 		84D924531C8ADF210049D09C /* FoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodService.swift; sourceTree = "<group>"; };
 		84D924551C8CE2360049D09C /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		84D924621C915D470049D09C /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
 		84E90C4A1C935C35003FC83E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../SettingsViewController.swift; sourceTree = "<group>"; };
 		84E90C511C954BD9003FC83E /* SettingsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
+		8D679A6567B8A8C91D2AEE1A /* Pods-never-go-bad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-bad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-bad/Pods-never-go-bad.debug.xcconfig"; sourceTree = "<group>"; };
 		996A569E1C8D3BC4009F94FA /* BarcodeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
 		996A56A01C8D3BEB009F94FA /* BarcodeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeResult.swift; sourceTree = "<group>"; };
 		996A56A21C8D3E3B009F94FA /* BarcodeDetectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeDetectorViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +146,8 @@
 		ADCA41DB1C94F1AA002164BF /* FoodSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSearchTableViewCell.swift; sourceTree = "<group>"; };
 		ADCA41DD1C94F3DA002164BF /* FoodSearchManualTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSearchManualTableViewCell.swift; sourceTree = "<group>"; };
 		ADCA41DF1C94FFAD002164BF /* FoodDictionaryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDictionaryService.swift; sourceTree = "<group>"; };
+		C6CBF2CB14AE8152B54FC67F /* Pods-never-go-badUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-badUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-badUITests/Pods-never-go-badUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EDE08E209D17527844B905C6 /* Pods-never-go-badTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-badTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-badTests/Pods-never-go-badTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9A00C747A3B21A429B99F1F /* Pods_never_go_bad.framework in Frameworks */,
+				84AABA01ADB03829FE2C1306 /* Pods_never_go_bad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				658D359E2C27D576A8744E92 /* Pods_never_go_badTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,21 +171,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656F93F61DEA67E30E7F8B47 /* Pods_never_go_badUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		58355CC485F8933D8C5994B1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				76824E770E258698A630750C /* Pods-never-go-bad.debug.xcconfig */,
-				74B37664F2B8B3ABAB7AE0F8 /* Pods-never-go-bad.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		84D924521C8ADEFF0049D09C /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,8 +224,8 @@
 				AD2F00C71C854603006E66DA /* never-go-badTests */,
 				AD2F00D21C854604006E66DA /* never-go-badUITests */,
 				AD2F00B11C854603006E66DA /* Products */,
-				58355CC485F8933D8C5994B1 /* Pods */,
-				DD73FBC89266FFEDA223E6B7 /* Frameworks */,
+				C3BCF8BADA90BA300AB3263D /* Pods */,
+				CF35C3470DA4E4D2503C7E6A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -339,10 +340,25 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
-		DD73FBC89266FFEDA223E6B7 /* Frameworks */ = {
+		C3BCF8BADA90BA300AB3263D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				247536C44AD3BA169E3E638D /* Pods_never_go_bad.framework */,
+				8D679A6567B8A8C91D2AEE1A /* Pods-never-go-bad.debug.xcconfig */,
+				4313F45BAC6B00CB76C93079 /* Pods-never-go-bad.release.xcconfig */,
+				EDE08E209D17527844B905C6 /* Pods-never-go-badTests.debug.xcconfig */,
+				733A805BFC91CCA75755D71B /* Pods-never-go-badTests.release.xcconfig */,
+				0C1DF0C7F1AD916D826495EF /* Pods-never-go-badUITests.debug.xcconfig */,
+				C6CBF2CB14AE8152B54FC67F /* Pods-never-go-badUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF35C3470DA4E4D2503C7E6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F523707B30E78FC5D3F05AF /* Pods_never_go_bad.framework */,
+				4717E06E6102647FD0313010 /* Pods_never_go_badTests.framework */,
+				284738514F9E26A0829D70E0 /* Pods_never_go_badUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -354,13 +370,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD2F00D81C854604006E66DA /* Build configuration list for PBXNativeTarget "never-go-bad" */;
 			buildPhases = (
-				0CABF3D9E41DD592E260AB62 /* Check Pods Manifest.lock */,
+				0861ABB284A6F651E64FE30D /* 📦 Check Pods Manifest.lock */,
 				AD2F00AC1C854603006E66DA /* Sources */,
 				AD2F00AD1C854603006E66DA /* Frameworks */,
 				AD2F00AE1C854603006E66DA /* Resources */,
-				2E9D2528807D960761A77454 /* Embed Pods Frameworks */,
-				49DF5F1A52D0D27248A0CF11 /* Copy Pods Resources */,
 				99FD1E881C8EB0FB009F98CB /* ShellScript */,
+				18DAD6B11FBE1E58A2246B84 /* 📦 Embed Pods Frameworks */,
+				415BFE33C55CFAF5B5D0D16B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -375,9 +391,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD2F00DB1C854604006E66DA /* Build configuration list for PBXNativeTarget "never-go-badTests" */;
 			buildPhases = (
+				3512C7ED1940FE29EB7C7F35 /* 📦 Check Pods Manifest.lock */,
 				AD2F00C01C854603006E66DA /* Sources */,
 				AD2F00C11C854603006E66DA /* Frameworks */,
 				AD2F00C21C854603006E66DA /* Resources */,
+				DFFCAEEA1207761315C92B95 /* 📦 Embed Pods Frameworks */,
+				D269BF4AEF17DA3BBFEA9BBA /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -393,9 +412,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD2F00DE1C854604006E66DA /* Build configuration list for PBXNativeTarget "never-go-badUITests" */;
 			buildPhases = (
+				CA2C397D8F7CEB2BB04324E0 /* 📦 Check Pods Manifest.lock */,
 				AD2F00CB1C854604006E66DA /* Sources */,
 				AD2F00CC1C854604006E66DA /* Frameworks */,
 				AD2F00CD1C854604006E66DA /* Resources */,
+				CBFA73A18DF96CBC7AB71ACE /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -490,14 +511,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CABF3D9E41DD592E260AB62 /* Check Pods Manifest.lock */ = {
+		0861ABB284A6F651E64FE30D /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,14 +526,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		2E9D2528807D960761A77454 /* Embed Pods Frameworks */ = {
+		18DAD6B11FBE1E58A2246B84 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,14 +541,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-never-go-bad/Pods-never-go-bad-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		49DF5F1A52D0D27248A0CF11 /* Copy Pods Resources */ = {
+		3512C7ED1940FE29EB7C7F35 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		415BFE33C55CFAF5B5D0D16B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,6 +583,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 10c4775730862d0345b14022272bab5bec9df47c 17dd90108fd247f311680d30d41a56d3f35aef40447c63dac5bbec0f91586540";
+		};
+		CA2C397D8F7CEB2BB04324E0 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CBFA73A18DF96CBC7AB71ACE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-never-go-badUITests/Pods-never-go-badUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D269BF4AEF17DA3BBFEA9BBA /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-never-go-badTests/Pods-never-go-badTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFFCAEEA1207761315C92B95 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-never-go-badTests/Pods-never-go-badTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -721,7 +817,7 @@
 		};
 		AD2F00D91C854604006E66DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76824E770E258698A630750C /* Pods-never-go-bad.debug.xcconfig */;
+			baseConfigurationReference = 8D679A6567B8A8C91D2AEE1A /* Pods-never-go-bad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -737,7 +833,7 @@
 		};
 		AD2F00DA1C854604006E66DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74B37664F2B8B3ABAB7AE0F8 /* Pods-never-go-bad.release.xcconfig */;
+			baseConfigurationReference = 4313F45BAC6B00CB76C93079 /* Pods-never-go-bad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -753,6 +849,7 @@
 		};
 		AD2F00DC1C854604006E66DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDE08E209D17527844B905C6 /* Pods-never-go-badTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "never-go-badTests/Info.plist";
@@ -765,6 +862,7 @@
 		};
 		AD2F00DD1C854604006E66DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 733A805BFC91CCA75755D71B /* Pods-never-go-badTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "never-go-badTests/Info.plist";
@@ -777,6 +875,7 @@
 		};
 		AD2F00DF1C854604006E66DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C1DF0C7F1AD916D826495EF /* Pods-never-go-badUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "never-go-badUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -789,6 +888,7 @@
 		};
 		AD2F00E01C854604006E66DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6CBF2CB14AE8152B54FC67F /* Pods-never-go-badUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "never-go-badUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

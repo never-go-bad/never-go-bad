@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import HCSStarRatingView
+import HMSegmentedControl
 
 class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     
@@ -18,6 +20,10 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var recipeLabel: UILabel!
     @IBOutlet weak var recipeBgImageView: UIImageView!
     @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var ratingView: HCSStarRatingView!
+    @IBOutlet weak var wouldDoAgainLabe: UILabel!
+    @IBOutlet weak var servingsDesc: UITextView!
+    @IBOutlet weak var segmentContainer: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +75,23 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
 //        ratingLabel.text = formatRating(recipe.rating.value)
 //        
 //        servingsTimeText.attributedText = decodeString(recipe.html)!
+        
+        ratingView.value = CGFloat(recipe.rating.value.doubleValue)
+        wouldDoAgainLabe.text = "\(recipe.wouldPrepareAgain) WOULD MAKE IT AGAIN"
+        servingsDesc.attributedText = decodeString(recipe.servingsHtml)!
+        
+        
+        let segmentedControl = HMSegmentedControl(sectionTitles: ["INGREDIENTS", "PROCEDURES"])
+        segmentedControl.frame = CGRectMake(0, 0, segmentContainer.bounds.width, segmentContainer.bounds.height)
+        segmentedControl.backgroundColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.8)
+        segmentedControl.selectionStyle = HMSegmentedControlSelectionStyleBox
+        segmentedControl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown
+        segmentedControl.selectionIndicatorColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.8)
+        segmentedControl.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        segmentContainer.addSubview(segmentedControl)
+       
+
+        
         loadingView.hidden = true
     }
   
