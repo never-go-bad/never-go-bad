@@ -18,7 +18,8 @@ target 'never-go-bad' do
     pod 'SWTableViewCell', '~> 0.3.7'
 	pod 'CSwiftV'
     pod 'HCSStarRatingView'
-	pod 'NUI', :head
+	pod 'NUI', :git => 'https://github.com/tombenner/nui', :commit => '582cb8d1760f96e22e10f577e253e0f05053190e'
+#	pod 'NUI'
 end
 
 target 'never-go-badTests' do

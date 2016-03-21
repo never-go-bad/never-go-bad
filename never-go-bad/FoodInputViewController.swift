@@ -33,7 +33,7 @@ CloudSightQueryDelegate
 		tableView.delegate = self
 		tableView.estimatedRowHeight = 100
 		tableView.rowHeight = UITableViewAutomaticDimension
-		tableView.setEditing(true, animated: true)
+//		tableView.setEditing(true, animated: true)
 
 		// André's keys
 		CloudSightConnection.sharedInstance().consumerKey = "zyLoq-b0FIdsivIIm8MtHg"
@@ -81,8 +81,8 @@ CloudSightQueryDelegate
 		}
 	}
 
-    func appendFood(foodName: String, shelfLife: Int, photoUrl: String?) {
-        foodInputs.append(FoodInput(name: foodName, daysLeft: shelfLife, photoUrl: photoUrl, quantityType: QuantityType.unit, quantity: 1))
+    func appendFood(foodName: String, shelfLife: Int, photoUrl: String?, selected: Bool) {
+        foodInputs.append(FoodInput(name: foodName, daysLeft: shelfLife, photoUrl: photoUrl, selected: selected, quantityType: QuantityType.unit, quantity: 1))
 		tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: foodInputs.count - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Bottom)
 	}
 
@@ -105,11 +105,13 @@ CloudSightQueryDelegate
 
 		var foods: [Food] = []
 		for input in foodInputs {
-			let food = input.toFood()
-			foods.append(food)
-			NotificationService.registerForExpiryAlert(food,
-				daysBeforeToFire: SettingsService.getDaysBeforeToAlert(),
-				timeToFire: SettingsService.getTimeToAlert())
+            if input.selected {
+                let food = input.toFood()
+                foods.append(food)
+                NotificationService.registerForExpiryAlert(food,
+                    daysBeforeToFire: SettingsService.getDaysBeforeToAlert(),
+                    timeToFire: SettingsService.getTimeToAlert())
+            }
 		}
 
 		FoodService.save(foods)
@@ -135,7 +137,7 @@ CloudSightQueryDelegate
 			if (!barcodeResult.response.data.isEmpty) {
 				let foodName = barcodeResult.response.data[0].brand! + " " + barcodeResult.response.data[0].product_name!
                 let photoUrl = barcodeResult.response.data[0].image_urls?[0]
-				self.appendFood(foodName, shelfLife: 1, photoUrl: photoUrl)
+                self.appendFood(foodName, shelfLife: 1, photoUrl: photoUrl, selected: true)
 			}
 			progress.hide(true)
 		}
@@ -184,7 +186,7 @@ CloudSightQueryDelegate
 			let matchedFoods = FoodDictionaryService.searchFoodItemWithDescription(query.title)
 			if !matchedFoods.isEmpty {
 				for food in matchedFoods {
-					self.appendFood(food.name, shelfLife: food.shelfLife, photoUrl: food.photoUrl)
+                    self.appendFood(food.name, shelfLife: food.shelfLife, photoUrl: food.photoUrl, selected: false)
 				}
 			} else {
 				self.showNonIdentifiedFoodDialog()
@@ -194,7 +196,7 @@ CloudSightQueryDelegate
 
     func foodSearchViewController(sender: FoodSearchViewController, didSelectFoodSearchResult foodName: String, shelfLife: Int, photoUrl: String?) {
 		self.navigationController?.popViewControllerAnimated(true)
-        appendFood(foodName, shelfLife: shelfLife, photoUrl: photoUrl)
+        appendFood(foodName, shelfLife: shelfLife, photoUrl: photoUrl, selected: true)
 	}
 
 	func showNonIdentifiedFoodDialog() {

@@ -48,6 +48,7 @@
 		AD483A271C897DB1000303C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD483A261C897DB1000303C2 /* Main.storyboard */; };
 		AD483A291C8AA170000303C2 /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A281C8AA170000303C2 /* RecipeListViewController.swift */; };
 		AD7EA1FF1C9A547800314FB1 /* style.nss in Resources */ = {isa = PBXBuildFile; fileRef = AD7EA1FE1C9A547800314FB1 /* style.nss */; };
+		AD84C1051C9FD59100B0E422 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD84C1041C9FD59100B0E422 /* Checkbox.swift */; };
 		ADA2BD8B1C9F844C0067A40D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA2BD8A1C9F844C0067A40D /* MainTabViewController.swift */; };
 		ADCA41D61C94E659002164BF /* FoodSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCA41D51C94E659002164BF /* FoodSearch.storyboard */; };
 		ADCA41D81C94EAE0002164BF /* FoodSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCA41D71C94EAE0002164BF /* FoodSearchViewController.swift */; };
@@ -127,6 +128,7 @@
 		AD483A261C897DB1000303C2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AD483A281C8AA170000303C2 /* RecipeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
 		AD7EA1FE1C9A547800314FB1 /* style.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = style.nss; path = "never-go-bad/style.nss"; sourceTree = SOURCE_ROOT; };
+		AD84C1041C9FD59100B0E422 /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		ADA2BD8A1C9F844C0067A40D /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		ADCA41D51C94E659002164BF /* FoodSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FoodSearch.storyboard; sourceTree = "<group>"; };
 		ADCA41D71C94EAE0002164BF /* FoodSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSearchViewController.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				ADCA41DB1C94F1AA002164BF /* FoodSearchTableViewCell.swift */,
 				ADCA41DD1C94F3DA002164BF /* FoodSearchManualTableViewCell.swift */,
 				99BCE66B1C95643200CE0A91 /* RecipeResultCell.swift */,
+				AD84C1041C9FD59100B0E422 /* Checkbox.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				AD483A291C8AA170000303C2 /* RecipeListViewController.swift in Sources */,
 				996A56A11C8D3BEB009F94FA /* BarcodeResult.swift in Sources */,
 				99BCE65F1C93F80800CE0A91 /* Recipe.swift in Sources */,
+				AD84C1051C9FD59100B0E422 /* Checkbox.swift in Sources */,
 				99BCE65D1C93EF4E00CE0A91 /* RecipeSearchResult.swift in Sources */,
 				ADA2BD8B1C9F844C0067A40D /* MainTabViewController.swift in Sources */,
 				996A56A31C8D3E3B009F94FA /* BarcodeDetectorViewController.swift in Sources */,
