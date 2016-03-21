@@ -22,6 +22,9 @@ class RecipeSearchViewController: UIViewController, UISearchBarDelegate, UIColle
         searchBar.delegate = self
         
         dataSource = RecipeDataSource(forTable: tableView, withEmpty: emptyView)
+        
+        UIBarButtonItem.appearanceWhenContainedInInstancesOfClasses([UISearchBar.self]).tintColor = UIColor.blackColor()
+        
         searchAboutToExpireFood()
         
     }
@@ -58,6 +61,18 @@ class RecipeSearchViewController: UIViewController, UISearchBarDelegate, UIColle
         tableView.setContentOffset(CGPointZero, animated: false)
     }
     
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let recipeDetailsVC = UIStoryboard(name: "RecipeDetails", bundle: nil).instantiateViewControllerWithIdentifier("recipeDetails") as! RecipeDetailsViewController
         recipeDetailsVC.recipeSummary = dataSource.getRecipeId(indexPath)
@@ -68,7 +83,7 @@ class RecipeSearchViewController: UIViewController, UISearchBarDelegate, UIColle
     func scrollViewDidScroll(scrollView: UIScrollView) {
         dataSource.scrollViewDidScroll(scrollView)
     }
-    
+   
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = nil

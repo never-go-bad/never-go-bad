@@ -24,7 +24,12 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var wouldDoAgainLabe: UILabel!
     @IBOutlet weak var servingsDesc: UITextView!
     @IBOutlet weak var segmentContainer: UIView!
+    @IBOutlet weak var recipeContentView: UIView!
     
+    private var ingredients:NSAttributedString!
+    private var steps:NSAttributedString!
+    
+    @IBOutlet weak var contentText: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -89,10 +94,28 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
         segmentedControl.selectionIndicatorColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.8)
         segmentedControl.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
         segmentContainer.addSubview(segmentedControl)
-       
-
         
+        steps = decodeString(recipe.stepsHtml)
+        ingredients = decodeString(recipe.ingredientsHtml)
+        contentText.attributedText = ingredients
+        segmentedControl.indexChangeBlock = {
+                index in
+            UIView.animateWithDuration(0.3,
+                animations: {
+                   self.contentText.alpha = 0.0
+                },
+                completion: {
+                    _ in
+                    self.contentText.attributedText = [self.ingredients, self.steps][index]
+                    UIView.animateWithDuration(0.3,
+                        animations: {
+                            self.contentText.alpha = 1.0
+                    })
+            })
+            
+        }
         loadingView.hidden = true
+        recipeContentView.hidden = false
     }
   
     func formatRating(value: NSDecimalNumber) -> String {

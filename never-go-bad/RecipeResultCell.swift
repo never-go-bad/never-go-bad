@@ -12,7 +12,7 @@ import HCSStarRatingView
 class RecipeResultCell: UICollectionViewCell {
     
     static let id = "recipe"
-    static let defaultImageUrl = "http://www.epicurious.com/css/i/recipe-img-icon.png"
+    static let defaultImage: UIImage = UIImage(named: "defaultRecipeThumb")!
 
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -33,9 +33,17 @@ class RecipeResultCell: UICollectionViewCell {
     func apply(recipe: RecipeSearchResult.Recipe) {
         titleLabel.text = recipe.name
         recipeImageView.image = nil
-        let recipeImageUrl = NSURL(string: recipe.image ?? RecipeResultCell.defaultImageUrl)
+        if recipe.image != nil {
+            let recipeImageUrl = NSURL(string: recipe.image!)
+            if recipeImageUrl != nil {
+                recipeImageView.fadedSetImageWithUrl(recipeImageUrl!)
+            } else {
+                recipeImageView.image = RecipeResultCell.defaultImage
+            }
+        } else {
+            recipeImageView.image = RecipeResultCell.defaultImage
+        }
         
-        recipeImageView.fadedSetImageWithUrl(recipeImageUrl ?? NSURL(string: RecipeResultCell.defaultImageUrl)!)
         if let rating = recipe.rating {
             starsView.hidden = false
             starsView.value = CGFloat(rating.value.doubleValue)

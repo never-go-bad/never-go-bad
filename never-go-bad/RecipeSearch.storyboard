@@ -152,6 +152,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="1Bx-Td-BLv" firstAttribute="top" secondItem="gr2-TL-lLc" secondAttribute="bottom" id="3wZ-Mb-Gjd"/>
                             <constraint firstAttribute="trailing" secondItem="KjC-Bz-nUO" secondAttribute="trailing" id="Hyj-4G-ppC"/>
