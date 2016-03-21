@@ -88,6 +88,8 @@ class FoodService {
 		query.whereKey("installationId", equalTo: PFInstallation.currentInstallation())
 		query.whereKey("consumed", equalTo: false)
 		query.whereKey("trashed", equalTo: false)
+        query.addAscendingOrder("expirationDate")
+        query.addAscendingOrder("name")
 		query.findObjectsInBackgroundWithBlock {
 			(objects: [PFObject]?, error: NSError?) -> Void in
 
