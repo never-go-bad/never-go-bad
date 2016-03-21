@@ -44,4 +44,13 @@ class SettingsService{
     class func setTimeToAlert(time : NSDate){
         defaults.setObject(time, forKey: "timeToAlert")
     }
+    
+    class func getDieteryConsideration(dietType: DietaryConsiderationEnum) -> Bool {
+        let considertion: Bool? = defaults.boolForKey(dietType.rawValue)
+        return considertion ?? false
+    }
+    
+    class func setDieteryConsideration(dietType: DietaryConsiderationEnum, value: Bool){
+        defaults.setBool(value, forKey: dietType.rawValue)
+    }
 }

@@ -8,11 +8,12 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITableViewDelegate, UITableViewDataSource {
 
 	@IBOutlet weak var alertDaysPickerView: UIPickerView!
 	@IBOutlet weak var alertTimePicker: UIDatePicker!
 
+	@IBOutlet weak var tableView: UITableView!
 	var pickerDays = [1, 2, 3, 4, 5, 6, 7]
 
 	override func viewDidLoad() {
@@ -20,6 +21,9 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
 
 		alertDaysPickerView.delegate = self
 		alertDaysPickerView.dataSource = self
+
+		tableView.delegate = self
+		tableView.dataSource = self
 
 		let daysBeforeToAlert = SettingsService.getDaysBeforeToAlert()
 		let indexOfDaysBeforeToAlert = pickerDays.indexOf(daysBeforeToAlert)
@@ -41,27 +45,34 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
 		return pickerDays.count
 	}
 	func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-		return String(pickerDays[row])
-	}
-
-	func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-		return 36.0
-	}
-
-	func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-		return 36.0
+		return ("\(pickerDays[row]) Days")
 	}
 
 	func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		SettingsService.setDaysBeforeToAlert(pickerDays[row])
 	}
 
-	@IBAction func onSaveButtonClicked(sender: AnyObject) {
-        // do we need save button?
-	}
-
 	@IBAction func timePickerComplete(sender: AnyObject) {
 		let timer = sender as! UIDatePicker
 		SettingsService.setTimeToAlert(timer.date)
+	}
+
+	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return DieteryConsideration.dieteryConsiderations.count
+	}
+
+	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+		return 1
+	}
+
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+		let cell = tableView.dequeueReusableCellWithIdentifier("DieteryConsiderationCell", forIndexPath: indexPath) as! DieteryConsiderationCell
+		cell.dieteryConsideration = DieteryConsideration.dieteryConsiderations[indexPath.row]
+		return cell
+	}
+
+	func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+		return "Dietery Consideration"
 	}
 }
