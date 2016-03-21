@@ -13,8 +13,6 @@ import UIKit
 }
 
 class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITableViewDelegate, UITableViewDataSource, DieteryConsiderationCellDelegate {
-    
-    static let defaults = NSUserDefaults.standardUserDefaults()
 
 	@IBOutlet weak var alertDaysPickerView: UIPickerView!
 	@IBOutlet weak var alertTimePicker: UIDatePicker!
@@ -96,6 +94,10 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
             for (row, isSelected) in switchStates!
             {
                 selectedCategories.append(dieteryConsiderationDictionary[row]["code"]! as! String)
+                print(row)
+                print(isSelected)
+               // var rowname = String(row)
+               // SettingsService.setDieteryConsideratons([[String(row) : isSelected]])
             }
             if selectedCategories.count > 0
             {
@@ -143,6 +145,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         }
         
         //  cell.onSwitch.on  = switchStates![indexPath.row] ?? false
+        
         
         print(cell.dieteryConsiderationLabel.text)
     

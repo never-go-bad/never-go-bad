@@ -29,6 +29,6 @@ class DieteryConsiderationCell: UITableViewCell {
     func switchValueChanged()
     {
         print ("Switch value changed")
-       delegate!.dieteryConsiderationCell?(self, didChangeValue: onSwitch.on)
+       delegate?.dieteryConsiderationCell?(self, didChangeValue: onSwitch.on)
     }
 }
