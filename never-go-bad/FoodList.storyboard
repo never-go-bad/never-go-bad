@@ -115,8 +115,35 @@
                                 <rect key="frame" x="0.0" y="205" width="320" height="363"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ManuallyAddFoodTableViewCell" id="wBs-Ep-6XT">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="86"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wBs-Ep-6XT" id="cWp-69-Muc">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="85.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qg7-o3-ikh">
+                                                    <rect key="frame" x="96" y="28" width="127" height="30"/>
+                                                    <state key="normal" title="Add item manually"/>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="cHE-xx-gxI">
+                                                    <rect key="frame" x="12" y="32" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="22" id="HM0-Bv-eyf"/>
+                                                        <constraint firstAttribute="height" constant="22" id="z0x-1w-5Z5"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qg7-o3-ikh" firstAttribute="centerX" secondItem="cWp-69-Muc" secondAttribute="centerX" id="CSH-P3-8yA"/>
+                                                <constraint firstItem="cHE-xx-gxI" firstAttribute="centerY" secondItem="cWp-69-Muc" secondAttribute="centerY" id="S4I-HK-or9"/>
+                                                <constraint firstItem="Qg7-o3-ikh" firstAttribute="centerY" secondItem="cWp-69-Muc" secondAttribute="centerY" id="Xou-eZ-JmG"/>
+                                                <constraint firstItem="cHE-xx-gxI" firstAttribute="leading" secondItem="cWp-69-Muc" secondAttribute="leading" constant="12" id="uzP-IY-tdE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodInputTableViewCell" rowHeight="94" id="stI-PH-JEw" customClass="FoodInputTableViewCell" customModule="never_go_bad" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="94"/>
+                                        <rect key="frame" x="0.0" y="114" width="320" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="stI-PH-JEw" id="wdB-o1-lep">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="93.5"/>
@@ -191,27 +218,6 @@
                                             <outlet property="foodImageView" destination="8Nq-Ra-b7e" id="yUY-Sp-g61"/>
                                             <outlet property="foodNameTextField" destination="8od-7f-IVI" id="njW-J2-ePE"/>
                                         </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ManuallyAddFoodTableViewCell" id="wBs-Ep-6XT">
-                                        <rect key="frame" x="0.0" y="122" width="320" height="86"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wBs-Ep-6XT" id="cWp-69-Muc">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="85.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qg7-o3-ikh">
-                                                    <rect key="frame" x="96" y="28" width="127" height="30"/>
-                                                    <state key="normal" title="Add item manually"/>
-                                                    <connections>
-                                                        <action selector="touchAddItemManually:" destination="SAO-Sb-fXc" eventType="touchUpInside" id="Tyd-nk-p6q"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Qg7-o3-ikh" firstAttribute="centerX" secondItem="cWp-69-Muc" secondAttribute="centerX" id="CSH-P3-8yA"/>
-                                                <constraint firstItem="Qg7-o3-ikh" firstAttribute="centerY" secondItem="cWp-69-Muc" secondAttribute="centerY" id="Xou-eZ-JmG"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -380,6 +386,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="44" height="44"/>
         <image name="barcode120" width="60" height="60"/>
         <image name="camera120" width="60" height="60"/>
         <image name="cart" width="24" height="24"/>

@@ -11,6 +11,9 @@ import MBProgressHUD
 import UIImage_Categories
 import CloudSight
 
+let SECTION_ADD_CELL = 0
+let SECTION_FOOD_INPUTS = 1
+
 class FoodInputViewController: UIViewController,
 UITableViewDelegate, UITableViewDataSource,
 BarcodeDelegate,
@@ -44,7 +47,7 @@ CloudSightQueryDelegate
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
+/*
 	func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
 		if indexPath.row < foodInputs.count {
 			return UITableViewCellEditingStyle.Delete
@@ -52,7 +55,8 @@ CloudSightQueryDelegate
 			return UITableViewCellEditingStyle.Insert
 		}
 	}
-
+*/
+    /*
 	func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
 		editingStyle
 		if editingStyle == UITableViewCellEditingStyle.Insert {
@@ -65,32 +69,41 @@ CloudSightQueryDelegate
 			tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
 		}
 	}
+    */
+
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
 
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return foodInputs.count + 1
+        if section == SECTION_ADD_CELL {
+            return 1
+        } else {
+            return foodInputs.count
+        }
 	}
 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		if indexPath.row < foodInputs.count {
-			let cell = tableView.dequeueReusableCellWithIdentifier("FoodInputTableViewCell") as! FoodInputTableViewCell
-			cell.foodInput = foodInputs[indexPath.row]
-			return cell
-		} else {
-			let cell = tableView.dequeueReusableCellWithIdentifier("ManuallyAddFoodTableViewCell")!
-			return cell
-		}
+        if indexPath.section == SECTION_ADD_CELL {
+            let cell = tableView.dequeueReusableCellWithIdentifier("ManuallyAddFoodTableViewCell")!
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("FoodInputTableViewCell") as! FoodInputTableViewCell
+            cell.foodInput = foodInputs[indexPath.row]
+            return cell
+        }
 	}
 
-    func appendFood(foodName: String, shelfLife: Int, photoUrl: String?, selected: Bool) {
-        foodInputs.append(FoodInput(name: foodName, daysLeft: shelfLife, photoUrl: photoUrl, selected: selected, quantityType: QuantityType.unit, quantity: 1))
-		tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: foodInputs.count - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Bottom)
+    func prependFood(foodName: String, shelfLife: Int, photoUrl: String?, selected: Bool) {
+        foodInputs.insert(FoodInput(name: foodName, daysLeft: shelfLife, photoUrl: photoUrl, selected: selected, quantityType: QuantityType.unit, quantity: 1), atIndex: 0)
+		tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: SECTION_FOOD_INPUTS)], withRowAnimation: UITableViewRowAnimation.Bottom)
 	}
-
-	@IBAction func touchAddItemManually(sender: AnyObject) {
-//        appendFood("")
-		// table + clicked
-		pushFoodSearchViewController()
-	}
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == SECTION_ADD_CELL {
+            pushFoodSearchViewController()
+        }
+    }
 
 	func pushFoodSearchViewController() {
 		let storyBoard = UIStoryboard(name: "FoodSearch", bundle: nil)
@@ -137,7 +150,7 @@ CloudSightQueryDelegate
 			if (!barcodeResult.response.data.isEmpty) {
 				let foodName = barcodeResult.response.data[0].brand! + " " + barcodeResult.response.data[0].product_name!
                 let photoUrl = barcodeResult.response.data[0].image_urls?[0]
-                self.appendFood(foodName, shelfLife: 1, photoUrl: photoUrl, selected: true)
+                self.prependFood(foodName, shelfLife: 1, photoUrl: photoUrl, selected: true)
 			}
 			progress.hide(true)
 		}
@@ -186,7 +199,7 @@ CloudSightQueryDelegate
 			let matchedFoods = FoodDictionaryService.searchFoodItemWithDescription(query.title)
 			if !matchedFoods.isEmpty {
 				for food in matchedFoods {
-                    self.appendFood(food.name, shelfLife: food.shelfLife, photoUrl: food.photoUrl, selected: false)
+                    self.prependFood(food.name, shelfLife: food.shelfLife, photoUrl: food.photoUrl, selected: false)
 				}
 			} else {
 				self.showNonIdentifiedFoodDialog()
@@ -196,7 +209,7 @@ CloudSightQueryDelegate
 
     func foodSearchViewController(sender: FoodSearchViewController, didSelectFoodSearchResult foodName: String, shelfLife: Int, photoUrl: String?) {
 		self.navigationController?.popViewControllerAnimated(true)
-        appendFood(foodName, shelfLife: shelfLife, photoUrl: photoUrl, selected: true)
+        prependFood(foodName, shelfLife: shelfLife, photoUrl: photoUrl, selected: true)
 	}
 
 	func showNonIdentifiedFoodDialog() {
