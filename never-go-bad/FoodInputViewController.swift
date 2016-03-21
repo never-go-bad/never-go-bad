@@ -36,7 +36,6 @@ CloudSightQueryDelegate
 		tableView.delegate = self
 		tableView.estimatedRowHeight = 100
 		tableView.rowHeight = UITableViewAutomaticDimension
-//		tableView.setEditing(true, animated: true)
 
 		// André's keys
 		CloudSightConnection.sharedInstance().consumerKey = "zyLoq-b0FIdsivIIm8MtHg"
@@ -47,29 +46,6 @@ CloudSightQueryDelegate
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-/*
-	func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
-		if indexPath.row < foodInputs.count {
-			return UITableViewCellEditingStyle.Delete
-		} else {
-			return UITableViewCellEditingStyle.Insert
-		}
-	}
-*/
-    /*
-	func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-		editingStyle
-		if editingStyle == UITableViewCellEditingStyle.Insert {
-//            foodInputs.append(FoodInput(name: "", daysLeft: 1, quantityType: QuantityType.unit, quantity: 1))
-//            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-			// table + clicked
-			pushFoodSearchViewController()
-		} else if editingStyle == UITableViewCellEditingStyle.Delete {
-			foodInputs.removeAtIndex(indexPath.row)
-			tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-		}
-	}
-    */
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2

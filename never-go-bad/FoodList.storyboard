@@ -133,11 +133,23 @@
                                                         <constraint firstAttribute="height" constant="22" id="z0x-1w-5Z5"/>
                                                     </constraints>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baW-XT-fz6" userLabel="border">
+                                                    <rect key="frame" x="0.0" y="84" width="320" height="1"/>
+                                                    <color key="backgroundColor" red="0.87450980389999999" green="0.87058823529999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1" id="8hM-Vc-nFZ"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="fHJ-ZY-71g"/>
+                                                        <constraint firstAttribute="height" constant="1" id="xDr-6b-zmx"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="baW-XT-fz6" secondAttribute="bottom" id="8gT-8Y-QUj"/>
                                                 <constraint firstItem="Qg7-o3-ikh" firstAttribute="centerX" secondItem="cWp-69-Muc" secondAttribute="centerX" id="CSH-P3-8yA"/>
+                                                <constraint firstItem="baW-XT-fz6" firstAttribute="leading" secondItem="cWp-69-Muc" secondAttribute="leading" id="Eb5-Ya-sJz"/>
                                                 <constraint firstItem="cHE-xx-gxI" firstAttribute="centerY" secondItem="cWp-69-Muc" secondAttribute="centerY" id="S4I-HK-or9"/>
                                                 <constraint firstItem="Qg7-o3-ikh" firstAttribute="centerY" secondItem="cWp-69-Muc" secondAttribute="centerY" id="Xou-eZ-JmG"/>
+                                                <constraint firstAttribute="trailing" secondItem="baW-XT-fz6" secondAttribute="trailing" id="rJm-2R-2nh"/>
                                                 <constraint firstItem="cHE-xx-gxI" firstAttribute="leading" secondItem="cWp-69-Muc" secondAttribute="leading" constant="12" id="uzP-IY-tdE"/>
                                             </constraints>
                                         </tableViewCellContentView>
