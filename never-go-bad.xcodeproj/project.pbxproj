@@ -243,7 +243,6 @@
 			children = (
 				99BCE66F1C95703300CE0A91 /* DataSources */,
 				99BCE6681C9532BC00CE0A91 /* Constants */,
-				84D924621C915D470049D09C /* Bridging-Header.h */,
 				996A56A61C8D3F99009F94FA /* Extensions */,
 				84D924521C8ADEFF0049D09C /* Services */,
 				AD483A1D1C897920000303C2 /* Storyboard */,
@@ -252,6 +251,7 @@
 				AD483A0B1C86DAFF000303C2 /* Model */,
 				AD2F00B31C854603006E66DA /* AppDelegate.swift */,
 				AD2F00B51C854603006E66DA /* ViewController.swift */,
+				84D924621C915D470049D09C /* Bridging-Header.h */,
 				AD2F00BA1C854603006E66DA /* Assets.xcassets */,
 				AD2F00BF1C854603006E66DA /* Info.plist */,
 				AD7EA1FE1C9A547800314FB1 /* style.nss */,

@@ -17,6 +17,7 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var titleBg: UIView!
     @IBOutlet weak var recipeLabel: UILabel!
     @IBOutlet weak var recipeBgImageView: UIImageView!
+    @IBOutlet weak var loadingView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +69,7 @@ class RecipeDetailsViewController: UIViewController, UIScrollViewDelegate {
 //        ratingLabel.text = formatRating(recipe.rating.value)
 //        
 //        servingsTimeText.attributedText = decodeString(recipe.html)!
+        loadingView.hidden = true
     }
   
     func formatRating(value: NSDecimalNumber) -> String {

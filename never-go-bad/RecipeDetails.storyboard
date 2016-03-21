@@ -59,7 +59,7 @@
                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BFS-a2-RRK" userLabel="Content">
                                                 <rect key="frame" x="0.0" y="310" width="481" height="504"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="81f-bO-J5y" userLabel="loadView">
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="81f-bO-J5y" userLabel="loadView">
                                                         <rect key="frame" x="0.0" y="0.0" width="481" height="138"/>
                                                         <subviews>
                                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lAs-ob-7qt">
@@ -74,10 +74,24 @@
                                                             <constraint firstItem="lAs-ob-7qt" firstAttribute="centerX" secondItem="81f-bO-J5y" secondAttribute="centerX" id="aOF-2i-gBm"/>
                                                         </constraints>
                                                     </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UCi-dB-ItO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="481" height="471"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OVq-vl-wTi" customClass="HCSStarRatingView">
+                                                                <rect key="frame" x="83" y="25" width="240" height="128"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="UCi-dB-ItO" firstAttribute="leading" secondItem="BFS-a2-RRK" secondAttribute="leading" id="8UL-nH-qMR"/>
+                                                    <constraint firstAttribute="bottom" secondItem="UCi-dB-ItO" secondAttribute="bottom" id="F8x-JY-1bi"/>
                                                     <constraint firstItem="81f-bO-J5y" firstAttribute="leading" secondItem="BFS-a2-RRK" secondAttribute="leading" id="Qyd-sT-uaZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="UCi-dB-ItO" secondAttribute="trailing" id="enh-vG-K2q"/>
+                                                    <constraint firstItem="UCi-dB-ItO" firstAttribute="top" secondItem="BFS-a2-RRK" secondAttribute="top" id="kkX-Gz-JUY"/>
                                                     <constraint firstItem="81f-bO-J5y" firstAttribute="top" secondItem="BFS-a2-RRK" secondAttribute="top" id="nVF-5t-DS2"/>
                                                     <constraint firstAttribute="trailing" secondItem="81f-bO-J5y" secondAttribute="trailing" id="rLu-5j-WYK"/>
                                                     <constraint firstAttribute="bottom" secondItem="81f-bO-J5y" secondAttribute="bottom" id="zSb-KT-CuZ"/>
@@ -111,6 +125,7 @@
                             <constraint firstAttribute="trailing" secondItem="aDU-zX-oux" secondAttribute="trailing" id="CWN-Vf-GbI"/>
                             <constraint firstItem="aDU-zX-oux" firstAttribute="leading" secondItem="3vJ-ni-GGh" secondAttribute="leading" id="L9i-Yo-KTt"/>
                             <constraint firstItem="s4p-cV-lcM" firstAttribute="top" secondItem="3vJ-ni-GGh" secondAttribute="topMargin" id="PQW-T2-K8M"/>
+                            <constraint firstItem="aDU-zX-oux" firstAttribute="width" secondItem="3vJ-ni-GGh" secondAttribute="width" id="Qqa-RF-f3q"/>
                             <constraint firstItem="s4p-cV-lcM" firstAttribute="leading" secondItem="3vJ-ni-GGh" secondAttribute="leading" id="VqB-q7-d0H"/>
                             <constraint firstItem="aDU-zX-oux" firstAttribute="top" secondItem="3vJ-ni-GGh" secondAttribute="top" id="Zbj-Qz-wQA"/>
                             <constraint firstItem="UqY-Yg-gg6" firstAttribute="top" secondItem="s4p-cV-lcM" secondAttribute="bottom" id="eP1-nh-Opu"/>
@@ -122,6 +137,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="480" height="800"/>
                     <connections>
+                        <outlet property="loadingView" destination="81f-bO-J5y" id="pqh-Pa-3uU"/>
                         <outlet property="recipeBgImageView" destination="aDU-zX-oux" id="SoR-jG-Vhl"/>
                         <outlet property="recipeLabel" destination="D2u-zA-YJt" id="UAg-Sg-lpp"/>
                         <outlet property="scrollView" destination="s4p-cV-lcM" id="Eps-yx-ngn"/>
