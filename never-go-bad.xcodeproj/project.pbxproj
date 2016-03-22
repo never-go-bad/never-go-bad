@@ -39,6 +39,7 @@
 		AD2F00BE1C854603006E66DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD2F00BC1C854603006E66DA /* LaunchScreen.storyboard */; };
 		AD2F00C91C854603006E66DA /* never_go_badTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00C81C854603006E66DA /* never_go_badTests.swift */; };
 		AD2F00D41C854604006E66DA /* never_go_badUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00D31C854604006E66DA /* never_go_badUITests.swift */; };
+		AD3C02351CA12C1100044EC7 /* FoodInputButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3C02341CA12C1100044EC7 /* FoodInputButtonsTableViewCell.swift */; };
 		AD3D63591C95074300C6046A /* USDAShelfLife.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD3D63581C95074300C6046A /* USDAShelfLife.csv */; };
 		AD483A0E1C86DB56000303C2 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A0D1C86DB56000303C2 /* Food.swift */; };
 		AD483A101C86DB7C000303C2 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD483A0F1C86DB7C000303C2 /* FoodListViewController.swift */; };
@@ -124,6 +125,7 @@
 		AD2F00CF1C854604006E66DA /* never-go-badUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "never-go-badUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2F00D31C854604006E66DA /* never_go_badUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = never_go_badUITests.swift; sourceTree = "<group>"; };
 		AD2F00D51C854604006E66DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD3C02341CA12C1100044EC7 /* FoodInputButtonsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodInputButtonsTableViewCell.swift; sourceTree = "<group>"; };
 		AD3D63581C95074300C6046A /* USDAShelfLife.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = USDAShelfLife.csv; sourceTree = "<group>"; };
 		AD483A0D1C86DB56000303C2 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		AD483A0F1C86DB7C000303C2 /* FoodListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				AD483A191C86F5B7000303C2 /* FoodInputTableViewCell.swift */,
 				ADCA41DB1C94F1AA002164BF /* FoodSearchTableViewCell.swift */,
 				ADCA41DD1C94F3DA002164BF /* FoodSearchManualTableViewCell.swift */,
+				AD3C02341CA12C1100044EC7 /* FoodInputButtonsTableViewCell.swift */,
 				99BCE66B1C95643200CE0A91 /* RecipeResultCell.swift */,
 				AD84C1041C9FD59100B0E422 /* Checkbox.swift */,
 				842ABC4B1C9E6D9000DD137C /* DieteryConsiderationCell.swift */,
@@ -695,6 +698,7 @@
 				99BCE6711C95706300CE0A91 /* RecipeDataSource.swift in Sources */,
 				99BCE66A1C9532D300CE0A91 /* SettingsConstants.swift in Sources */,
 				ADCA41DC1C94F1AA002164BF /* FoodSearchTableViewCell.swift in Sources */,
+				AD3C02351CA12C1100044EC7 /* FoodInputButtonsTableViewCell.swift in Sources */,
 				ADCA41E01C94FFAD002164BF /* FoodDictionaryService.swift in Sources */,
 				99BCE6731C96124600CE0A91 /* InfiniteScrollActivityView.swift in Sources */,
 				842ABC4C1C9E6D9000DD137C /* DieteryConsiderationCell.swift in Sources */,

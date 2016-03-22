@@ -11,16 +11,17 @@ import MBProgressHUD
 import UIImage_Categories
 import CloudSight
 
-let SECTION_ADD_CELL = 0
-let SECTION_FOOD_INPUTS = 1
+let SECTION_FOOD_BUTTONS = 0
+let SECTION_ADD_CELL = 1
+let SECTION_FOOD_INPUTS = 2
 
 class FoodInputViewController: UIViewController,
 UITableViewDelegate, UITableViewDataSource,
 BarcodeDelegate,
 FoodSearchViewControllerDeletage,
 UIImagePickerControllerDelegate, UINavigationControllerDelegate,
-CloudSightQueryDelegate
-
+CloudSightQueryDelegate,
+FoodInputButtonsTableViewCellDelegate
 {
 	@IBOutlet var topView: UIView!
 	@IBOutlet weak var tableView: UITableView!
@@ -48,14 +49,16 @@ CloudSightQueryDelegate
 	}
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
 
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == SECTION_ADD_CELL {
             return 1
-        } else {
+        } else if section == SECTION_FOOD_INPUTS{
             return foodInputs.count
+        } else {
+            return 1
         }
 	}
 
@@ -63,9 +66,13 @@ CloudSightQueryDelegate
         if indexPath.section == SECTION_ADD_CELL {
             let cell = tableView.dequeueReusableCellWithIdentifier("ManuallyAddFoodTableViewCell")!
             return cell
-        } else {
+        } else if indexPath.section == SECTION_FOOD_INPUTS {
             let cell = tableView.dequeueReusableCellWithIdentifier("FoodInputTableViewCell") as! FoodInputTableViewCell
             cell.foodInput = foodInputs[indexPath.row]
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("FoodInputButtonsTableViewCell") as! FoodInputButtonsTableViewCell
+            cell.delegate = self
             return cell
         }
 	}
@@ -109,7 +116,7 @@ CloudSightQueryDelegate
 		self.navigationController?.popViewControllerAnimated(true)
 	}
 
-	@IBAction func onDidTapBarcodeButton(sender: AnyObject) {
+    func foodInputButtonsTableViewCell(barcodeButtonDidTap sender: FoodInputButtonsTableViewCell) {
 		let storyBoard = UIStoryboard(name: "BarcodeDetector", bundle: nil)
 		let barcodePresenter = storyBoard.instantiateViewControllerWithIdentifier(BarcodeDetectorViewController.storyBoardId) as! BarcodeDetectorViewController
 		barcodePresenter.delegate = self
@@ -134,7 +141,7 @@ CloudSightQueryDelegate
 		BarcodeService.sharedInstance.getByUPC(barcode, onSuccess: productFoundClosure, onError: { progress.hide(true)})
 	}
 
-	@IBAction func onDidTapCameraButton(sender: AnyObject) {
+    func foodInputButtonsTableViewCell(cameraButtonDidTap sender: FoodInputButtonsTableViewCell) {
 		let imagePicker = UIImagePickerController()
 		imagePicker.delegate = self
 		imagePicker.allowsEditing = true
