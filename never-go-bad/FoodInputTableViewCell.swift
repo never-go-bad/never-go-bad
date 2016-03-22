@@ -40,6 +40,8 @@ CheckboxDelegate {
                     foodImageView.image = UIImage(named: "tree")
                 }
                 checkbox.delegate = self
+                checkbox.checkedImage = UIImage(named: "checkbox-checked-blue")
+                checkbox.uncheckedImage = UIImage(named: "checkbox-unchecked")
                 checkbox.isChecked = foodInput.selected
             }
         }
