@@ -45,7 +45,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
         if section == 0 {
             return "Expired!"
         } else if section == 1 {
-            return "Today!"
+            return "Expiring Today!"
         } else if section < 7 {
             return "\(section) Days Left"
         } else {
