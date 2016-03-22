@@ -9,6 +9,7 @@
 import Foundation
 import Parse
 
+let notificationFoodListDidChange = "notificationFoodListDidChange"
 class FoodService {
 
 	class func save(foodItems: [Food]) -> Bool
@@ -33,6 +34,7 @@ class FoodService {
 				if successful
 				{
 					print("saved")
+                    NSNotificationCenter.defaultCenter().postNotificationName(notificationFoodListDidChange, object: nil)
 				}
 				else
 				{
@@ -55,6 +57,7 @@ class FoodService {
 					object["consumed"] = true as Bool
 				}
 				object!.saveInBackground()
+                NSNotificationCenter.defaultCenter().postNotificationName(notificationFoodListDidChange, object: nil)
 			}
 	} }
 
@@ -69,6 +72,7 @@ class FoodService {
 					object["trashed"] = true as Bool
 				}
 				object!.saveInBackground()
+                NSNotificationCenter.defaultCenter().postNotificationName(notificationFoodListDidChange, object: nil)
 			}
 	} }
 
@@ -79,6 +83,7 @@ class FoodService {
 				NSLog("No food items left to be deleted")
 			} else {
 				object!.deleteInBackground()
+                NSNotificationCenter.defaultCenter().postNotificationName(notificationFoodListDidChange, object: nil)
 			}
 		}
 	}

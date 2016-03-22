@@ -14,6 +14,7 @@ class RecipeSearchViewController: UIViewController, UISearchBarDelegate, UIColle
     @IBOutlet weak var tableView: UICollectionView!
     @IBOutlet weak var emptyView: UIView!
     private var dataSource: RecipeDataSource!
+    var needToRefresh = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +26,7 @@ class RecipeSearchViewController: UIViewController, UISearchBarDelegate, UIColle
         
         UIBarButtonItem.appearanceWhenContainedInInstancesOfClasses([UISearchBar.self]).tintColor = UIColor.blackColor()
         
-        searchAboutToExpireFood()
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "foodListDidChange:", name: notificationFoodListDidChange, object: nil)
     }
 
     func searchAboutToExpireFood() {
@@ -83,9 +83,17 @@ class RecipeSearchViewController: UIViewController, UISearchBarDelegate, UIColle
     func scrollViewDidScroll(scrollView: UIScrollView) {
         dataSource.scrollViewDidScroll(scrollView)
     }
+    
+    func foodListDidChange(sender: NSNotification) {
+        needToRefresh = true
+    }
    
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = nil
+        if needToRefresh {
+            searchAboutToExpireFood()
+        }
+        needToRefresh = false
     }
 }
