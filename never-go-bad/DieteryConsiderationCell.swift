@@ -36,6 +36,8 @@ class DieteryConsiderationCell: UITableViewCell {
         if(self.dieteryConsideration != nil) {
             self.dieteryConsideration!.selected = onSwitch.on
             SettingsService.setDieteryConsideration(dieteryConsideration!.dietType, value: onSwitch.on)
+            NSNotificationCenter.defaultCenter().postNotificationName(notificationFoodListDidChange, object: nil)
+
         }
     }
 }
