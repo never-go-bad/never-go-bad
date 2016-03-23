@@ -33,6 +33,8 @@
 		99BCE6731C96124600CE0A91 /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BCE6721C96124600CE0A91 /* InfiniteScrollActivityView.swift */; };
 		99BCE6751C965D8800CE0A91 /* RecipeDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99BCE6741C965D8800CE0A91 /* RecipeDetails.storyboard */; };
 		99BCE6771C9662F200CE0A91 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BCE6761C9662F200CE0A91 /* RecipeDetailsViewController.swift */; };
+		AD2465F91CA26CF10019587A /* SettingsDaysCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2465F81CA26CF10019587A /* SettingsDaysCell.swift */; };
+		AD2465FB1CA26D010019587A /* SettingsTimePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2465FA1CA26D010019587A /* SettingsTimePickerCell.swift */; };
 		AD2F00B41C854603006E66DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00B31C854603006E66DA /* AppDelegate.swift */; };
 		AD2F00B61C854603006E66DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F00B51C854603006E66DA /* ViewController.swift */; };
 		AD2F00BB1C854603006E66DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD2F00BA1C854603006E66DA /* Assets.xcassets */; };
@@ -113,6 +115,8 @@
 		99BCE6721C96124600CE0A91 /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
 		99BCE6741C965D8800CE0A91 /* RecipeDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecipeDetails.storyboard; sourceTree = "<group>"; };
 		99BCE6761C9662F200CE0A91 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		AD2465F81CA26CF10019587A /* SettingsDaysCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDaysCell.swift; sourceTree = "<group>"; };
+		AD2465FA1CA26D010019587A /* SettingsTimePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTimePickerCell.swift; sourceTree = "<group>"; };
 		AD2F00B01C854603006E66DA /* never-go-bad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "never-go-bad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2F00B31C854603006E66DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD2F00B51C854603006E66DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -323,6 +327,8 @@
 				99BCE66B1C95643200CE0A91 /* RecipeResultCell.swift */,
 				AD84C1041C9FD59100B0E422 /* Checkbox.swift */,
 				842ABC4B1C9E6D9000DD137C /* DieteryConsiderationCell.swift */,
+				AD2465F81CA26CF10019587A /* SettingsDaysCell.swift */,
+				AD2465FA1CA26D010019587A /* SettingsTimePickerCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -675,6 +681,7 @@
 				996A56A11C8D3BEB009F94FA /* BarcodeResult.swift in Sources */,
 				99BCE65F1C93F80800CE0A91 /* Recipe.swift in Sources */,
 				AD84C1051C9FD59100B0E422 /* Checkbox.swift in Sources */,
+				AD2465FB1CA26D010019587A /* SettingsTimePickerCell.swift in Sources */,
 				99BCE65D1C93EF4E00CE0A91 /* RecipeSearchResult.swift in Sources */,
 				843C7D051C9FC94700DDA976 /* DieteryConsideration.swift in Sources */,
 				ADA2BD8B1C9F844C0067A40D /* MainTabViewController.swift in Sources */,
@@ -704,6 +711,7 @@
 				842ABC4C1C9E6D9000DD137C /* DieteryConsiderationCell.swift in Sources */,
 				ADCA41D81C94EAE0002164BF /* FoodSearchViewController.swift in Sources */,
 				84D924541C8ADF210049D09C /* FoodService.swift in Sources */,
+				AD2465F91CA26CF10019587A /* SettingsDaysCell.swift in Sources */,
 				ADCA41DA1C94EB44002164BF /* FoodReference.swift in Sources */,
 				99BCE6771C9662F200CE0A91 /* RecipeDetailsViewController.swift in Sources */,
 				84E90C4B1C935C35003FC83E /* SettingsViewController.swift in Sources */,

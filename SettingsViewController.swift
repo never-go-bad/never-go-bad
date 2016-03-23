@@ -12,12 +12,6 @@ class SettingsViewController: UIViewController
 //, UIPickerViewDataSource, UIPickerViewDelegate
 , UITableViewDelegate, UITableViewDataSource {
 
-	//@IBOutlet weak var alertDaysPickerView: UIPickerView!
-	@IBOutlet weak var alertTimePicker: UIDatePicker!
-
-    @IBOutlet weak var stepper: UIStepper!
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var stepperValueLabel: UILabel!
 	@IBOutlet weak var tableView: UITableView!
 	var pickerDays = [1, 2, 3, 4, 5, 6, 7]
 
@@ -29,23 +23,9 @@ class SettingsViewController: UIViewController
 
 		tableView.delegate = self
 		tableView.dataSource = self
-        
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
-        
-		let daysBeforeToAlert = SettingsService.getDaysBeforeToAlert()
-        stepper.value = Double(daysBeforeToAlert)
-        
-		alertTimePicker.date = SettingsService.getTimeToAlert()
-        
-        stepper.wraps = false
-       // stepper.autorepeat = true
-        stepper.minimumValue = 1
-        stepper.maximumValue = 7
-        stepper.layer.cornerRadius = 5
-        
-        stepper.backgroundColor = UIColor(red: 0.62, green: 0.02, blue: 0.11, alpha:  1)
-        
-        stepperValueLabel.text = String(SettingsService.getDaysBeforeToAlert())
         
 	}
 
@@ -53,36 +33,48 @@ class SettingsViewController: UIViewController
 		super.didReceiveMemoryWarning()
 	}
 
-
-	@IBAction func timePickerComplete(sender: AnyObject) {
-		let timer = sender as! UIDatePicker
-		SettingsService.setTimeToAlert(timer.date)
-	}
-
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return DieteryConsideration.dieteryConsiderations.count
+        if section == 0 {
+            return DieteryConsideration.dieteryConsiderations.count
+        } else if section == 1{
+            return 1
+        } else {
+            return 1
+        }
 	}
 
 	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-		return 1
+		return 3
 	}
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Dietary Considerations"
+        } else if section == 1 {
+            return "Alert Before (# of Days)"
+        } else {
+            return "Time to Receive Notifications"
+        }
+    }
 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
-		let cell = tableView.dequeueReusableCellWithIdentifier("DieteryConsiderationCell", forIndexPath: indexPath) as! DieteryConsiderationCell
-		cell.dieteryConsideration = DieteryConsideration.dieteryConsiderations[indexPath.row]
-        return cell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("DieteryConsiderationCell", forIndexPath: indexPath) as! DieteryConsiderationCell
+            cell.dieteryConsideration = DieteryConsideration.dieteryConsiderations[indexPath.row]
+            return cell
+        } else if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("SettingsDaysCell", forIndexPath: indexPath) as! SettingsDaysCell
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("SettingsTimePickerCell", forIndexPath: indexPath) as! SettingsTimePickerCell
+            return cell
+        }
 	}
     
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        var nav = self.navigationController?.navigationBar
+        let nav = self.navigationController?.navigationBar
         nav?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-    }
-    @IBAction func stepperValueChanged(sender: UIStepper) {
-        stepperValueLabel.text = Int(sender.value).description
-        SettingsService.setDaysBeforeToAlert(Int(sender.value))
-    
     }
 }

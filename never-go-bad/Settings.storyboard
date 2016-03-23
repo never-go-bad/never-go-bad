@@ -8,7 +8,7 @@
         <!--Settings-->
         <scene sceneID="KtJ-7A-uHa">
             <objects>
-                <viewController id="aAu-F2-kuw" customClass="SettingsViewController" customModule="never_go_bad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="aAu-F2-kuw" customClass="SettingsViewController" customModule="never_go_bad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QbA-4t-nux"/>
                         <viewControllerLayoutGuide type="bottom" id="bzi-8P-MkF"/>
@@ -17,23 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time to send Notifications" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7e-yt-czQ">
-                                <rect key="frame" x="6" y="435" width="196" height="24"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wRa-aQ-xNd">
-                                <rect key="frame" x="0.0" y="101" width="320" height="256"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wRa-aQ-xNd">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DieteryConsiderationCell" rowHeight="44" id="msu-tb-ZTs" customClass="DieteryConsiderationCell" customModule="never_go_bad" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DieteryConsiderationCell" rowHeight="50" id="msu-tb-ZTs" customClass="DieteryConsiderationCell" customModule="never_go_bad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="msu-tb-ZTs" id="ECb-uA-cFF">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTS-MR-ind" customClass="Checkbox" customModule="never_go_bad" customModuleProvider="target">
@@ -45,7 +38,7 @@
                                                     <state key="normal" image="checkbox-unchecked"/>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oxe-nw-eZK" userLabel="bottom border">
-                                                    <rect key="frame" x="0.0" y="42.5" width="320" height="1"/>
+                                                    <rect key="frame" x="0.0" y="48.5" width="320" height="1"/>
                                                     <color key="backgroundColor" red="0.87450980389999999" green="0.87058823529999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="MrP-GL-V1J"/>
@@ -77,66 +70,96 @@
                                             <outlet property="dieteryConsiderationLabel" destination="ffT-Mi-5dd" id="s68-XP-ZvY"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsDaysCell" rowHeight="50" id="AGO-PO-E4X" customClass="SettingsDaysCell" customModule="never_go_bad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="78" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AGO-PO-E4X" id="au1-nT-Wvw">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ghi-3A-FD6">
+                                                    <rect key="frame" x="20" y="12" width="94" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="94" id="UgI-Ew-KGD"/>
+                                                        <constraint firstAttribute="height" constant="29" id="cb6-Oc-jU9"/>
+                                                    </constraints>
+                                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="stepperValueChanged:" destination="AGO-PO-E4X" eventType="valueChanged" id="Ceq-sn-cNr"/>
+                                                    </connections>
+                                                </stepper>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10h-SP-9gR">
+                                                    <rect key="frame" x="245" y="10" width="11" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZ6-jP-oxw">
+                                                    <rect key="frame" x="264" y="14" width="42" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ghi-3A-FD6" firstAttribute="leading" secondItem="au1-nT-Wvw" secondAttribute="leading" constant="20" id="B8Q-p5-57m"/>
+                                                <constraint firstItem="ghi-3A-FD6" firstAttribute="top" secondItem="au1-nT-Wvw" secondAttribute="top" constant="12" id="CwJ-4e-Gmu"/>
+                                                <constraint firstItem="10h-SP-9gR" firstAttribute="top" secondItem="au1-nT-Wvw" secondAttribute="top" constant="10" id="Gir-3B-jPK"/>
+                                                <constraint firstAttribute="bottom" secondItem="ghi-3A-FD6" secondAttribute="bottom" constant="12" id="Ljm-jm-Oiv"/>
+                                                <constraint firstItem="FZ6-jP-oxw" firstAttribute="top" secondItem="au1-nT-Wvw" secondAttribute="top" constant="14" id="jXl-y9-p6v"/>
+                                                <constraint firstAttribute="trailing" secondItem="FZ6-jP-oxw" secondAttribute="trailing" constant="14" id="lHq-NR-ocV"/>
+                                                <constraint firstItem="FZ6-jP-oxw" firstAttribute="leading" secondItem="10h-SP-9gR" secondAttribute="trailing" constant="8" id="mTN-vX-KUp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="stepper" destination="ghi-3A-FD6" id="BU3-BU-2Rj"/>
+                                            <outlet property="stepperValueLabel" destination="10h-SP-9gR" id="a3k-Bi-Qqs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTimePickerCell" rowHeight="83" id="CoY-ca-jqW" customClass="SettingsTimePickerCell" customModule="never_go_bad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="320" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CoY-ca-jqW" id="czh-sT-2Xe">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="82.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="748" misplaced="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="UrZ-tY-mxl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="82.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="130" id="Kyg-6C-0P1"/>
+                                                    </constraints>
+                                                    <date key="date" timeIntervalSinceReferenceDate="480287499.94949299">
+                                                        <!--2016-03-21 21:11:39 +0000-->
+                                                    </date>
+                                                    <connections>
+                                                        <action selector="timePickerComplete:" destination="CoY-ca-jqW" eventType="valueChanged" id="F08-oc-NHJ"/>
+                                                    </connections>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UrZ-tY-mxl" firstAttribute="top" secondItem="czh-sT-2Xe" secondAttribute="top" id="84c-G0-tUA"/>
+                                                <constraint firstItem="UrZ-tY-mxl" firstAttribute="leading" secondItem="czh-sT-2Xe" secondAttribute="leading" id="98x-In-hs4"/>
+                                                <constraint firstAttribute="bottom" secondItem="UrZ-tY-mxl" secondAttribute="bottom" id="LpW-uO-8r0"/>
+                                                <constraint firstAttribute="trailing" secondItem="UrZ-tY-mxl" secondAttribute="trailing" id="pJk-AU-zm5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="alertTimePicker" destination="UrZ-tY-mxl" id="5zv-LJ-1Kj"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ghi-3A-FD6">
-                                <rect key="frame" x="20" y="389" width="94" height="29"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="stepperValueChanged:" destination="aAu-F2-kuw" eventType="valueChanged" id="7uI-jX-sBa"/>
-                                </connections>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Alert before (# of Days)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="www-72-zeS">
-                                <rect key="frame" x="6" y="359" width="294" height="22"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" ambiguous="YES" misplaced="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10h-SP-9gR">
-                                <rect key="frame" x="239" y="392" width="18" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Dietery Considerations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGb-75-YNG">
-                                <rect key="frame" x="6" y="72" width="300" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZ6-jP-oxw">
-                                <rect key="frame" x="258" y="392" width="42" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="748" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="UrZ-tY-mxl">
-                                <rect key="frame" x="20" y="467" width="280" height="40"/>
-                                <date key="date" timeIntervalSinceReferenceDate="480287499.94949299">
-                                    <!--2016-03-21 21:11:39 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="timePickerComplete:" destination="aAu-F2-kuw" eventType="valueChanged" id="Cte-kn-Ace"/>
-                                </connections>
-                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="FZ6-jP-oxw" firstAttribute="baseline" secondItem="10h-SP-9gR" secondAttribute="baseline" id="76U-Pg-DGd"/>
                             <constraint firstAttribute="trailing" secondItem="wRa-aQ-xNd" secondAttribute="trailing" id="Oc5-pq-HR8"/>
-                            <constraint firstItem="wRa-aQ-xNd" firstAttribute="top" secondItem="rGb-75-YNG" secondAttribute="bottom" constant="8" id="cj8-Hy-S4f"/>
-                            <constraint firstItem="FZ6-jP-oxw" firstAttribute="leading" secondItem="10h-SP-9gR" secondAttribute="trailing" constant="4" id="iHN-al-zWp"/>
-                            <constraint firstAttribute="trailing" secondItem="FZ6-jP-oxw" secondAttribute="trailing" constant="17" id="wXX-ah-JBI"/>
-                            <constraint firstItem="wRa-aQ-xNd" firstAttribute="leading" secondItem="JG5-c1-qgz" secondAttribute="leading" id="wlS-aF-ESG"/>
-                            <constraint firstItem="www-72-zeS" firstAttribute="top" secondItem="wRa-aQ-xNd" secondAttribute="bottom" constant="23" id="xhA-jd-dIB"/>
+                            <constraint firstItem="bzi-8P-MkF" firstAttribute="top" secondItem="wRa-aQ-xNd" secondAttribute="bottom" id="QYL-mF-8n8"/>
+                            <constraint firstItem="wRa-aQ-xNd" firstAttribute="top" secondItem="QbA-4t-nux" secondAttribute="bottom" id="Wj4-3W-JhD"/>
+                            <constraint firstItem="wRa-aQ-xNd" firstAttribute="leading" secondItem="JG5-c1-qgz" secondAttribute="leading" id="wcX-tV-gTV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="4DA-mI-NSG"/>
                     <connections>
-                        <outlet property="alertTimePicker" destination="UrZ-tY-mxl" id="raF-KW-g12"/>
-                        <outlet property="stepper" destination="ghi-3A-FD6" id="JMy-rB-P4k"/>
-                        <outlet property="stepperValueLabel" destination="10h-SP-9gR" id="MtH-qk-YTp"/>
                         <outlet property="tableView" destination="wRa-aQ-xNd" id="iMp-jy-uSd"/>
                     </connections>
                 </viewController>
