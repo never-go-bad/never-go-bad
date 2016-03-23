@@ -29,33 +29,47 @@
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DieteryConsiderationCell" rowHeight="40" id="msu-tb-ZTs" customClass="DieteryConsiderationCell" customModule="never_go_bad" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="40"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DieteryConsiderationCell" rowHeight="44" id="msu-tb-ZTs" customClass="DieteryConsiderationCell" customModule="never_go_bad" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="msu-tb-ZTs" id="ECb-uA-cFF">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffT-Mi-5dd">
-                                                    <rect key="frame" x="19" y="6" width="151" height="25"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTS-MR-ind" customClass="Checkbox" customModule="never_go_bad" customModuleProvider="target">
-                                                    <rect key="frame" x="278" y="8" width="22" height="22"/>
+                                                    <rect key="frame" x="278" y="12" width="22" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="Akd-Z0-KSj"/>
                                                         <constraint firstAttribute="width" constant="22" id="PdY-eQ-Qoi"/>
                                                     </constraints>
                                                     <state key="normal" image="checkbox-unchecked"/>
                                                 </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oxe-nw-eZK" userLabel="bottom border">
+                                                    <rect key="frame" x="0.0" y="42.5" width="320" height="1"/>
+                                                    <color key="backgroundColor" red="0.87450980389999999" green="0.87058823529999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="MrP-GL-V1J"/>
+                                                        <constraint firstAttribute="height" constant="1" id="bWf-g0-aqr"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1" id="t9t-Sq-E1g"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1" id="zar-m0-Iae"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffT-Mi-5dd">
+                                                    <rect key="frame" x="19" y="12" width="37.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="JTS-MR-ind" secondAttribute="trailing" constant="20" id="0bM-sD-e9p"/>
-                                                <constraint firstItem="JTS-MR-ind" firstAttribute="top" secondItem="ECb-uA-cFF" secondAttribute="top" constant="8" id="Por-0V-DZ7"/>
+                                                <constraint firstAttribute="bottom" secondItem="Oxe-nw-eZK" secondAttribute="bottom" id="NWO-sp-yJj"/>
+                                                <constraint firstAttribute="trailing" secondItem="Oxe-nw-eZK" secondAttribute="trailing" id="PQP-35-nuZ"/>
+                                                <constraint firstItem="JTS-MR-ind" firstAttribute="top" secondItem="ECb-uA-cFF" secondAttribute="top" constant="12" id="Por-0V-DZ7"/>
+                                                <constraint firstItem="Oxe-nw-eZK" firstAttribute="leading" secondItem="ECb-uA-cFF" secondAttribute="leading" id="nYH-Tf-lMa"/>
                                                 <constraint firstItem="ffT-Mi-5dd" firstAttribute="leading" secondItem="ECb-uA-cFF" secondAttribute="leading" constant="19" id="s46-qz-1UM"/>
+                                                <constraint firstItem="ffT-Mi-5dd" firstAttribute="top" secondItem="ECb-uA-cFF" secondAttribute="top" constant="12" id="wak-jQ-GNQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
