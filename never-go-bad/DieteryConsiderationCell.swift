@@ -6,17 +6,17 @@ import UIKit
 //    optional func dieteryConsiderationCell(dieteryConsiderationCell: DieteryConsiderationCell, didChangeValue value: Bool)
 //}
 
-class DieteryConsiderationCell: UITableViewCell {
+class DieteryConsiderationCell: UITableViewCell, CheckboxDelegate {
     
     //weak var delegate: DieteryConsiderationCellDelegate?
     
     @IBOutlet weak var dieteryConsiderationLabel: UILabel!
-    @IBOutlet weak var onSwitch: UISwitch!
+    @IBOutlet weak var checkbox: Checkbox!
     
     var dieteryConsideration: DieteryConsideration? {
         didSet{
             self.dieteryConsiderationLabel.text = dieteryConsideration!.displayName
-            self.onSwitch.on = SettingsService.getDieteryConsideration(dieteryConsideration!.dietType)
+            self.checkbox.isChecked = SettingsService.getDieteryConsideration(dieteryConsideration!.dietType)
         }
     }
    
@@ -24,20 +24,20 @@ class DieteryConsiderationCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         // self.view.addSubview(onSwitch)
-        onSwitch.addTarget(self, action: "switchValueChanged", forControlEvents: UIControlEvents.ValueChanged)
+        checkbox.delegate = self
+        checkbox.checkedImage = UIImage(named: "checkbox-checked-red")
+        checkbox.uncheckedImage = UIImage(named: "checkbox-unchecked")
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    func switchValueChanged()
-    {
+    func checkbox(sender: Checkbox, didValueChange value: Bool) {
         if(self.dieteryConsideration != nil) {
-            self.dieteryConsideration!.selected = onSwitch.on
-            SettingsService.setDieteryConsideration(dieteryConsideration!.dietType, value: onSwitch.on)
+            self.dieteryConsideration!.selected = value
+            SettingsService.setDieteryConsideration(dieteryConsideration!.dietType, value: value)
             NSNotificationCenter.defaultCenter().postNotificationName(notificationFoodListDidChange, object: nil)
-
         }
     }
 }
