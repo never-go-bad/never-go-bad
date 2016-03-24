@@ -89,7 +89,7 @@ class FoodListViewController: UIViewController, UITableViewDataSource, UITableVi
 	func getRightUtilityButtonsToCell() -> NSMutableArray {
 		let rightUtilityButtons: NSMutableArray = NSMutableArray()
         rightUtilityButtons.sw_addUtilityButtonWithColor(UIColor(red:0.494, green:0.827, blue:0.129, alpha:1.00), icon: UIImage(named: "Eaten"))
-        rightUtilityButtons.sw_addUtilityButtonWithColor(UIColor(red:0.996, green:0.220 ,blue:0.141, alpha:1.00), icon: UIImage(named: "Wasted"))
+        rightUtilityButtons.sw_addUtilityButtonWithColor(UIColor(red:0.996, green:0.220 ,blue:0.141, alpha:1.00), icon: UIImage(named: "wasted"))
 		return rightUtilityButtons
 	}
 
