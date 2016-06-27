@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AX7-ad-aqd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AX7-ad-aqd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="511" width="320" height="57"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c81-xR-noH" userLabel="buttonView1">
-                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="57"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="57"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar-bag" translatesAutoresizingMaskIntoConstraints="NO" id="rxZ-SG-6FD">
                                                 <rect key="frame" x="37" y="5" width="32" height="32"/>
@@ -32,7 +32,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPm-3D-ffS">
-                                                <rect key="frame" x="35" y="38" width="35.5" height="17"/>
+                                                <rect key="frame" x="35" y="38" width="36" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -47,11 +47,11 @@
                                             <constraint firstItem="rxZ-SG-6FD" firstAttribute="top" secondItem="c81-xR-noH" secondAttribute="top" constant="5" id="oOU-5l-gnC"/>
                                         </constraints>
                                     </view>
-                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3X7-oj-3t9" userLabel="buttonView2">
-                                        <rect key="frame" x="106" y="0.0" width="106.5" height="57"/>
+                                    <view tag="1" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3X7-oj-3t9" userLabel="buttonView2">
+                                        <rect key="frame" x="106" y="0.0" width="107" height="57"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5UM-3P-ij7">
-                                                <rect key="frame" x="27" y="38" width="51.5" height="17"/>
+                                                <rect key="frame" x="27" y="38" width="52" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -77,7 +77,7 @@
                                         <rect key="frame" x="213" y="0.0" width="107" height="57"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6L2-iD-DVa">
-                                                <rect key="frame" x="27" y="38" width="53.5" height="17"/>
+                                                <rect key="frame" x="27" y="38" width="54" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>

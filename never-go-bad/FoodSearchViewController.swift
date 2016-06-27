@@ -41,7 +41,7 @@ class FoodSearchViewController: UIViewController,
     }
     
     override func viewWillAppear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardDidShow:",
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FoodSearchViewController.keyboardDidShow(_:)),
             name: UIKeyboardDidShowNotification, object: nil)
     }
     

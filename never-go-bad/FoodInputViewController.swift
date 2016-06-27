@@ -44,9 +44,9 @@ FoodInputButtonsTableViewCellDelegate
 	}
     
     override func viewWillAppear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardDidShow:",
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FoodInputViewController.keyboardDidShow(_:)),
             name: UIKeyboardDidShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardDidHide:",
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FoodInputViewController.keyboardDidHide(_:)),
             name: UIKeyboardDidHideNotification, object: nil)
     }
     

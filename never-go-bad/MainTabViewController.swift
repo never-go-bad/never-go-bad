@@ -34,15 +34,15 @@ class MainTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tgr0 = UITapGestureRecognizer(target: self, action: "onButtonTap:")
+        let tgr0 = UITapGestureRecognizer(target: self, action: #selector(MainTabViewController.onButtonTap(_:)))
         buttonView0.addGestureRecognizer(tgr0)
         buttonView0.tag = 0
         
-        let tgr1 = UITapGestureRecognizer(target: self, action: "onButtonTap:")
+        let tgr1 = UITapGestureRecognizer(target: self, action: #selector(MainTabViewController.onButtonTap(_:)))
         buttonView1.addGestureRecognizer(tgr1)
         buttonView1.tag = 1
         
-        let tgr2 = UITapGestureRecognizer(target: self, action: "onButtonTap:")
+        let tgr2 = UITapGestureRecognizer(target: self, action: #selector(MainTabViewController.onButtonTap(_:)))
         buttonView2.addGestureRecognizer(tgr2)
         buttonView2.tag = 2
         

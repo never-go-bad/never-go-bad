@@ -59,7 +59,7 @@ class RecipeListViewController: UIViewController, UIWebViewDelegate {
     }
     
     
-    func shuffleArray<Food>(var array: [Food]) -> [Food] {
+    func shuffleArray<Food>(array: [Food]) -> [Food] {
         var ret: [Food] = []
         for index in 0..<array.count {
             ret.append(array[index])

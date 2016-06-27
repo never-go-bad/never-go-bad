@@ -22,7 +22,7 @@ PODS:
   - CloudSight (1.0.3):
     - BFOAuth (~> 1.0)
     - RequestUtils (~> 1.1)
-  - Crashlytics (3.7.0):
+  - Crashlytics (3.7.2):
     - Fabric (~> 1.6.3)
   - CSwiftV (0.0.3)
   - ELCodable (0.0.1)
@@ -79,7 +79,7 @@ SPEC CHECKSUMS:
   BFOAuth: e3c2e4eaae862a89bc301ed6f292d3cd0d6a107b
   Bolts: f52a250053bb517ca874523c3913776359ab3def
   CloudSight: 7974bacb22ec2db1bfb0f0242d9be7f442a78d77
-  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
+  Crashlytics: 130ab943f8c78cda7a814b434f270b2e2c8a3cba
   CSwiftV: 93e3d4e1501f2a9b1eac3ae51d53a5edf41beb5b
   ELCodable: cf628dcbac2398935b0081c6fe4fa3e25594e5c9
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
@@ -93,4 +93,6 @@ SPEC CHECKSUMS:
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
   UIImage-Categories: a0593f6a7991c99016b9ecadfbd38b3717ff1a73
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: e5828c07736fb54ae3cc7251addfa586dedf6645
+
+COCOAPODS: 1.0.0.beta.6

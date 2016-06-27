@@ -57,7 +57,7 @@ CheckboxDelegate {
         daysLeftPickerView!.delegate = self
         daysLeftPickerView!.tag = DAYS_LEFT_PICKER_VIEW
 
-        addGestureRecognizer(UITapGestureRecognizer(target: self, action: "endEditing:"))
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(UIView.endEditing(_:))))
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

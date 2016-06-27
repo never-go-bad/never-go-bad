@@ -25,8 +25,8 @@ class FoodInputButtonsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        cameraButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "cameraButtonTap:"))
-        barcodeButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "barcodeButtonTap:"))
+        cameraButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(FoodInputButtonsTableViewCell.cameraButtonTap(_:))))
+        barcodeButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(FoodInputButtonsTableViewCell.barcodeButtonTap(_:))))
     }
     
     func cameraButtonTap(sender: UITapGestureRecognizer) {

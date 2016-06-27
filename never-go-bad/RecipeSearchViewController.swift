@@ -26,7 +26,7 @@ class RecipeSearchViewController: UIViewController, UISearchBarDelegate, UIColle
         
         UIBarButtonItem.appearanceWhenContainedInInstancesOfClasses([UISearchBar.self]).tintColor = UIColor.blackColor()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "foodListDidChange:", name: notificationFoodListDidChange, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RecipeSearchViewController.foodListDidChange(_:)), name: notificationFoodListDidChange, object: nil)
     }
 
     func searchAboutToExpireFood() {

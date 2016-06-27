@@ -120,7 +120,7 @@ class RecipeDataSource: NSObject, UICollectionViewDataSource {
     }
     
     func loadMoreData() {
-        currentPage++
+        currentPage += 1
         
         RecipeService.instance.searchRecipe(searchTerm,
             page: currentPage,

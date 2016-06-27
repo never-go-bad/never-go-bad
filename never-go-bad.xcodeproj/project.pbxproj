@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		656F93F61DEA67E30E7F8B47 /* Pods_never_go_badUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284738514F9E26A0829D70E0 /* Pods_never_go_badUITests.framework */; };
-		658D359E2C27D576A8744E92 /* Pods_never_go_badTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4717E06E6102647FD0313010 /* Pods_never_go_badTests.framework */; };
+		002A349369F660135EE807ED /* Pods_never_go_badUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE757CBE542267A7ED7D88AB /* Pods_never_go_badUITests.framework */; };
+		301D74425840552BC5FC04B2 /* Pods_never_go_bad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFF285CF4452F654E080B12 /* Pods_never_go_bad.framework */; };
+		6734EB290EE14D9B45FE74D9 /* Pods_never_go_badTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650AA26DC7B7242F6B343A26 /* Pods_never_go_badTests.framework */; };
 		842ABC4C1C9E6D9000DD137C /* DieteryConsiderationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842ABC4B1C9E6D9000DD137C /* DieteryConsiderationCell.swift */; };
 		843C7D051C9FC94700DDA976 /* DieteryConsideration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C7D041C9FC94700DDA976 /* DieteryConsideration.swift */; };
-		84AABA01ADB03829FE2C1306 /* Pods_never_go_bad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F523707B30E78FC5D3F05AF /* Pods_never_go_bad.framework */; };
 		84D924541C8ADF210049D09C /* FoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D924531C8ADF210049D09C /* FoodService.swift */; };
 		84D924561C8CE2360049D09C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D924551C8CE2360049D09C /* NotificationService.swift */; };
 		84E90C4B1C935C35003FC83E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E90C4A1C935C35003FC83E /* SettingsViewController.swift */; };
@@ -84,12 +84,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C1DF0C7F1AD916D826495EF /* Pods-never-go-badUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-badUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-badUITests/Pods-never-go-badUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		284738514F9E26A0829D70E0 /* Pods_never_go_badUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_never_go_badUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F523707B30E78FC5D3F05AF /* Pods_never_go_bad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_never_go_bad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4313F45BAC6B00CB76C93079 /* Pods-never-go-bad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-bad.release.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-bad/Pods-never-go-bad.release.xcconfig"; sourceTree = "<group>"; };
-		4717E06E6102647FD0313010 /* Pods_never_go_badTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_never_go_badTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		733A805BFC91CCA75755D71B /* Pods-never-go-badTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-badTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-badTests/Pods-never-go-badTests.release.xcconfig"; sourceTree = "<group>"; };
+		1B01FC4FE3079AB999C5C157 /* Pods-never-go-badUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-badUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-badUITests/Pods-never-go-badUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2F985011E7FBCE402BCA27E0 /* Pods-never-go-badUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-badUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-badUITests/Pods-never-go-badUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5758185E8C53AAA65E182455 /* Pods-never-go-bad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-bad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-bad/Pods-never-go-bad.debug.xcconfig"; sourceTree = "<group>"; };
+		650AA26DC7B7242F6B343A26 /* Pods_never_go_badTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_never_go_badTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		674EF20FCB262FDDFCE6DADA /* Pods-never-go-badTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-badTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-badTests/Pods-never-go-badTests.debug.xcconfig"; sourceTree = "<group>"; };
 		842ABC4B1C9E6D9000DD137C /* DieteryConsiderationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DieteryConsiderationCell.swift; sourceTree = "<group>"; };
 		843C7D041C9FC94700DDA976 /* DieteryConsideration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DieteryConsideration.swift; sourceTree = "<group>"; };
 		84D924531C8ADF210049D09C /* FoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodService.swift; sourceTree = "<group>"; };
@@ -97,7 +96,7 @@
 		84D924621C915D470049D09C /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
 		84E90C4A1C935C35003FC83E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../SettingsViewController.swift; sourceTree = "<group>"; };
 		84E90C511C954BD9003FC83E /* SettingsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
-		8D679A6567B8A8C91D2AEE1A /* Pods-never-go-bad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-bad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-bad/Pods-never-go-bad.debug.xcconfig"; sourceTree = "<group>"; };
+		8CFF285CF4452F654E080B12 /* Pods_never_go_bad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_never_go_bad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		996A569E1C8D3BC4009F94FA /* BarcodeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
 		996A56A01C8D3BEB009F94FA /* BarcodeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeResult.swift; sourceTree = "<group>"; };
 		996A56A21C8D3E3B009F94FA /* BarcodeDetectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeDetectorViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +114,7 @@
 		99BCE6721C96124600CE0A91 /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
 		99BCE6741C965D8800CE0A91 /* RecipeDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RecipeDetails.storyboard; sourceTree = "<group>"; };
 		99BCE6761C9662F200CE0A91 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		A3E1C5B0B619A2768A0706AD /* Pods-never-go-bad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-bad.release.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-bad/Pods-never-go-bad.release.xcconfig"; sourceTree = "<group>"; };
 		AD2465F81CA26CF10019587A /* SettingsDaysCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDaysCell.swift; sourceTree = "<group>"; };
 		AD2465FA1CA26D010019587A /* SettingsTimePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTimePickerCell.swift; sourceTree = "<group>"; };
 		AD2F00B01C854603006E66DA /* never-go-bad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "never-go-bad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,8 +152,8 @@
 		ADCA41DB1C94F1AA002164BF /* FoodSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSearchTableViewCell.swift; sourceTree = "<group>"; };
 		ADCA41DD1C94F3DA002164BF /* FoodSearchManualTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSearchManualTableViewCell.swift; sourceTree = "<group>"; };
 		ADCA41DF1C94FFAD002164BF /* FoodDictionaryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDictionaryService.swift; sourceTree = "<group>"; };
-		C6CBF2CB14AE8152B54FC67F /* Pods-never-go-badUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-badUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-badUITests/Pods-never-go-badUITests.release.xcconfig"; sourceTree = "<group>"; };
-		EDE08E209D17527844B905C6 /* Pods-never-go-badTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-badTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-badTests/Pods-never-go-badTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2FA48EB2DB68F3F53A13653 /* Pods-never-go-badTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-never-go-badTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-never-go-badTests/Pods-never-go-badTests.release.xcconfig"; sourceTree = "<group>"; };
+		EE757CBE542267A7ED7D88AB /* Pods_never_go_badUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_never_go_badUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84AABA01ADB03829FE2C1306 /* Pods_never_go_bad.framework in Frameworks */,
+				301D74425840552BC5FC04B2 /* Pods_never_go_bad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				658D359E2C27D576A8744E92 /* Pods_never_go_badTests.framework in Frameworks */,
+				6734EB290EE14D9B45FE74D9 /* Pods_never_go_badTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,13 +177,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				656F93F61DEA67E30E7F8B47 /* Pods_never_go_badUITests.framework in Frameworks */,
+				002A349369F660135EE807ED /* Pods_never_go_badUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		387D9FF2495197BBA1C87674 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5758185E8C53AAA65E182455 /* Pods-never-go-bad.debug.xcconfig */,
+				A3E1C5B0B619A2768A0706AD /* Pods-never-go-bad.release.xcconfig */,
+				674EF20FCB262FDDFCE6DADA /* Pods-never-go-badTests.debug.xcconfig */,
+				C2FA48EB2DB68F3F53A13653 /* Pods-never-go-badTests.release.xcconfig */,
+				1B01FC4FE3079AB999C5C157 /* Pods-never-go-badUITests.debug.xcconfig */,
+				2F985011E7FBCE402BCA27E0 /* Pods-never-go-badUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		79FD17AB1104C4EA2E362640 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CFF285CF4452F654E080B12 /* Pods_never_go_bad.framework */,
+				650AA26DC7B7242F6B343A26 /* Pods_never_go_badTests.framework */,
+				EE757CBE542267A7ED7D88AB /* Pods_never_go_badUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84D924521C8ADEFF0049D09C /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,8 +253,8 @@
 				AD2F00C71C854603006E66DA /* never-go-badTests */,
 				AD2F00D21C854604006E66DA /* never-go-badUITests */,
 				AD2F00B11C854603006E66DA /* Products */,
-				C3BCF8BADA90BA300AB3263D /* Pods */,
-				CF35C3470DA4E4D2503C7E6A /* Frameworks */,
+				387D9FF2495197BBA1C87674 /* Pods */,
+				79FD17AB1104C4EA2E362640 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -349,29 +372,6 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
-		C3BCF8BADA90BA300AB3263D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8D679A6567B8A8C91D2AEE1A /* Pods-never-go-bad.debug.xcconfig */,
-				4313F45BAC6B00CB76C93079 /* Pods-never-go-bad.release.xcconfig */,
-				EDE08E209D17527844B905C6 /* Pods-never-go-badTests.debug.xcconfig */,
-				733A805BFC91CCA75755D71B /* Pods-never-go-badTests.release.xcconfig */,
-				0C1DF0C7F1AD916D826495EF /* Pods-never-go-badUITests.debug.xcconfig */,
-				C6CBF2CB14AE8152B54FC67F /* Pods-never-go-badUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		CF35C3470DA4E4D2503C7E6A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2F523707B30E78FC5D3F05AF /* Pods_never_go_bad.framework */,
-				4717E06E6102647FD0313010 /* Pods_never_go_badTests.framework */,
-				284738514F9E26A0829D70E0 /* Pods_never_go_badUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -386,7 +386,6 @@
 				99FD1E881C8EB0FB009F98CB /* ShellScript */,
 				18DAD6B11FBE1E58A2246B84 /* 📦 Embed Pods Frameworks */,
 				415BFE33C55CFAF5B5D0D16B /* 📦 Copy Pods Resources */,
-				49456091D0CF39217DE3A6A5 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -579,21 +578,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-never-go-bad/Pods-never-go-bad-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		49456091D0CF39217DE3A6A5 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-never-go-bad/Pods-never-go-bad-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		99FD1E881C8EB0FB009F98CB /* ShellScript */ = {
@@ -845,7 +829,7 @@
 		};
 		AD2F00D91C854604006E66DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D679A6567B8A8C91D2AEE1A /* Pods-never-go-bad.debug.xcconfig */;
+			baseConfigurationReference = 5758185E8C53AAA65E182455 /* Pods-never-go-bad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -861,7 +845,7 @@
 		};
 		AD2F00DA1C854604006E66DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4313F45BAC6B00CB76C93079 /* Pods-never-go-bad.release.xcconfig */;
+			baseConfigurationReference = A3E1C5B0B619A2768A0706AD /* Pods-never-go-bad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -877,7 +861,7 @@
 		};
 		AD2F00DC1C854604006E66DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDE08E209D17527844B905C6 /* Pods-never-go-badTests.debug.xcconfig */;
+			baseConfigurationReference = 674EF20FCB262FDDFCE6DADA /* Pods-never-go-badTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "never-go-badTests/Info.plist";
@@ -890,7 +874,7 @@
 		};
 		AD2F00DD1C854604006E66DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 733A805BFC91CCA75755D71B /* Pods-never-go-badTests.release.xcconfig */;
+			baseConfigurationReference = C2FA48EB2DB68F3F53A13653 /* Pods-never-go-badTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "never-go-badTests/Info.plist";
@@ -903,7 +887,7 @@
 		};
 		AD2F00DF1C854604006E66DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C1DF0C7F1AD916D826495EF /* Pods-never-go-badUITests.debug.xcconfig */;
+			baseConfigurationReference = 1B01FC4FE3079AB999C5C157 /* Pods-never-go-badUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "never-go-badUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -916,7 +900,7 @@
 		};
 		AD2F00E01C854604006E66DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6CBF2CB14AE8152B54FC67F /* Pods-never-go-badUITests.release.xcconfig */;
+			baseConfigurationReference = 2F985011E7FBCE402BCA27E0 /* Pods-never-go-badUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "never-go-badUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
