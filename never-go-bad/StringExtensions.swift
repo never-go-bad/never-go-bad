@@ -26,7 +26,7 @@ extension String {
     }
     
     func urlEncode() -> String {
-        return self.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        return self.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
     }
     
     func replace(text: String, by replacement: String) -> String {

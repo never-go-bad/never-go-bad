@@ -59,7 +59,7 @@ class RecipeService {
             }
         }
         
-        return session.GET("recipes",
+        return session.GET("v2/recipes",
             parameters: queryParams,
             progress: nil,
             success: {
